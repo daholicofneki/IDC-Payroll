@@ -69,9 +69,9 @@ class MY_Controller extends CI_Controller {
 		$this->template
 
 			// loading css file
+			
 			->add_stylesheet('screen.css')
 			->add_stylesheet('style.css')
-			->add_stylesheet('buttons.css')
 			//->add_stylesheet('forms.css')
 			->add_stylesheet('jquery-ui-1.8.16.custom.css')
 

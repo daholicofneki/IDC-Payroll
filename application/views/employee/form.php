@@ -92,8 +92,8 @@
 
 
 	<li class="form_handle">
-            <?php echo form_submit('save','Save Data Employee', 'class="submit button"')?>
-	    <?php echo anchor( $module.'/index','Cancel Save', 'class="reset button negative"')?>
+            <?php echo form_submit('save','Save Data Employee', 'class="awesome medium blue"')?>
+	    <?php echo anchor( $module.'/index','Cancel Save', 'class="awesome medium red"')?>
         </li>
 
     </ul>
