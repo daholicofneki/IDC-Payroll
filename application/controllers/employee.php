@@ -87,7 +87,7 @@ class Employee extends MY_Controller {
 		
 		// get labels from database table employee
 		$this->params['labels'] = $this->employee_m->getLabels();
-		$this->params['data']=(object) array ('emp_idx'=>$this->employee_m->get_new_id());
+		$this->params['data']=(object) array ('pi_no'=>$this->employee_m->get_new_id());
 		
 		if ($this->input->post('save'))
 		{
