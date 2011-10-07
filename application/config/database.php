@@ -49,7 +49,7 @@ $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'neki';
-$db['default']['password'] = 'nekineki';
+$db['default']['password'] = 'neki';
 $db['default']['database'] = 'db_payroll';
 $db['default']['dbdriver'] = 'postgre';
 $db['default']['dbprefix'] = 'tb_';
