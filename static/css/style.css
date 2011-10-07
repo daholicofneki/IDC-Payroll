@@ -73,7 +73,7 @@ form ul li span.hint {
 		position: absolute;
 		font-size:11px;
 		min-height:25px; right:
-		-10px; z-index:1;
+		20px; z-index:1;
 		width: 200px;
 		margin-top: -4px;
 		border: 1px solid #c93;
