@@ -46,14 +46,14 @@ class Employee_m extends MY_Model {
 			'pi_status_nikah' => array ('Status Pernikahan', TRUE, 'required'),
 			'pi_jumlah_anak' => array ('Jumlah Anak', TRUE, 'required|is_natural'),
 			'pi_kewarganegaraan' => array ('Kewarganegaraan', TRUE, 'required'),
-			'pi_suku' => array ('Suku', TRUE, 'required'),
+			'pi_suku' => array ('Suku', TRUE),
 
 			'pi_no_ktp' => array ('No KTP', FALSE),
 			'pi_no_sim' => array ('NO SIM', FALSE),
 			'pi_no_jamsostek' => array ('NO Jamsostek', FALSE),
 			'pi_status_pajak' => array ('Status Pajak', TRUE, 'required'),
 			'pi_npwp' => array ('NO NPWP', TRUE, 'required'),
-			'pi_foto' => array ('Path Poto', TRUE, 'required'),
+			'pi_foto' => array ('Path Poto', TRUE),
 
 			'pi_lastupdated_by_account' => array ('Last Updated by Account', TRUE, 'required'),
 			'pi_lastupdated_timestamp' => array ('Last Updated Timestamp', TRUE, 'required')
@@ -64,15 +64,15 @@ class Employee_m extends MY_Model {
 	{
 		$this->db->select('MAX(pi_no)');
 		$max_record = $this->one($this->tableName);
-		$YM = substr ($max_record, 0, 3);
-		$ID = substr ($max_record, 3, 3);
-		if ($YM == date('ym'))
+		$INIT = substr ($max_record, 0, 2);
+		$ID = substr ($max_record, 2, 4);
+		if ($INIT == 'IP')
 		{
-			return $YM.str_pad($ID+1, 2, "0", STR_PAD_LEFT);
+			return $YM.str_pad($ID+1, 4, "0", STR_PAD_LEFT);
 		}
 		else
 		{
-			return date('ym').'01';	
+			return 'IP0001';	
 		}
 	}
 }

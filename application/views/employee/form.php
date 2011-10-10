@@ -40,7 +40,7 @@
         <li>
 		<?php echo form_label('No Telepon','', array('class'=>'description'))?>
 		<?php echo form_input('pi_no_telepon1',@$data->pi_no_telepon1, 'size="24" placeholder="Masukkan no telepon" onkeyup="validate(this, \'num\')" class="required number"')?>, &nbsp;
-		<?php echo form_input('pi_no_telepon2',@$data->pi_no_telepon2, 'size="24" placeholder="Masukkan no telepon" onkeyup="validate(this, \'num\')" class="required number"')?>
+		<?php echo form_input('pi_no_telepon2',@$data->pi_no_telepon2, 'size="24" placeholder="Masukkan no telepon" onkeyup="validate(this, \'num\')"')?>
         </li>
         <li>
 		<?php echo form_label($labels->pi_email,'', array('class'=>'description'))?>
@@ -57,16 +57,16 @@
 	</li>
 	<li>
 		<?php echo form_label($labels->pi_jumlah_anak,'', array('class'=>'description'))?>
-		<?php echo form_input('pi_jumlah_anak',@$data->pi_jumlah_anak, 'size="5" max="2" class="required"')?>
+		<?php echo form_input('pi_jumlah_anak',(@$data->pi_jumlah_anak=='')?'0':@$data->pi_jumlah_anak, 'size="5" max="2" class="required number"')?>
         </li>
     	<li>
 		<?php echo form_label('Status Pajak, NPWP','', array('class'=>'description'))?>
-		<?php echo form_dropdown('emp_tax_status',array ('K0'=>'K0','TK0'=>'TK0','TK1'=>'TK1','TK2'=>'TK2'),(@$data->emp_tax_status=='')?'K0':@$data->emp_tax_status,'class="required"') ?> &nbsp;
-		<?php echo form_input('emp_npwp',@$data->emp_npwp, 'size="24" class="required"')?>
+		<?php echo form_dropdown('pi_status_pajak',array ('K0'=>'K0','TK0'=>'TK0','TK1'=>'TK1','TK2'=>'TK2'),(@$data->pi_status_pajak=='')?'K0':@$data->pi_status_pajak,'class="required"') ?> &nbsp;
+		<?php echo form_input('pi_npwp',@$data->pi_npwp, 'size="24" class="required"')?>
         </li>
 	<li>
 		<?php echo form_label($labels->pi_kewarganegaraan,'', array('class'=>'description'))?>
-		<?php echo form_input('pi_kewarganegaraan',@$data->pi_kewarganegaraan, 'size="24"')?>
+		<?php echo form_input('pi_kewarganegaraan',@$data->pi_kewarganegaraan, 'size="24" class="required"')?>
         </li>
 	<li>
 		<?php echo form_label($labels->pi_suku,'', array('class'=>'description'))?>
@@ -86,10 +86,8 @@
         </li>
 	<li>
 		<?php echo form_label('Foto','', array('class'=>'description'))?>
-		<?php echo form_input('pi_foto',@$data->pi_foto, 'style="width:70%" class="required"')?>
+		<?php echo form_input('pi_foto',@$data->pi_foto, 'style="width:70%"')?>
         </li>
-
-
 
 	<li class="form_handle">
             <?php echo form_submit('save','Save Data Employee', 'class="awesome medium blue"')?>
