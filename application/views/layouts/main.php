@@ -8,10 +8,6 @@
 	<?php echo $javascripts; ?>
 </head>
 <body>
-<?php
-require_once("template/header.php");
-require_once("template/tpl_1_3.php");
-require_once("template/footer.php");
-?>
+
 </body>
 </html>

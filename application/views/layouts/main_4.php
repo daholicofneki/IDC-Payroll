@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<?php echo $meta_tags; ?>
+	<title><?php echo $title; ?></title>
+	<?php echo $stylesheets; ?>
+	<?php echo $javascripts; ?>
+</head>
+<body>
 <header>
 	<div class="container">
 		<div class="span-14">
@@ -16,3 +26,17 @@
 		</div>
         </div>
 </header>
+<div class="container">
+	<div class="span-24 last">
+		000
+	</div>
+</div>
+<footer>
+	<div class="container">
+		<div class="span-24 last">
+			@2011 PT. Samudia Bahtera
+		</div>
+	</div>	
+</footer>
+</body>
+</html>

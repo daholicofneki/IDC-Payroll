@@ -56,12 +56,12 @@ class Employee extends MY_Controller {
 	 *  ini di hapus saja
 	 */
 	
-	protected function _view ($actions = 'main' )
+	protected function _view ($template = 'main_1_3', $actions = 'main')
 	{
 		// call javascript on class
 		//$this->template->prepend_metadata('');
 		
-		return parent :: _view ($actions);
+		return parent :: _view ($template, $actions);
 	}
 	
 	
@@ -107,7 +107,7 @@ class Employee extends MY_Controller {
 			}
 		}
 		
-		$this->_view('form');
+		$this->_view('main_1_3', 'form');
 	}
 
 }

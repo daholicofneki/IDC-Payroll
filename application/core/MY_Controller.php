@@ -55,7 +55,7 @@ class MY_Controller extends CI_Controller {
          * @return      void
          * @filesource
          */
-        protected function _view ($actions = 'main')
+        protected function _view ($template = 'main_1_3', $actions = 'main')
         {       
                 $this->title    = ucwords(preg_replace('/[_]+/', ' ', strtolower(trim($this->router->fetch_class()))));
                 $this->method   = ucwords(preg_replace('/[_]+/', ' ', strtolower(trim($this->router->fetch_method()))));
@@ -79,7 +79,7 @@ class MY_Controller extends CI_Controller {
 
 			->set_base_title($this->title)
 			->add_title_segment($this->method)
-			->set_template('layouts/main') // application/views/layouts/default.php
+			->set_template('layouts/'.$template) // application/views/layouts/default.php
            
 			// and here we go ............................
 			->build($this->module.'/'.$actions, $this->params);
