@@ -104,7 +104,6 @@ class Employee extends MY_Controller {
 				{
 					setError('Unable to save');
 				}
-					
 			}
 		}
 		

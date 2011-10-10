@@ -13,4 +13,4 @@ $config['_assets_dir'] = 'static/';
 $config['_base_title'] = 'HR & Payroll Management System';
 
 // Title Separator
-$config['_title_separator'] = ' // ';
+$config['_title_separator'] = ' - ';

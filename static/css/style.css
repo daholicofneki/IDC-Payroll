@@ -21,11 +21,19 @@ footer {
 	padding-top:10px;
 }
 
-header .nq_title {
+footer div div { font-size:11px; }
+
+header a h3 {
 	text-align: left;
 	top:auto;
-	font-size:14px;
+	font-size:18px;
+	font-weight:bold;
 }
+
+header a:hover h3 {
+	color:#04f;
+}
+
 
 header .nq_status {
 	text-align: right;
@@ -54,15 +62,7 @@ ul.nq_menu-left li li.current a 	{ -moz-background-clip:border; -moz-background-
 	color:#666;
 	margin:10px 0;
 }
-.nq_notification {
-	margin:10px 0;
-	padding: 15px 0 15px 0 !important;
-	border:thin #333 dashed;
-}
 
-.nq_content {
-
-}
 
 /* Form */ 
 form { margin: 10px 0;}
