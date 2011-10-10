@@ -70,7 +70,7 @@
         </li>
 	<li>
 		<?php echo form_label($labels->pi_suku,'', array('class'=>'description'))?>
-		<?php echo form_input('pi_suku',@$data->pi_suku, 'size="24"')?>
+		<?php echo form_input('pi_suku',@$data->pi_suku, 'size="24" class="required"')?>
         </li>
 	<li>
 		<?php echo form_label($labels->pi_no_ktp,'', array('class'=>'description'))?>

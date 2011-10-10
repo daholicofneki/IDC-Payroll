@@ -19,13 +19,13 @@
 			<?php if ($data):?>
 			<?php foreach ($data as $item):?>
 			<tr>
-				<td><?php echo $item->emp_idx?></td>
-				<td><?php echo anchor($module.'/edit_employee/'.$item->emp_idx,$item->emp_name)?></td>
-				<td><?php echo $item->emp_dob?></td>
-				<td><?php echo $item->emp_sex.' / '.$item->emp_marital_status?></td>
-				<td><?php echo $item->emp_phone?></td>
-				<td><?php echo anchor($module.'/delete_employee/'.$item->emp_idx,'Delete')?></td>
-				<td><?php echo anchor('job_sallary/index/'.$item->emp_idx,'Info')?></td>
+				<td><?php echo $item->pi_no?></td>
+				<td><?php echo anchor($module.'/edit_employee/'.$item->pi_no,$item->pi_nama_lengkap)?></td>
+				<td><?php echo date('d-M-Y', strtotime($item->pi_tanggal_lahir)) ?></td>
+				<td><?php echo $item->pi_jenis_kelamin.' / '.$item->pi_status_nikah?></td>
+				<td><?php echo $item->pi_no_telepon1?></td>
+				<td><?php echo anchor($module.'/delete_employee/'.$item->pi_no,'Delete')?></td>
+				<td><?php echo anchor('job_sallary/index/'.$item->pi_no,'Info')?></td>
 			</tr>
 			<?php endforeach;?>
 			<?php else:?>
