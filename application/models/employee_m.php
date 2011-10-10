@@ -56,13 +56,14 @@ class Employee_m extends MY_Model {
 			'pi_foto' => array ('Path Poto', TRUE),
 
 			//'pi_lastupdated_by_account' => array ('Last Updated by Account', TRUE, 'required'),
-			'pi_lastupdated_timestamp' => array ('Last Updated Timestamp', TRUE, 'required')
+			//'pi_lastupdated_timestamp' => array ('Last Updated Timestamp', TRUE, 'required')
 		);
 	}
 	
 	public function save ($idx)
 	{
-		$this->db->set('pi_lastupdated_by_account',now());
+		$this->db->set('pi_lastupdated_by_account','daholicofneki');
+		$this->db->set('pi_lastupdated_timestamp',now());
 		return parent :: save ($idx);
 		
 	}
