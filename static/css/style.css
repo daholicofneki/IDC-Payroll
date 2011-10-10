@@ -86,29 +86,40 @@ form ul li span.hint .hint-pointer{ position: absolute; left: -10px; top: 5px; w
 form ul li.form_handle { margin-top:15px; border-top: 1px solid #DDD; padding: 10px;}
 
 label { font-weight:normal; }
-input[type=text], input[type=password], input[type=url], input[type=email],
-input.text, input.title, textarea {
-	background-color:#fff;
-	border:1px solid #bbb;
-	color:#000;
-	padding:2px;
+
+input[type=text], input[type=password],
+input.text, input.title,
+textarea {
+  background:#fff url(../image/input-bg.png) no-repeat top;
+  border:1px solid #bbb;
+  font-weight: inherit;
 }
-input[type=text]:focus, input[type=password]:focus, input[type=url]:focus, input[type=email]:focus,
-input.text:focus, input.title:focus, textarea:focus {
-	border-color:#09f;
+input[type=text]:hover, input[type=password]:hover,
+input.text:hover, input.title:hover,
+textarea:hover {
+  border-color:#666;
 }
-input[type=text], input[type=password], input[type=url], input[type=email],
-input.text, input.title, textarea, select {
-	margin:0.5em 0;
+input[type=text]:focus, input[type=password]:focus,
+input.text:focus, input.title:focus,
+textarea:focus {
+  border-color:#4D90FE;
 }
-select {
-	background-color:#fff;
-	border-width:1px;
-	border-style:solid;
+select {  background:#fff url(../image/input-bg.png) no-repeat top;border:1px solid #bbb;}
+select:hover {border-color:#666;}
+select option { padding-left:5px;}
+
+input[type=text], input[type=password],
+input.text, input.title,
+textarea, select {
+  margin:0.2em 0; padding:4px;
 }
-input.text, input.title {width:300px;padding:5px;}
-input.title {font-size:1.5em;}
-textarea {padding:5px;}
+
+
+
+input[type=text].hint, input[type=password].hint,
+input.text.hint, input.title.hint,
+textarea.hint {border-color: #DD4B39; }
+
 
 
 /*
