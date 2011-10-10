@@ -60,7 +60,7 @@ class Employee_m extends MY_Model {
 		);
 	}
 	
-	public function save ($idx)
+	public function save ($idx = FALSE)
 	{
 		$this->db->set('pi_lastupdated_by_account',now());
 		return parent :: save ($idx);
