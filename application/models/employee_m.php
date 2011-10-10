@@ -55,9 +55,16 @@ class Employee_m extends MY_Model {
 			'pi_npwp' => array ('NO NPWP', TRUE, 'required'),
 			'pi_foto' => array ('Path Poto', TRUE),
 
-			'pi_lastupdated_by_account' => array ('Last Updated by Account', TRUE, 'required'),
+			//'pi_lastupdated_by_account' => array ('Last Updated by Account', TRUE, 'required'),
 			'pi_lastupdated_timestamp' => array ('Last Updated Timestamp', TRUE, 'required')
 		);
+	}
+	
+	public function save ($idx)
+	{
+		$this->db->set('pi_lastupdated_by_account',now());
+		return parent :: save ($idx);
+		
 	}
 
 	public function get_new_id ()
