@@ -30,18 +30,23 @@ class MY_Controller extends CI_Controller {
          * Constructor
          *
          */
-		public function __construct ()
+	public function __construct ()
+	{
+		parent :: __construct ();
+				
+		// load spark template
+		$this->load->spark('layout-library/1.0.0');
+		$this->load->spark('Debug-Toolbar/1.0.1');
+		// load spark library
+		$this->load->library('template');
+		if (! $this->input->is_ajax_request())
 		{
-				parent :: __construct ();
-						
-				// load spark template
-				$this->load->spark('layout-library/1.0.0');
-				$this->load->spark('Debug-Toolbar/1.0.1');
-				// load spark library
-				$this->load->library('template');
-				if (! $this->input->is_ajax_request()) $this->output->enable_profiler(true);
-						
+			$this->output->enable_profiler(true);
+			$this->load->library('console');
+			Console::log_memory();
 		}
+					
+	}
         
         // ---------------------------------------------------------------------
         

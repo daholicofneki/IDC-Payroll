@@ -31,7 +31,6 @@ class Employee extends MY_Controller {
 	 * Constructor
 	 *
 	 */
-	
 	public function __construct ()
 	{
 		parent :: __construct ();
@@ -41,37 +40,11 @@ class Employee extends MY_Controller {
 	}
 	
 	/**
-	 * Extending _view function
-	 * 
-	 * @access 	protected
-	 * @param 	string
-	 * @return	parent class
-	 */
-	
-	/**
-	 *  karena pada function _view di class MY_Controller ada variabelnya
-	 *  maka function turunanya juga harus ada valiabelnya juga
-	 *
-	 *  apabila tidak ada yang di extends lebih baik function _view di class
-	 *  ini di hapus saja
-	 */
-	
-	protected function _view ($template = 'main_1_3', $actions = 'main')
-	{
-		// call javascript on class
-		//$this->template->prepend_metadata('');
-		
-		return parent :: _view ($template, $actions);
-	}
-	
-	
-	/**
 	 * Jika memiliki index yang di modifikasi
 	 *
 	 * @access	public
 	 * @return	parent class function
 	 */
-	
 	public function index ()
 	{
 		
@@ -82,6 +55,12 @@ class Employee extends MY_Controller {
 		return parent :: index ('');
 	}
 	
+	/**
+	 * Add New Employee
+	 *
+	 * @access	public
+	 * @return	array
+	 */
 	public function add_new_employee ()
 	{
 		
@@ -110,6 +89,13 @@ class Employee extends MY_Controller {
 		$this->_view('main_1_3', 'form');
 	}
 
+	/**
+	 * Edit Employee
+	 *
+	 * @access	public
+	 * @param 	string
+	 * @return	array
+	 */
 	public function edit_employee ( $id = FALSE )
 	{
 		// cek id apakah ada di dalam record
@@ -145,3 +131,5 @@ class Employee extends MY_Controller {
 	}
 
 }
+/* End class employee */
+/* Location ./application/controllers/employee.php */
