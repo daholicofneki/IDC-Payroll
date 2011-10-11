@@ -115,10 +115,6 @@ class Employee extends MY_Controller {
 		// cek id apakah ada di dalam record
 		if ($id AND $this->employee_m->get($id))
 		{
-			//print_r($this->employee_m->get($id));
-			$this->params['data'] = $this->employee_m->get($id);
-			$this->params['labels'] = $this->employee_m->getLabels();
-		
 			if ($this->input->post('save'))
 			{
 				// cek validation sesuaid dengan field yang di employee model
@@ -135,6 +131,10 @@ class Employee extends MY_Controller {
 					}
 				}
 			}
+			
+			//print_r($this->employee_m->get($id));
+			$this->params['data'] = $this->employee_m->get($id);
+			$this->params['labels'] = $this->employee_m->getLabels();
 			
 			$this->_view('main_1_3', 'form');
 		}
