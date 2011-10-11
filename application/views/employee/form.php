@@ -9,7 +9,8 @@
 			maxDate: '-15y',
 			showAnim: 'fold'
 		});
-		$('#formid').validate();
+		$("#more_info").tabs();
+		$("#formid").validate();
 	});
 </script>
 <h2 id="method">Add New Employee</h2>
@@ -88,6 +89,106 @@
 		<?php echo form_label('Foto','', array('class'=>'description'))?>
 		<?php echo form_input('pi_foto',@$data->pi_foto, 'style="width:70%"')?>
         </li>
+
+	<div id="more_info">
+		<ul>
+			<li><a href="#info-1">Keluarga</a></li>
+			<li><a href="#info-2">Pendidikan Formal</a></li>
+			<li><a href="#info-3">Pendidikan Informal</a></li>
+			<li><a href="#info-4">Bahasa</a></li>
+			<li><a href="#info-5">Riwayat Pekerjaan</a></li>
+		</ul>
+		<div id="info-1">
+			<table>
+				<tr>
+					<td>Nama</td>
+					<td>Jenis Kelamin</td>
+					<td>Umur</td>
+					<td>Hubungan Keluarga</td>
+					<td>Pendidikan</td>
+					<td>Pekerjaan</td>
+				</tr>
+				<tr>
+					<td><?php echo form_input('name="pi_1_nama"')?></td>
+					<td><?php echo form_input('name="pi_1_jenis_kelamin"')?></td>
+					<td><?php echo form_input('name="pi_1_umur"')?></td>
+					<td><?php echo form_input('name="pi_1_hubungan"')?></td>
+					<td><?php echo form_input('name="pi_1_pendidikan"')?></td>
+					<td><?php echo form_input('name="pi_1_pekerjaan"')?></td>
+				</tr>
+			</table>
+		</div>
+		<div id="info-2">
+			<table>
+				<tr>
+					<td>Tingkat</td>
+					<td>Nama Sekolah</td>
+					<td>Tanggal<br />Lulus</td>
+					<td>Jurusan</td>
+					<td>Sertifikat</td>
+				</tr>
+				<tr>
+					<td><?php echo form_input('name="pi_2_tingkat"')?></td>
+					<td><?php echo form_input('name="pi_2_nama_sekolah"')?></td>
+					<td><?php echo form_input('name="pi_2_tanggal_lulus"')?></td>
+					<td><?php echo form_input('name="pi_2_jurusan"')?></td>
+					<td><?php echo form_input('name="pi_2_sertifikat"')?></td>
+				</tr>
+			</table>
+		</div>
+		<div id="info-3">
+			<table>
+				<tr>
+					<td>Jenis Kursus</td>
+					<td>Nama Lembaga</td>
+					<td>Kualifikasi</td>
+					<td>Tahun</td>
+				</tr>
+				<tr>
+					<td><?php echo form_input('name="pi_3_jenis_kursus"')?></td>
+					<td><?php echo form_input('name="pi_3_nama_lembaga"')?></td>
+					<td><?php echo form_input('name="pi_3_kualifikasi"')?></td>
+					<td><?php echo form_input('name="pi_3_tahun"')?></td>
+				</tr>
+			</table>
+		</div>
+		<div id="info-4">
+			<table>
+				<tr>
+					<td>Bahasa</td>
+					<td>Nilai Bicara</td>
+					<td>Nilai Membaca</td>
+					<td>Nilai Menulis</td>
+				</tr>
+				<tr>
+					<td><?php echo form_input('name="pi_4_bahasa"')?></td>
+					<td><?php echo form_input('name="pi_4_nilai_bicara"')?></td>
+					<td><?php echo form_input('name="pi_4_nilai_membaca"')?></td>
+					<td><?php echo form_input('name="pi_4_nilai_menulis"')?></td>
+				</tr>
+			</table>
+		</div>
+		<div id="info-5">
+			<table>
+				<tr>
+					<td>Nama Perusahaan</td>
+					<td>Dari</td>
+					<td>Sampai</td>
+					<td>Jabatan</td>
+					<td>Tugas</td>
+					<td>Gaji</td>
+				</tr>
+				<tr>
+					<td><?php echo form_input('name="pi_5_nama_perusahaan"')?></td>
+					<td><?php echo form_input('name="pi_5_bekerja_dari"')?></td>
+					<td><?php echo form_input('name="pi_5_bekerja_sampai"')?></td>
+					<td><?php echo form_input('name="pi_5_jabatan"')?></td>
+					<td><?php echo form_input('name="pi_5_tugas"')?></td>
+					<td><?php echo form_input('name="pi_5_gaji"')?></td>
+				</tr>
+			</table>
+		</div>
+	</div>
 
 	<li class="form_handle">
             <?php echo form_submit('save','Save Data Employee', 'class="awesome medium blue"')?>

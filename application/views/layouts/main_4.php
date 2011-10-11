@@ -28,7 +28,8 @@
 </header>
 <div class="container">
 	<div class="span-24 last">
-		000
+		<div class="nq_breadcumb"><?php echo $breadcrumbs?></div>
+		<?php echo $content; ?>
 	</div>
 </div>
 <footer>

@@ -33,13 +33,26 @@
 			<h3 class="group">Personal Data</h3>
 			<ul>
 			    <li>
-				<?php echo anchor('employee/add_new_employee','Add New Employee','class="vcard-add"')?>
+				<?php echo anchor('employee/employee/add_new_employee','Add New Employee')?>
 			    </li>
 			    <li class="current">
-				<?php echo anchor('employee/index','Employee Data','class="vcard"')?>
+				<?php echo anchor('employee/employee/index','Employee Data')?>
 			    </li>
 			</ul>
 		    </li>
+		    <?php if ($module == 'employee'):?>
+		    <li>
+			<h3 class="group">Job History</h3>
+			<ul>
+			    <li>
+				<?php echo anchor('employee/job_history/add_new_job','Add New Job')?>
+			    </li>
+			    <li>
+				<?php echo anchor('employee/job_history/index','List')?>
+			    </li>
+			</ul>
+		    </li>
+		    <?php endif?>
 		    <li>
 			<h3 class="group">Work History</h3>
 			<ul>
