@@ -110,4 +110,38 @@ class Employee extends MY_Controller {
 		$this->_view('main_1_3', 'form');
 	}
 
+	public function edit_employee ( $id = FALSE )
+	{
+		// cek id apakah ada di dalam record
+		if ($id AND $this->employee_m->get($id))
+		{
+			//print_r($this->employee_m->get($id));
+			$this->params['data'] = $this->employee_m->get($id);
+			$this->params['labels'] = $this->employee_m->getLabels();
+		
+			if ($this->input->post('save'))
+			{
+				// cek validation sesuaid dengan field yang di employee model
+				if ($this->employee_m->isValid())
+				{
+					// save data
+					if ($this->employee_m->save($id))
+					{
+						setSucces('Data is edited');
+					}
+					else
+					{
+						setError('Unable to save');
+					}
+				}
+			}
+			
+			$this->_view('main_1_3', 'form');
+		}
+		else
+		{
+			redirect ($this->module.'/index');
+		}
+	}
+
 }
