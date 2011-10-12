@@ -60,6 +60,7 @@
 		<div class="nq_breadcumb"><?php echo $breadcrumbs?></div>
 		<?php echo $content; ?>
 	</div>
+	<hr class="space">
 </div>
 <footer>
 	<div class="container">
