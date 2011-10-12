@@ -47,12 +47,12 @@ class Employee extends MY_Controller {
 	 */
 	public function index ()
 	{
-		
-		// anothe data
+		// another data
 		$this->params['data'] = $this->employee_m->get();
-		
+
 		// call parent class function
-		return parent :: index ('');
+		//return parent :: index ('');
+		$this->_view('main_1_3', 'employee');
 	}
 	
 	/**
@@ -86,7 +86,7 @@ class Employee extends MY_Controller {
 			}
 		}
 		
-		$this->_view('main_1_3', 'form');
+		$this->_view('main_1_3', 'employee_add');
 	}
 
 	/**
@@ -117,12 +117,12 @@ class Employee extends MY_Controller {
 					}
 				}
 			}
-			
+
 			//print_r($this->employee_m->get($id));
 			$this->params['data'] = $this->employee_m->get($id);
 			$this->params['labels'] = $this->employee_m->getLabels();
-			
-			$this->_view('main_1_3', 'form');
+
+			$this->_view('main_1_3', 'employee_edit');
 		}
 		else
 		{

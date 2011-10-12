@@ -30,42 +30,29 @@
 	<div class="span-6">
 		<ul class="nq_menu-left">
 		    <li>
-			<h3 class="group">Personal Data</h3>
+			<h3 class="group">Data Personal</h3>
 			<ul>
 			    <li>
-				<?php echo anchor('employee/employee/add_new_employee','Add New Employee')?>
+				<?php echo anchor('employee/employee/add_new_employee','Tambah Pegawai')?>
 			    </li>
 			    <li class="current">
-				<?php echo anchor('employee/employee/index','Employee Data')?>
+				<?php echo anchor('employee/employee/index','Daftar')?>
 			    </li>
 			</ul>
 		    </li>
 		    <?php if ($module == 'employee'):?>
 		    <li>
-			<h3 class="group">Job History</h3>
+			<h3 class="group">Riwayat Pekerjaan</h3>
 			<ul>
 			    <li>
-				<?php echo anchor('employee/job_history/add_new_job','Add New Job')?>
+				<?php echo anchor('employee/job_history/add_new_job','Tambah Pekerjaan')?>
 			    </li>
 			    <li>
-				<?php echo anchor('employee/job_history/index','List')?>
+				<?php echo anchor('employee/job_history/index','Daftar')?>
 			    </li>
 			</ul>
 		    </li>
 		    <?php endif?>
-		    <li>
-			<h3 class="group">Work History</h3>
-			<ul>
-			    <li>
-				<a title="Add new Employee" href="#">Add New</a>
-			    </li>
-			    <li>
-				<a title="List Employee" href="#">List</a>
-			    </li>
-			    <li>
-				<a title="Record History" href="#">Record</a>
-			    </li>
-			</ul>
 		    </li>
 		</ul>
 	</div>

@@ -28,7 +28,7 @@ class Employee_m extends MY_Model {
 	public function __construct ()
 	{
 		parent :: __construct ();
-		$this->tableName = 'karyawan';
+		$this->tableName = 'pegawai';
 		$this->idx 	= 'pi_no';
 		$this->fields 	= array(
 			'pi_no' => array('NIK', TRUE),
@@ -54,9 +54,6 @@ class Employee_m extends MY_Model {
 			'pi_status_pajak' => array ('Status Pajak', TRUE),
 			'pi_npwp' => array ('NO NPWP', TRUE, 'required'),
 			'pi_foto' => array ('Path Poto', FALSE)
-
-			//'pi_lastupdated_by_account' => array ('Last Updated by Account', TRUE, 'required'),
-			//'pi_lastupdated_timestamp' => array ('Last Updated Timestamp', TRUE, 'required')
 		);
 	}
 	
