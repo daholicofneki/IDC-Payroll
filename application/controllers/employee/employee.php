@@ -25,8 +25,7 @@
 class Employee extends MY_Controller {
 
 	public $module = 'employee';
-	
-	
+
 	/**
 	 * Constructor
 	 *
@@ -63,7 +62,6 @@ class Employee extends MY_Controller {
 	 */
 	public function add_new_employee ()
 	{
-		
 		// get labels from database table employee
 		$this->params['labels'] = $this->employee_m->getLabels();
 		$this->params['data']=(object) array ('pi_no'=>$this->employee_m->get_new_id());
@@ -85,7 +83,7 @@ class Employee extends MY_Controller {
 				}
 			}
 		}
-		
+
 		$this->_view('main_1_3', 'employee_add');
 	}
 
@@ -128,6 +126,12 @@ class Employee extends MY_Controller {
 		{
 			redirect ($this->module.'/index');
 		}
+	}
+
+	public function more_info ()
+	{
+		$this->params['module']         = $this->module;
+		$this->_view('main_blank', 'employee_more_info');
 	}
 
 }

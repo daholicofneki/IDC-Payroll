@@ -25,7 +25,6 @@ for($i=0; $i<count($var); $i++) {
 	}
 }
 ?>
-
 <div id="more_info">
 	<ul>
 		<li><a href="#info-1">Personal</a></li>
@@ -111,14 +110,14 @@ for($i=0; $i<count($var); $i++) {
 
 		<li class="form_handle">
 			<?php echo form_submit('save','Save Data Employee', 'class="awesome medium blue"')?>
-			<?php echo anchor( $module.'/index','Cancel Save', 'class="awesome medium red"')?>
+			<?php echo anchor( 'employee/' . $module.'/index','Cancel Save', 'class="awesome medium red"')?>
 		</li>
 
 	</ul>
 	<?php echo form_close()?>
 	</div>
 	<div id="info-2">
-		<h3 id="method">Informasi Keluarga</h3>
+		<h3>Informasi Keluarga</h3>
 		<table>
 			<thead>
 			<tr>
@@ -128,6 +127,7 @@ for($i=0; $i<count($var); $i++) {
 				<th>Hubungan</th>
 				<th>Pendidikan</th>
 				<th>Pekerjaan</th>
+				<th width="10px"><?php echo anchor('employee/employee/more_info?height=400&width=320&form=1','+', 'class="thickbox" title="Informasi Keluarga"')?></th>
 			</tr>
 			</thead>
 			<tbody>
@@ -138,6 +138,8 @@ for($i=0; $i<count($var); $i++) {
 				<td><?php echo $var[0][$i][2]?></td>
 				<td><?php echo $var[0][$i][3]?></td>
 				<td><?php echo $var[0][$i][4]?></td>
+				<td><?php echo $var[0][$i][5]?></td>
+				<td>v</td>
 			</tr>
 			<?php }} ?>
 			</tbody>
@@ -153,6 +155,7 @@ for($i=0; $i<count($var); $i++) {
 				<th>Tahun Lulus</th>
 				<th>Jurusan</th>
 				<th>Sertifikat</th>
+				<th width="10px"><?php echo anchor('employee/employee/more_info?height=400&width=320&form=2','+', 'class="thickbox" title="Informasi Pendidikan Formal"')?></th>
 			</tr>
 			</thead>
 			<tbody>
@@ -163,6 +166,7 @@ for($i=0; $i<count($var); $i++) {
 				<td><?php echo $var[1][$i][2]?></td>
 				<td><?php echo $var[1][$i][3]?></td>
 				<td><?php echo $var[1][$i][4]?></td>
+				<td>v</td>
 			</tr>
 			<?php }} ?>
 			</tbody>
@@ -177,6 +181,7 @@ for($i=0; $i<count($var); $i++) {
 				<th>Lembaga</th>
 				<th>Kualifikasi</th>
 				<th>Tahun</th>
+				<th width="10px"><?php echo anchor('employee/employee/more_info?height=400&width=320&form=3','+', 'class="thickbox" title="Informasi Pendidikan Informal"')?></th>
 			</tr>
 			</thead>
 			<tbody>
@@ -186,6 +191,7 @@ for($i=0; $i<count($var); $i++) {
 				<td><?php echo $var[2][$i][1]?></td>
 				<td><?php echo $var[2][$i][2]?></td>
 				<td><?php echo $var[2][$i][3]?></td>
+				<td>v</td>
 			</tr>
 			<?php }} ?>
 			</tbody>
@@ -200,6 +206,7 @@ for($i=0; $i<count($var); $i++) {
 				<th>Nilai Bicara</th>
 				<th>Nilai Membaca</th>
 				<th>Nilai Menulis</th>
+				<th width="10px"><?php echo anchor('employee/employee/more_info?height=400&width=320&form=4','+', 'class="thickbox" title="Informasi Bahasa"')?></th>
 			</tr>
 			</thead>
 			<tbody>
@@ -209,6 +216,7 @@ for($i=0; $i<count($var); $i++) {
 				<td><?php echo $var[3][$i][1]?></td>
 				<td><?php echo $var[3][$i][2]?></td>
 				<td><?php echo $var[3][$i][3]?></td>
+				<td>v</td>
 			</tr>
 			<?php }} ?>
 			</tbody>
@@ -225,6 +233,7 @@ for($i=0; $i<count($var); $i++) {
 				<th>Jabatan</th>
 				<th>Pekerjaan</th>
 				<th>Gaji</th>
+				<th width="10px"><?php echo anchor('employee/employee/more_info?height=400&width=320&form=5','+', 'class="thickbox" title="Informasi Riwayat Pekerjaan"')?></th>
 			</tr>
 			</thead>
 			<tbody>
@@ -236,6 +245,7 @@ for($i=0; $i<count($var); $i++) {
 				<td><?php echo $var[4][$i][3]?></td>
 				<td><?php echo $var[4][$i][4]?></td>
 				<td>Rp. <?php echo number_format($var[4][$i][5])?></td>
+				<td>v</td>
 			</tr>
 			<?php }} ?>
 			</tbody>

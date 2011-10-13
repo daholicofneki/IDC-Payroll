@@ -77,10 +77,12 @@ class MY_Controller extends CI_Controller {
 			->add_stylesheet('screen.css')
 			->add_stylesheet('style.css')
 			->add_stylesheet('jquery-ui-1.8.16.custom.css')
+			->add_stylesheet('thickbox.css')
 
 			// loading javascript file
 			->add_javascript('jquery-1.6.2.min.js')
 			->add_javascript('jquery-ui-1.8.16.custom.min.js')
+			->add_javascript('thickbox.js')
 
 			->set_base_title($this->title)
 			->add_title_segment($this->method)

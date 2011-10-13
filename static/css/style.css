@@ -66,7 +66,7 @@ ul.nq_menu-left li li.current a 	{ -moz-background-clip:border; -moz-background-
 /* Form */ 
 form { margin: 10px 0;}
 form ul { padding-top: 10px} 
-form ul li { list-style : none; min-height: 33px; display: block; margin:10px 0; padding:0;}
+form ul li { list-style : none; min-height: 33px; display: block; margin:3px 0; padding:0;}
 form ul li label { width : 150px; float: left;}
 form ul li span.hint {
 		position: absolute;
