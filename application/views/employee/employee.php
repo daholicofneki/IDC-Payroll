@@ -22,7 +22,7 @@
 				<td><?php echo $item->pi_no?></td>
 				<td><?php echo anchor('employee/'.$module.'/edit_employee/'.$item->pi_no,$item->pi_nama_lengkap)?></td>
 				<td><?php echo date('d-M-Y', strtotime($item->pi_tanggal_lahir)) ?></td>
-				<td><?php echo $item->pi_jenis_kelamin.' / '.$item->pi_status_nikah?></td>
+				<td><?php echo ($item->pi_jenis_kelamin=='L')?'Laki-laki':'Perempuan'; echo ' / '; echo ($item->pi_status_nikah=='L')?'Lajang':'Menikah' ?></td>
 				<td><?php echo $item->pi_no_telepon1?></td>
 				<td><?php echo anchor($module.'/delete_employee/'.$item->pi_no,'Delete')?></td>
 				<td><?php echo anchor('job_sallary/index/'.$item->pi_no,'Info')?></td>

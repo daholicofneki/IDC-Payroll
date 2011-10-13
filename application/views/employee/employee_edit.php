@@ -111,14 +111,14 @@ for($i=0; $i<count($var); $i++) {
 
 		<li class="form_handle">
 			<?php echo form_submit('save','Save Data Employee', 'class="awesome medium blue"')?>
-			<?php echo anchor( $module.'/index','Cancel Save', 'class="awesome medium red"')?>
+			<?php echo anchor( 'employee/' . $module.'/index','Cancel Save', 'class="awesome medium red"')?>
 		</li>
 
 	</ul>
 	<?php echo form_close()?>
 	</div>
 	<div id="info-2">
-		<h3 id="method">Informasi Keluarga</h3>
+		<h3>Informasi Keluarga</h3>
 		<table>
 			<thead>
 			<tr>
@@ -128,6 +128,7 @@ for($i=0; $i<count($var); $i++) {
 				<th>Hubungan</th>
 				<th>Pendidikan</th>
 				<th>Pekerjaan</th>
+				<th width="10px"><?php echo anchor('employee/employee/more_info?height=370&width=300&form=1','+', 'class="thickbox" title="Informasi Keluarga"')?></th>
 			</tr>
 			</thead>
 			<tbody>
@@ -138,6 +139,8 @@ for($i=0; $i<count($var); $i++) {
 				<td><?php echo $var[0][$i][2]?></td>
 				<td><?php echo $var[0][$i][3]?></td>
 				<td><?php echo $var[0][$i][4]?></td>
+				<td><?php echo $var[0][$i][5]?></td>
+				<td>v</td>
 			</tr>
 			<?php }} ?>
 			</tbody>
