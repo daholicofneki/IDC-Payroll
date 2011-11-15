@@ -24,6 +24,9 @@ for($i=0; $i<count($var); $i++) {
 		$var[$i][$j] = str_replace($replace, "", $var[$i][$j]);
 	}
 }
+echo "<pre>";
+var_dump($info);
+echo "</pre>";
 ?>
 <div id="more_info">
 	<ul>
@@ -127,7 +130,7 @@ for($i=0; $i<count($var); $i++) {
 				<th>Hubungan</th>
 				<th>Pendidikan</th>
 				<th>Pekerjaan</th>
-				<th width="10px"><?php echo anchor('employee/employee/more_info?height=400&width=320&form=1','+', 'class="thickbox" title="Informasi Keluarga"')?></th>
+				<th width="10px"><?php echo anchor('employee/employee/more_info/'.@$data->pi_no.'/1?height=400&width=320&form=1','+', 'class="thickbox" title="Informasi Keluarga"')?></th>
 			</tr>
 			</thead>
 			<tbody>
@@ -155,7 +158,7 @@ for($i=0; $i<count($var); $i++) {
 				<th>Tahun Lulus</th>
 				<th>Jurusan</th>
 				<th>Sertifikat</th>
-				<th width="10px"><?php echo anchor('employee/employee/more_info?height=400&width=320&form=2','+', 'class="thickbox" title="Informasi Pendidikan Formal"')?></th>
+				<th width="10px"><?php echo anchor('employee/employee/more_info/'.@$data->pi_no.'/2?height=400&width=320&form=2','+', 'class="thickbox" title="Informasi Pendidikan Formal"')?></th>
 			</tr>
 			</thead>
 			<tbody>
@@ -181,7 +184,7 @@ for($i=0; $i<count($var); $i++) {
 				<th>Lembaga</th>
 				<th>Kualifikasi</th>
 				<th>Tahun</th>
-				<th width="10px"><?php echo anchor('employee/employee/more_info?height=400&width=320&form=3','+', 'class="thickbox" title="Informasi Pendidikan Informal"')?></th>
+				<th width="10px"><?php echo anchor('employee/employee/more_info/'.@$data->pi_no.'/3?height=400&width=320&form=3','+', 'class="thickbox" title="Informasi Pendidikan Informal"')?></th>
 			</tr>
 			</thead>
 			<tbody>
@@ -206,7 +209,7 @@ for($i=0; $i<count($var); $i++) {
 				<th>Nilai Bicara</th>
 				<th>Nilai Membaca</th>
 				<th>Nilai Menulis</th>
-				<th width="10px"><?php echo anchor('employee/employee/more_info?height=400&width=320&form=4','+', 'class="thickbox" title="Informasi Bahasa"')?></th>
+				<th width="10px"><?php echo anchor('employee/employee/more_info/'.@$data->pi_no.'/4?height=400&width=320&form=4','+', 'class="thickbox" title="Informasi Bahasa"')?></th>
 			</tr>
 			</thead>
 			<tbody>
@@ -233,7 +236,7 @@ for($i=0; $i<count($var); $i++) {
 				<th>Jabatan</th>
 				<th>Pekerjaan</th>
 				<th>Gaji</th>
-				<th width="10px"><?php echo anchor('employee/employee/more_info?height=400&width=320&form=5','+', 'class="thickbox" title="Informasi Riwayat Pekerjaan"')?></th>
+				<th width="10px"><?php echo anchor('employee/employee/more_info/'.@$data->pi_no.'/5?height=400&width=320&form=5','+', 'class="thickbox" title="Informasi Riwayat Pekerjaan"')?></th>
 			</tr>
 			</thead>
 			<tbody>

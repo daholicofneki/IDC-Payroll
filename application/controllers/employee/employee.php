@@ -36,6 +36,7 @@ class Employee extends MY_Controller {
 		
 		// load model
 		$this->load->model('employee_m');
+		$this->load->model('pegawai_info_keluarga_m');
 	}
 	
 	/**
@@ -119,6 +120,8 @@ class Employee extends MY_Controller {
 			//print_r($this->employee_m->get($id));
 			$this->params['data'] = $this->employee_m->get($id);
 			$this->params['labels'] = $this->employee_m->getLabels();
+			$this->params['info'][0] = $this->pegawai_info_keluarga_m->where('pi_no =', $id);
+			$this->params['l_info'][0] = $this->pegawai_info_keluarga_m->getLabels();
 
 			$this->_view('main_1_3', 'employee_edit');
 		}
@@ -128,9 +131,10 @@ class Employee extends MY_Controller {
 		}
 	}
 
-	public function more_info ()
+	public function more_info ($id, $form)
 	{
-		$this->params['module']         = $this->module;
+		$this->params['id'] = $id;
+		$this->params['form'] = $form;
 		$this->_view('main_blank', 'employee_more_info');
 	}
 

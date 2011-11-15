@@ -35,6 +35,7 @@
 	    }, 400);
 	}
 </script>
+<?php if ($form == 1) { ?>
 <div id="form_info-1">
 <?php echo form_open($module.'/form_handle',array('class'=>'form','id'=>'ajax_form','onSubmit'=>'return submit_form();'))?>
 <ul>
@@ -48,6 +49,7 @@
 </ul>
 <?php echo form_close()?>
 </div>
+<?php } else if ($form == 2) { ?>
 <div id="form_info-2">
 <?php echo form_open($module.'/form_handle',array('class'=>'form','id'=>'ajax_form','onSubmit'=>'return submit_form();'))?>
 <ul>
@@ -60,6 +62,7 @@
 </ul>
 <?php echo form_close()?>
 </div>
+<?php } else if ($form == 3) { ?>
 <div id="form_info-3">
 <?php echo form_open($module.'/form_handle',array('class'=>'form','id'=>'ajax_form','onSubmit'=>'return submit_form();'))?>
 <ul>
@@ -71,6 +74,7 @@
 </ul>
 <?php echo form_close()?>
 </div>
+<?php } else if ($form == 4) { ?>
 <div id="form_info-4">
 <?php echo form_open($module.'/form_handle',array('class'=>'form','id'=>'ajax_form','onSubmit'=>'return submit_form();'))?>
 <ul>
@@ -82,6 +86,7 @@
 </ul>
 <?php echo form_close()?>
 </div>
+<?php } else if ($form == 5) { ?>
 <div id="form_info-5">
 <?php echo form_open($module.'/form_handle',array('class'=>'form','id'=>'ajax_form','onSubmit'=>'return submit_form();'))?>
 <ul>
@@ -95,3 +100,4 @@
 </ul>
 <?php echo form_close()?>
 </div>
+<?php } ?>
