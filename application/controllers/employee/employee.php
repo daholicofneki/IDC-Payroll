@@ -24,7 +24,7 @@
 
 class Employee extends MY_Controller {
 
-	public $module = 'employee';
+	public $module = 'employee/employee';
 
 	/**
 	 * Constructor
@@ -133,8 +133,12 @@ class Employee extends MY_Controller {
 
 	public function more_info ($id, $form)
 	{
+<<<<<<< HEAD
+		$this->params['form']=$this->input->get('form');
+=======
 		$this->params['id'] = $id;
 		$this->params['form'] = $form;
+>>>>>>> d2611575e6ea464c002577d7906efeacea2c8d5b
 		$this->_view('main_blank', 'employee_more_info');
 	}
 
