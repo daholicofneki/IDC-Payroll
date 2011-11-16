@@ -130,11 +130,7 @@ echo "</pre>";
 				<th>Hubungan</th>
 				<th>Pendidikan</th>
 				<th>Pekerjaan</th>
-<<<<<<< HEAD
-				<th width="10px"><?php echo anchor($module.'/more_info?height=400&width=320&modal=true&form=1','+', 'class="thickbox" title="Informasi Keluarga"')?></th>
-=======
-				<th width="10px"><?php echo anchor('employee/employee/more_info/'.@$data->pi_no.'/1?height=400&width=320&form=1','+', 'class="thickbox" title="Informasi Keluarga"')?></th>
->>>>>>> d2611575e6ea464c002577d7906efeacea2c8d5b
+				<th width="10px"><?php echo anchor($module.'/more_info/'.@$data->pi_no.'/1?height=400&width=320&modal=true&form=1','+', 'class="thickbox" title="Informasi Keluarga"')?></th>
 			</tr>
 			</thead>
 			<tbody>
@@ -162,11 +158,7 @@ echo "</pre>";
 				<th>Tahun Lulus</th>
 				<th>Jurusan</th>
 				<th>Sertifikat</th>
-<<<<<<< HEAD
-				<th width="10px"><?php echo anchor($module.'/more_info?height=400&width=320&modal=true&form=2','+', 'class="thickbox" title="Informasi Pendidikan Formal"')?></th>
-=======
-				<th width="10px"><?php echo anchor('employee/employee/more_info/'.@$data->pi_no.'/2?height=400&width=320&form=2','+', 'class="thickbox" title="Informasi Pendidikan Formal"')?></th>
->>>>>>> d2611575e6ea464c002577d7906efeacea2c8d5b
+				<th width="10px"><?php echo anchor($module.'/more_info/'.@$data->pi_no.'/2?height=400&width=320&modal=true&form=2','+', 'class="thickbox" title="Informasi Pendidikan Formal"')?></th>
 			</tr>
 			</thead>
 			<tbody>
@@ -192,11 +184,7 @@ echo "</pre>";
 				<th>Lembaga</th>
 				<th>Kualifikasi</th>
 				<th>Tahun</th>
-<<<<<<< HEAD
-				<th width="10px"><?php echo anchor($module.'/more_info?height=400&modal=true&width=320&form=3','+', 'class="thickbox" title="Informasi Pendidikan Informal"')?></th>
-=======
-				<th width="10px"><?php echo anchor('employee/employee/more_info/'.@$data->pi_no.'/3?height=400&width=320&form=3','+', 'class="thickbox" title="Informasi Pendidikan Informal"')?></th>
->>>>>>> d2611575e6ea464c002577d7906efeacea2c8d5b
+				<th width="10px"><?php echo anchor($module.'/more_info/'.@$data->pi_no.'/3?height=400&modal=true&width=320&form=3','+', 'class="thickbox" title="Informasi Pendidikan Informal"')?></th>
 			</tr>
 			</thead>
 			<tbody>
@@ -221,11 +209,7 @@ echo "</pre>";
 				<th>Nilai Bicara</th>
 				<th>Nilai Membaca</th>
 				<th>Nilai Menulis</th>
-<<<<<<< HEAD
-				<th width="10px"><?php echo anchor($module.'/more_info?height=400&modal=true&width=320&form=4','+', 'class="thickbox" title="Informasi Bahasa"')?></th>
-=======
-				<th width="10px"><?php echo anchor('employee/employee/more_info/'.@$data->pi_no.'/4?height=400&width=320&form=4','+', 'class="thickbox" title="Informasi Bahasa"')?></th>
->>>>>>> d2611575e6ea464c002577d7906efeacea2c8d5b
+				<th width="10px"><?php echo anchor($module.'/more_info/'.@$data->pi_no.'/4?height=400&modal=true&width=320&form=4','+', 'class="thickbox" title="Informasi Bahasa"')?></th>
 			</tr>
 			</thead>
 			<tbody>
@@ -252,11 +236,7 @@ echo "</pre>";
 				<th>Jabatan</th>
 				<th>Pekerjaan</th>
 				<th>Gaji</th>
-<<<<<<< HEAD
-				<th width="10px"><?php echo anchor($module.'/more_info?height=400&width=320&modal=true&form=5','+', 'class="thickbox" title="Informasi Riwayat Pekerjaan"')?></th>
-=======
-				<th width="10px"><?php echo anchor('employee/employee/more_info/'.@$data->pi_no.'/5?height=400&width=320&form=5','+', 'class="thickbox" title="Informasi Riwayat Pekerjaan"')?></th>
->>>>>>> d2611575e6ea464c002577d7906efeacea2c8d5b
+				<th width="10px"><?php echo anchor($module.'/more_info/'.@$data->pi_no.'/5?height=400&width=320&modal=true&form=5','+', 'class="thickbox" title="Informasi Riwayat Pekerjaan"')?></th>
 			</tr>
 			</thead>
 			<tbody>
