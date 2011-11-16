@@ -40,7 +40,7 @@
 			    </li>
 			</ul>
 		    </li>
-		    <?php if ($module == 'employee'):?>
+		    <?php if ($module == 'employee/employee'):?>
 		    <li>
 			<h3 class="group">Riwayat Pekerjaan</h3>
 			<ul>
