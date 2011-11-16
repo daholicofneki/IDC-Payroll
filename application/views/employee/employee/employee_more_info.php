@@ -38,7 +38,12 @@
 		$("#form_info-<?php echo $form?>").show();	
 	})
 </script>
+<<<<<<< HEAD
 <div id="form_info-1" style="display:none">
+=======
+<?php if ($form == 1) { ?>
+<div id="form_info-1">
+>>>>>>> d2611575e6ea464c002577d7906efeacea2c8d5b
 <?php echo form_open($module.'/form_handle',array('class'=>'form','id'=>'ajax_form','onSubmit'=>'return submit_form();'))?>
 <ul>
 	<li><?php echo form_input('pi1_nama','','placeholder="Nama Lengkap"')?></li>
@@ -51,7 +56,12 @@
 </ul>
 <?php echo form_close()?>
 </div>
+<<<<<<< HEAD
 <div id="form_info-2" style="display:none">
+=======
+<?php } else if ($form == 2) { ?>
+<div id="form_info-2">
+>>>>>>> d2611575e6ea464c002577d7906efeacea2c8d5b
 <?php echo form_open($module.'/form_handle',array('class'=>'form','id'=>'ajax_form','onSubmit'=>'return submit_form();'))?>
 <ul>
 	<li><?php echo form_input('pi2_tingkat','','placeholder="Tingkat" size="5"')?></li>
@@ -63,7 +73,12 @@
 </ul>
 <?php echo form_close()?>
 </div>
+<<<<<<< HEAD
 <div id="form_info-3" style="display:none">
+=======
+<?php } else if ($form == 3) { ?>
+<div id="form_info-3">
+>>>>>>> d2611575e6ea464c002577d7906efeacea2c8d5b
 <?php echo form_open($module.'/form_handle',array('class'=>'form','id'=>'ajax_form','onSubmit'=>'return submit_form();'))?>
 <ul>
 	<li><?php echo form_input('pi3_jenis_kursus','','placeholder="Jenis Kursus"')?></li>
@@ -74,7 +89,12 @@
 </ul>
 <?php echo form_close()?>
 </div>
+<<<<<<< HEAD
 <div id="form_info-4" style="display:none">
+=======
+<?php } else if ($form == 4) { ?>
+<div id="form_info-4">
+>>>>>>> d2611575e6ea464c002577d7906efeacea2c8d5b
 <?php echo form_open($module.'/form_handle',array('class'=>'form','id'=>'ajax_form','onSubmit'=>'return submit_form();'))?>
 <ul>
 	<li><?php echo form_input('pi4_bahasa','','placeholder="Nama Bahasa"')?></li>
@@ -85,7 +105,12 @@
 </ul>
 <?php echo form_close()?>
 </div>
+<<<<<<< HEAD
 <div id="form_info-5" style="display:none">
+=======
+<?php } else if ($form == 5) { ?>
+<div id="form_info-5">
+>>>>>>> d2611575e6ea464c002577d7906efeacea2c8d5b
 <?php echo form_open($module.'/form_handle',array('class'=>'form','id'=>'ajax_form','onSubmit'=>'return submit_form();'))?>
 <ul>
 	<li><?php echo form_input('pi5_nama_perusahaan','','placeholder="Nama Pekerjaan"')?></li>
@@ -98,3 +123,4 @@
 </ul>
 <?php echo form_close()?>
 </div>
+<?php } ?>
