@@ -13,21 +13,6 @@
 		$("#formid").validate();
 	});
 </script>
-<?php
-// Explode data
-$replace = array('{','}','"');
-$var = array(@$data->pi_keluarga,@$data->pi_pendidikan_formal,@$data->pi_pendidikan_informal,@$data->pi_bahasa,@$data->pi_riwayat_pekerjaan);
-for($i=0; $i<count($var); $i++) {
-	$var[$i] = explode("},{", substr($var[$i],1,-1));
-	for($j=0; $j<count($var[$i]);$j++) {
-		$var[$i][$j] = explode(',',$var[$i][$j]);
-		$var[$i][$j] = str_replace($replace, "", $var[$i][$j]);
-	}
-}
-echo "<pre>";
-#var_dump($info);
-echo "</pre>";
-?>
 <div id="more_info">
 	<ul>
 		<li><a href="#info-1">Personal</a></li>
@@ -143,7 +128,7 @@ echo "</pre>";
 				<td><?php echo $item->pi1_hubungan ?></td>
 				<td><?php echo $item->pi1_pendidikan ?></td>
 				<td><?php echo $item->pi1_pekerjaan ?></td>
-				<td>v</td>
+				<td><?php echo anchor($module.'/more_info_edit/'.@$data->pi_no.'/'.$item->pi1_idx.'/1?height=400&width=320&modal=true&form=1','+', 'class="thickbox"')?></td>
 			</tr>
 			<?php endforeach?>
 			<?php else:?>
@@ -176,7 +161,7 @@ echo "</pre>";
 				<td><?php echo $item->pi2_tahun_lulus ?></td>
 				<td><?php echo $item->pi2_jurusan ?></td>
 				<td><?php echo $item->pi2_sertifikat ?></td>
-				<td>v</td>
+				<td><?php echo anchor($module.'/more_info_edit/'.@$data->pi_no.'/'.$item->pi2_idx.'/2?height=400&width=320&modal=true&form=1','+', 'class="thickbox"')?></td>
 			</tr>
 			<?php endforeach?>
 			<?php else:?>
@@ -207,7 +192,7 @@ echo "</pre>";
 				<td><?php echo $item->pi3_nama_lembaga ?></td>
 				<td><?php echo $item->pi3_kualifikasi ?></td>
 				<td><?php echo $item->pi3_tahun ?></td>
-				<td>v</td>
+				<td><?php echo anchor($module.'/more_info_edit/'.@$data->pi_no.'/'.$item->pi3_idx.'/3?height=400&width=320&modal=true&form=1','+', 'class="thickbox"')?></td>
 			</tr>
 			<?php endforeach?>
 			<?php else:?>
@@ -238,7 +223,7 @@ echo "</pre>";
 				<td><?php echo $item->pi4_nilai_bicara ?></td>
 				<td><?php echo $item->pi4_nilai_membaca ?></td>
 				<td><?php echo $item->pi4_nilai_menulis ?></td>
-				<td>v</td>
+				<td><?php echo anchor($module.'/more_info_edit/'.@$data->pi_no.'/'.$item->pi4_idx.'/4?height=400&width=320&modal=true&form=1','+', 'class="thickbox"')?></td>
 			</tr>
 			<?php endforeach?>
 			<?php else:?>
@@ -273,7 +258,7 @@ echo "</pre>";
 				<td><?php echo $item->pi5_jabatan ?></td>
 				<td><?php echo $item->pi5_pekerjaan ?></td>
 				<td>Rp. <?php echo $item->pi5_gaji ?></td>
-				<td>v</td>
+				<td><?php echo anchor($module.'/more_info_edit/'.@$data->pi_no.'/'.$item->pi5_idx.'/5?height=400&width=320&modal=true&form=1','+', 'class="thickbox"')?></td>
 			</tr>
 			<?php endforeach?>
 			<?php else:?>
