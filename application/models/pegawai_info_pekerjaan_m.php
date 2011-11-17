@@ -22,21 +22,21 @@
  * @category	        Model
  */
 
-class Pegawai_info_keluarga_m extends MY_Model {
+class Pegawai_info_pekerjaan_m extends MY_Model {
 
 	
 	public function __construct ()
 	{
 		parent :: __construct ();
-		$this->tableName = 'pegawai_info_keluarga';
-		$this->idx 	= 'pi1_idx';
+		$this->tableName = 'pegawai_info_pekerjaan';
+		$this->idx 	= 'pi5_idx';
 		$this->fields 	= array(
-			'pi1_nama' => array('Nama', TRUE, 'required'),
-			'pi1_jenis_kelamin' => array('Jenis Kelamin', TRUE, 'required'),
-			'pi1_umur' => array('Umur', TRUE),
-			'pi1_hubungan' => array('Hubungan Keluarga', TRUE, 'required'),
-			'pi1_pendidikan' => array('Pendidikan', TRUE),
-			'pi1_pekerjaan' => array('Pekerjaan', TRUE)
+			'pi5_nama_perusahaan' => array('Nama Perusahaan', TRUE),
+			'pi5_dari' => array('Dari', TRUE),
+			'pi5_sampai' => array('Sampai', TRUE),
+			'pi5_jabatan' => array('Jabatan', TRUE),
+			'pi5_pekerjaan' => array('Pekerjaan', TRUE),
+			'pi5_gaji' => array('Gaji', TRUE)
 		);
 	}
 
@@ -46,10 +46,10 @@ class Pegawai_info_keluarga_m extends MY_Model {
 		return parent :: save ($idx);	
 	}
 
-	public function get_info_keluarga ($pi_no)
+	public function get_info_pekerjaan ($pi_no)
 	{
 		$this->db->where('pi_no', $pi_no);
-		$this->db->order_by('pi1_umur');
+		$this->db->order_by('pi5_dari');
 		return parent :: get ();
 	}
 

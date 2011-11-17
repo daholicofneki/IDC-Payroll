@@ -25,7 +25,7 @@ for($i=0; $i<count($var); $i++) {
 	}
 }
 echo "<pre>";
-var_dump($info);
+#var_dump($info);
 echo "</pre>";
 ?>
 <div id="more_info">
@@ -44,7 +44,7 @@ echo "</pre>";
 		<h3 id="method">Edit Data Pegawai</h3>
 		<li>
 			<?php echo form_label('NIK','', array('class'=>'description'))?>
-			<?php echo form_input('pi_no',@$data->pi_no, 'size="8" readOnly')?> 
+			<?php echo form_input('pi_no',@$data->pi_no, 'size="8" readonly="readOnly"')?> 
 		</li>
 		<li>
 			<?php echo form_label('Nama, Nickname','', array('class'=>'description'))?>
@@ -134,17 +134,23 @@ echo "</pre>";
 			</tr>
 			</thead>
 			<tbody>
-			<?php if($var[0][0][0]!='' && $var[0][0][1] != '') { for($i=0; $i<count($var[0]); $i++) { ?>
+			<?php if ($info[0]):?>
+			<?php foreach ($info[0] as $item):?>
 			<tr>
-				<td><?php echo $var[0][$i][0]?></td>
-				<td><?php echo $var[0][$i][1]?></td>
-				<td><?php echo $var[0][$i][2]?></td>
-				<td><?php echo $var[0][$i][3]?></td>
-				<td><?php echo $var[0][$i][4]?></td>
-				<td><?php echo $var[0][$i][5]?></td>
+				<td><?php echo $item->pi1_nama ?></td>
+				<td align="right"><?php echo $item->pi1_umur ?></td>
+				<td><?php echo ($item->pi1_jenis_kelamin=='L')?'Laki-laki':'Perempuan' ?></td>
+				<td><?php echo $item->pi1_hubungan ?></td>
+				<td><?php echo $item->pi1_pendidikan ?></td>
+				<td><?php echo $item->pi1_pekerjaan ?></td>
 				<td>v</td>
 			</tr>
-			<?php }} ?>
+			<?php endforeach?>
+			<?php else:?>
+			<tr>
+				<td>There is no data yet</td>
+			</tr>
+			<?php endif?>
 			</tbody>
 		</table>
 	</div>
@@ -162,16 +168,22 @@ echo "</pre>";
 			</tr>
 			</thead>
 			<tbody>
-			<?php if($var[1][0][0]!='' && $var[1][0][1] != '') { for($i=0; $i<count($var[1]); $i++) { ?>
+			<?php if ($info[1]):?>
+			<?php foreach ($info[1] as $item):?>
 			<tr>
-				<td><?php echo $var[1][$i][0]?></td>
-				<td><?php echo $var[1][$i][1]?></td>
-				<td><?php echo $var[1][$i][2]?></td>
-				<td><?php echo $var[1][$i][3]?></td>
-				<td><?php echo $var[1][$i][4]?></td>
+				<td><?php echo $item->pi2_tingkat ?></td>
+				<td><?php echo $item->pi2_nama_sekolah ?></td>
+				<td><?php echo $item->pi2_tahun_lulus ?></td>
+				<td><?php echo $item->pi2_jurusan ?></td>
+				<td><?php echo $item->pi2_sertifikat ?></td>
 				<td>v</td>
 			</tr>
-			<?php }} ?>
+			<?php endforeach?>
+			<?php else:?>
+			<tr>
+				<td>There is no data yet</td>
+			</tr>
+			<?php endif?>
 			</tbody>
 		</table>
 	</div>
@@ -181,22 +193,28 @@ echo "</pre>";
 			<thead>
 			<tr>
 				<th>Jenis Kursus</th>
-				<th>Lembaga</th>
+				<th>Nama Lembaga</th>
 				<th>Kualifikasi</th>
 				<th>Tahun</th>
 				<th width="10px"><?php echo anchor($module.'/more_info/'.@$data->pi_no.'/3?height=400&modal=true&width=320&form=3','+', 'class="thickbox" title="Informasi Pendidikan Informal"')?></th>
 			</tr>
 			</thead>
 			<tbody>
-			<?php if($var[2][0][0]!='' && $var[2][0][1] != '') { for($i=0; $i<count($var[2]); $i++) { ?>
+			<?php if ($info[2]):?>
+			<?php foreach ($info[2] as $item):?>
 			<tr>
-				<td><?php echo $var[2][$i][0]?></td>
-				<td><?php echo $var[2][$i][1]?></td>
-				<td><?php echo $var[2][$i][2]?></td>
-				<td><?php echo $var[2][$i][3]?></td>
+				<td><?php echo $item->pi3_jenis_kursus ?></td>
+				<td><?php echo $item->pi3_nama_lembaga ?></td>
+				<td><?php echo $item->pi3_kualifikasi ?></td>
+				<td><?php echo $item->pi3_tahun ?></td>
 				<td>v</td>
 			</tr>
-			<?php }} ?>
+			<?php endforeach?>
+			<?php else:?>
+			<tr>
+				<td>There is no data yet</td>
+			</tr>
+			<?php endif?>
 			</tbody>
 		</table>
 	</div>
@@ -213,15 +231,21 @@ echo "</pre>";
 			</tr>
 			</thead>
 			<tbody>
-			<?php if($var[3][0][0]!='' && $var[3][0][1] != '') { for($i=0; $i<count($var[3]); $i++) { ?>
+			<?php if ($info[3]):?>
+			<?php foreach ($info[3] as $item):?>
 			<tr>
-				<td><?php echo $var[3][$i][0]?></td>
-				<td><?php echo $var[3][$i][1]?></td>
-				<td><?php echo $var[3][$i][2]?></td>
-				<td><?php echo $var[3][$i][3]?></td>
+				<td><?php echo $item->pi4_bahasa ?></td>
+				<td><?php echo $item->pi4_nilai_bicara ?></td>
+				<td><?php echo $item->pi4_nilai_membaca ?></td>
+				<td><?php echo $item->pi4_nilai_menulis ?></td>
 				<td>v</td>
 			</tr>
-			<?php }} ?>
+			<?php endforeach?>
+			<?php else:?>
+			<tr>
+				<td>There is no data yet</td>
+			</tr>
+			<?php endif?>
 			</tbody>
 		</table>
 	</div>
@@ -240,17 +264,23 @@ echo "</pre>";
 			</tr>
 			</thead>
 			<tbody>
-			<?php if($var[4][0][0]!='' && $var[4][0][1] != '') { for($i=0; $i<count($var[4]); $i++) { ?>
+			<?php if ($info[4]):?>
+			<?php foreach ($info[4] as $item):?>
 			<tr>
-				<td><?php echo $var[4][$i][0]?></td>
-				<td><?php echo $var[4][$i][1]?></td>
-				<td><?php echo $var[4][$i][2]?></td>
-				<td><?php echo $var[4][$i][3]?></td>
-				<td><?php echo $var[4][$i][4]?></td>
-				<td>Rp. <?php echo number_format($var[4][$i][5])?></td>
+				<td><?php echo $item->pi5_nama_perusahaan ?></td>
+				<td><?php echo $item->pi5_dari ?></td>
+				<td><?php echo $item->pi5_sampai ?></td>
+				<td><?php echo $item->pi5_jabatan ?></td>
+				<td><?php echo $item->pi5_pekerjaan ?></td>
+				<td>Rp. <?php echo $item->pi5_gaji ?></td>
 				<td>v</td>
 			</tr>
-			<?php }} ?>
+			<?php endforeach?>
+			<?php else:?>
+			<tr>
+				<td>There is no data yet</td>
+			</tr>
+			<?php endif?>
 			</tbody>
 		</table>
 	</div>

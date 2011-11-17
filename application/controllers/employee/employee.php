@@ -33,10 +33,13 @@ class Employee extends MY_Controller {
 	public function __construct ()
 	{
 		parent :: __construct ();
-		
-		// load model
+
 		$this->load->model('employee_m');
-		#$this->load->model('pegawai_info_keluarga_m');
+		$this->load->model(array('employee_m','pegawai_info_keluarga_m'));
+		$this->load->model(array('employee_m','pegawai_info_pendidikan_formal_m'));
+		$this->load->model(array('employee_m','pegawai_info_pendidikan_informal_m'));
+		$this->load->model(array('employee_m','pegawai_info_bahasa_m'));
+		$this->load->model(array('employee_m','pegawai_info_pekerjaan_m'));
 	}
 	
 	/**
@@ -118,10 +121,14 @@ class Employee extends MY_Controller {
 			}
 
 			//print_r($this->employee_m->get($id));
-			$this->params['data'] = $this->employee_m->get($id);
-			$this->params['labels'] = $this->employee_m->getLabels();
-			#$this->params['info'][0] = $this->pegawai_info_keluarga_m->where('pi_no =', $id);
-			#$this->params['l_info'][0] = $this->pegawai_info_keluarga_m->getLabels();
+			$this->params['data']		= $this->employee_m->get($id);
+			$this->params['labels']		= $this->employee_m->getLabels();
+
+			$this->params['info'][0]	= $this->pegawai_info_keluarga_m->get_info_keluarga($id);
+			$this->params['info'][1]	= $this->pegawai_info_pendidikan_formal_m->get_info_pendidikan_formal($id);
+			$this->params['info'][2]	= $this->pegawai_info_pendidikan_informal_m->get_info_pendidikan_informal($id);
+			$this->params['info'][3]	= $this->pegawai_info_bahasa_m->get_info_bahasa($id);
+			$this->params['info'][4]	= $this->pegawai_info_pekerjaan_m->get_info_pekerjaan($id);
 
 			$this->_view('main_1_3', 'employee_edit');
 		}

@@ -20,7 +20,7 @@
     <ul>
     	<li>
 		<?php echo form_label('NIK','', array('class'=>'description'))?>
-		<?php echo form_input('pi_no',@$data->pi_no, 'size="8" readOnly')?> 
+		<?php echo form_input('pi_no',@$data->pi_no, 'size="8" readonly="readOnly"')?> 
 				
         </li>
 	<li>

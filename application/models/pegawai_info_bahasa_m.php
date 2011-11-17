@@ -22,21 +22,19 @@
  * @category	        Model
  */
 
-class Pegawai_info_keluarga_m extends MY_Model {
+class Pegawai_info_bahasa_m extends MY_Model {
 
 	
 	public function __construct ()
 	{
 		parent :: __construct ();
-		$this->tableName = 'pegawai_info_keluarga';
-		$this->idx 	= 'pi1_idx';
+		$this->tableName = 'pegawai_info_bahasa';
+		$this->idx 	= 'pi4_idx';
 		$this->fields 	= array(
-			'pi1_nama' => array('Nama', TRUE, 'required'),
-			'pi1_jenis_kelamin' => array('Jenis Kelamin', TRUE, 'required'),
-			'pi1_umur' => array('Umur', TRUE),
-			'pi1_hubungan' => array('Hubungan Keluarga', TRUE, 'required'),
-			'pi1_pendidikan' => array('Pendidikan', TRUE),
-			'pi1_pekerjaan' => array('Pekerjaan', TRUE)
+			'pi4_bahasa' => array('Bahasa', TRUE),
+			'pi4_nilai_bicara' => array('Nilai Bicara'),
+			'pi4_nilai_membaca' => array('Nilai Membaca'),
+			'pi4_nilai_menulis' => array('Nilai Menulis'),
 		);
 	}
 
@@ -46,10 +44,10 @@ class Pegawai_info_keluarga_m extends MY_Model {
 		return parent :: save ($idx);	
 	}
 
-	public function get_info_keluarga ($pi_no)
+	public function get_info_bahasa ($pi_no)
 	{
 		$this->db->where('pi_no', $pi_no);
-		$this->db->order_by('pi1_umur');
+		$this->db->order_by('pi4_bahasa');
 		return parent :: get ();
 	}
 
