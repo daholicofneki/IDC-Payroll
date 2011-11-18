@@ -71,25 +71,26 @@ class MY_Controller extends CI_Controller {
 		$this->params['breadcrumbs']	= anchor(base_url(), 'Base Home').' &raquo; '. anchor($this->module.'/index/'.$this->uri->segment(3), $this->title).' &raquo; '.$this->method;
                 
 		// load template
-		$this->template
-
-			// loading css file
-			->add_stylesheet('screen.css')
-			->add_stylesheet('style.css')
-			->add_stylesheet('jquery-ui-1.8.16.custom.css')
-			->add_stylesheet('thickbox.css')
-
-			// loading javascript file
-			->add_javascript('jquery-1.6.2.min.js')
-			->add_javascript('jquery-ui-1.8.16.custom.min.js')
-			->add_javascript('thickbox.js')
-
-			->set_base_title($this->title)
-			->add_title_segment($this->method)
-			->set_template('layouts/'.$template) // application/views/layouts/default.php
-           
-			// and here we go ............................
-			->build($this->module.'/'.$actions, $this->params);
+		if ( ! $this->input->is_ajax_request())
+		{
+			$this->template
+				// loading css file
+				->add_stylesheet('screen.css')
+				->add_stylesheet('style.css')
+				->add_stylesheet('jquery-ui-1.8.16.custom.css')
+				
+				// loading javascript file
+				->add_javascript('jquery-1.6.2.min.js')
+				->add_javascript('jquery-ui-1.8.16.custom.min.js');
+	
+				
+		}
+		
+		$this->template ->set_base_title($this->title)
+				->add_title_segment($this->method)
+				->set_template('layouts/'.$template) // application/views/layouts/default.php
+				// and here we go ............................
+				->build($this->module.'/'.$actions, $this->params);
         }
         
         // ---------------------------------------------------------------------

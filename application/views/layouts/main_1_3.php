@@ -65,9 +65,12 @@
 <footer>
 	<div class="container">
 		<div class="span-24 last">
-			@2011 PT. Samudia Bahtera
+			@2011 PT. Samudia Bahtera Halloooo
 		</div>
 	</div>	
 </footer>
+
+<script type="text/javascript" src="<?php echo base_url()?>static/js/thickbox.js"></script>
+<link href="<?php echo base_url()?>static/css/thickbox.css" rel='stylesheet' type='text/css' />
 </body>
 </html>
