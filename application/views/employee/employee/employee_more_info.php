@@ -23,22 +23,22 @@
 	function submit_form ()
 	{
 		$('#form<?php echo $form?>').ajaxSubmit({
-		target : '#form',
-		dataType : 'json',
-		beforeSubmit    : show_loading,
-		//error           : function (){alert("Error calling ajax");hide_loading();},
-		success         : function (response){
-		    if (response.status == 2 ){
-			$('#form').html(response.text).addClass('error').fadeIn('slow');
-		    }
-		    else{
-			$('#form').html(response.text).addClass('info').fadeIn('slow');
-			tb_remove();
-		    }
-		    hide_loading();   
-		}   
-	    });
-	    return false;
+			target : '#form',
+			dataType : 'json',
+			beforeSubmit    : show_loading,
+			//error           : function (){alert("Error calling ajax");hide_loading();},
+			success         : function (response){
+			    if (response.status == 2 ){
+				$('#form').html(response.text).addClass('error').fadeIn('slow');
+			    }
+			    else{
+				$('#form').html(response.text).addClass('info').fadeIn('slow');
+				tb_remove();
+			    }
+			    hide_loading();   
+			}   
+		    });
+		    return false;
 	}
 
 	function show_loading ()
@@ -60,7 +60,7 @@
 </script>
 <div id="form_info-1" style="display:none">
 <h3>Informasi Keluarga</h3>
-<?php echo form_open(uri_string(),array('id'=>'form1', 'class'=>'form','id'=>'ajax_form','onSubmit'=>'return submit_form();'))?>
+<?php echo form_open(uri_string(),array('class'=>'form','id'=>'form1','onSubmit'=>'return submit_form();'))?>
 <ul>
 	<li><?php echo form_input('pi1_nama','','placeholder="Nama Lengkap"')?></li>
 	<li><?php echo form_dropdown('pi1_jenis_kelamin',array ('L'=>'Laki-laki','P'=>'Perempuan'),'L','class="required"') ?></li>
@@ -77,7 +77,7 @@
 <?php echo form_open(uri_string(),array('class'=>'form','id'=>'ajax_form','onSubmit'=>'return submit_form();'))?>
 <ul>
 	<li><?php echo form_input('pi2_tingkat','','placeholder="Tingkat" size="5"')?></li>
-	<li><?php echo form_input('pi2_nama_instansi','','placeholder="Nama Instansi" class="required"') ?></li>
+	<li><?php echo form_input('pi2_nama_sekolah','','placeholder="Nama Instansi" class="required"') ?></li>
 	<li><?php echo form_input('pi2_tahun_lulus','','placeholder="Tahun" size="5px"')?></li>
 	<li><?php echo form_input('pi2_jurusan','','placeholder="Jurusan"')?></li>
 	<li><?php echo form_input('pi2_sertifikasi','','placeholder="Sertifikasi"')?></li>
