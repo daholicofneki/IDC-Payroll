@@ -138,48 +138,90 @@ class Employee extends MY_Controller {
 		}
 	}
 
-	public function more_info ($id, $form)
+	public function more_info ($pi_no = FALSE, $form = FALSE , $idx = FALSE)
 	{
-		$this->params['form']=$this->input->get('form');
+		
+
+		if ($this->employee_m->getValue('pi_no', $pi_no))
+		{
+			if ($_POST)
+			{
+				
+				if ( $form == '1')
+				{
+					$model[0] = 'pi1_idx';
+					$model[1] = 'pegawai_info_keluarga_m';
+				}
+				elseif ( $form == '2')
+				{
+					$model[0] = 'pi2_idx';
+					$model[1] = 'pegawai_info_pendidikan_formal_m';
+				}
+				elseif ( $form == '3')
+				{
+					$model[0] = 'pi3_idx';
+					$model[1] = 'pegawai_info_pendidikan_informal_m';
+				}
+				elseif ( $form =='4')
+				{
+					$model[0] = 'pi4_idx';
+					$model[1] = 'pegawai_info_bahasa_m'; 
+				}
+				elseif ( $form =='5')
+				{
+					$model[0] = 'pi5_idx';
+					$model[1] = 'pegawai_info_pekerjaan_m';
+				}
+				
+				if ($this->$model[1]->isValid())
+				{
+					// if new 
+					if ($idx AND $this->$model[1]->getValue($model[0],$idx))
+					{
+						if ($this->$model[1]->save($idx,$pi_no))
+						{
+							//setSucces('Data is saved');
+							echo 'Data tersimpan';
+						}
+						else
+						{
+							//setError('Unable to save');
+							echo 'Error';
+						}
+					}
+					else
+					{
+						if ($this->$model[1]->save('',$pi_no))
+						{
+							//setSucces('Data is saved');
+							echo 'Data tersimpan';
+						}
+						else
+						{
+							//setError('Unable to save');
+							echo 'Error';
+						}
+					}
+					
+						
+				}
+				else
+				{
+					echo 'Data tidak valid';
+				}
+		
+		
+			}
+			
+		}
+		$this->params['form'] = $this->input->get('form');
 		$this->_view('main_blank', 'employee_more_info');
 	}
 	
 	public function more_info_edit ($pi_no = FALSE, $idx = FALSE, $form)
 	{
 
-		switch ($form) {
-		    case 1:
-			$model[0] = 'pi1_idx'; $model[1] = 'pegawai_info_keluarga_m'; break;
-		    case 2:
-			$model[0] = 'pi2_idx'; $model[1] = 'pegawai_info_pendidikan_formal_m'; break;
-		    case 3:
-			$model[0] = 'pi3_idx'; $model[1] = 'pegawai_info_pendidikan_informal_m'; break;
-		    case 4:
-			$model[0] = 'pi4_idx'; $model[1] = 'pegawai_info_bahasa_m'; break;
-		    case 5:
-			$model[0] = 'pi5_idx'; $model[1] = 'pegawai_info_pekerjaan_m'; break;
-		}
-
-		if ($this->employee_m->getValue('pi_no', $pi_no) AND $this->$model[1]->getValue($model[0],$idx))
-		{
-			if ($this->input->post('save'))
-			{
-				if ($this->$model[1]->isValid())
-				{
-					if ($this->$model[1]->save($idx,$pi_no))
-					{
-						setSucces('Data is saved');
-					}
-					else
-					{
-						setError('Unable to save');
-					}
-						
-				}
-			}
-			$this->params['data'] = $this->$model[1]->get($idx);
-			$this->_view('main_blank', 'employee_more_info');
-		}
+		
 	}
 
 }
