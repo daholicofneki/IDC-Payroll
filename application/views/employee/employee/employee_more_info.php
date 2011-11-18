@@ -16,21 +16,23 @@
 			maxDate: '-1d',
 			showAnim: 'fold'
 		});
+		$("#form_info-<?php echo $form?>").show();
+		$("#form<?php echo $form?>").validate();
 	});
 
 	function submit_form ()
 	{
-		$('#ajax_form').ajaxSubmit({
-		target : '#form_target',
+		$('#form<?php echo $form?>').ajaxSubmit({
+		target : '#form',
 		dataType : 'json',
 		beforeSubmit    : show_loading,
 		//error           : function (){alert("Error calling ajax");hide_loading();},
 		success         : function (response){
 		    if (response.status == 2 ){
-			$('#form_target').html(response.text).addClass('error').fadeIn('slow');
+			$('#form').html(response.text).addClass('error').fadeIn('slow');
 		    }
 		    else{
-			$('#form_target').html(response.text).addClass('info').fadeIn('slow');
+			$('#form').html(response.text).addClass('info').fadeIn('slow');
 			tb_remove();
 		    }
 		    hide_loading();   
@@ -38,6 +40,7 @@
 	    });
 	    return false;
 	}
+
 	function show_loading ()
 	{
 	    setTimeout(function(){
@@ -46,6 +49,7 @@
 		
 	    }, 100);
 	}
+
 	function hide_loading(){
 	    setTimeout(function(){
 		$('#loading-layer').hide();
@@ -53,13 +57,10 @@
 	       
 	    }, 400);
 	}
-	$(document).ready(function(){
-		$("#form_info-<?php echo $form?>").show();	
-	})
 </script>
 <div id="form_info-1" style="display:none">
 <h3>Informasi Keluarga</h3>
-<?php echo form_open(uri_string(),array('class'=>'form','id'=>'ajax_form','onSubmit'=>'return submit_form();'))?>
+<?php echo form_open(uri_string(),array('id'=>'form1', 'class'=>'form','id'=>'ajax_form','onSubmit'=>'return submit_form();'))?>
 <ul>
 	<li><?php echo form_input('pi1_nama','','placeholder="Nama Lengkap"')?></li>
 	<li><?php echo form_dropdown('pi1_jenis_kelamin',array ('L'=>'Laki-laki','P'=>'Perempuan'),'L','class="required"') ?></li>

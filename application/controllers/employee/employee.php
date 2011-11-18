@@ -57,7 +57,7 @@ class Employee extends MY_Controller {
 		//return parent :: index ('');
 		$this->_view('main_1_3', 'employee');
 	}
-	
+
 	/**
 	 * Add New Employee
 	 *
@@ -178,9 +178,6 @@ class Employee extends MY_Controller {
 				}
 			}
 			$this->params['data'] = $this->$model[1]->get($idx);
-			#$this->params['label_emp'] = $this->employee_m->getLabels();
-			#$this->params['labels'] = $this->$model[1]->getLabels();
-			#$this->params['emp'] = $this->$model[1]->get($idx);
 			$this->_view('main_blank', 'employee_more_info');
 		}
 	}
