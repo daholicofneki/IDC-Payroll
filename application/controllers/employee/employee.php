@@ -207,15 +207,20 @@ class Employee extends MY_Controller {
 				}
 				else
 				{
-					echo 'Data tidak valid';
+					echo json_encode(array('status'=>'2', 'text'=> showErrors ()));
 				}
 		
 		
 			}
+			else
+			{
+				$this->params['form'] = $this->input->get('form');
+				$this->_view('main_blank', 'employee_more_info');
+			}
 			
 		}
-		$this->params['form'] = $this->input->get('form');
-		$this->_view('main_blank', 'employee_more_info');
+		
+		
 	}
 	
 	public function more_info_edit ($pi_no = FALSE, $idx = FALSE, $form)
