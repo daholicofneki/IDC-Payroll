@@ -34,12 +34,14 @@ class Employee extends MY_Controller {
 	{
 		parent :: __construct ();
 
-		$this->load->model('employee_m');
-		$this->load->model(array('employee_m','pegawai_info_keluarga_m'));
-		$this->load->model(array('employee_m','pegawai_info_pendidikan_formal_m'));
-		$this->load->model(array('employee_m','pegawai_info_pendidikan_informal_m'));
-		$this->load->model(array('employee_m','pegawai_info_bahasa_m'));
-		$this->load->model(array('employee_m','pegawai_info_pekerjaan_m'));
+		$this->load->model(array(
+			'employee_m',
+			'pegawai_info_keluarga_m',
+			'pegawai_info_pendidikan_formal_m',
+			'pegawai_info_pendidikan_informal_m',
+			'pegawai_info_bahasa_m',
+			'pegawai_info_pekerjaan_m'
+		));
 	}
 	
 	/**
