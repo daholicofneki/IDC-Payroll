@@ -283,34 +283,34 @@ class Employee extends MY_Controller {
 	{
 		if ($this->employee_m->getValue('pi_no', $pi_no))
 		{
+			if ( $form == '2')
+			{
+				$model[0] = 'pi1_idx';
+				$model[1] = 'pegawai_info_keluarga_m';
+			}
+			elseif ( $form == '3')
+			{
+				$model[0] = 'pi2_idx';
+				$model[1] = 'pegawai_info_pendidikan_formal_m';
+			}
+			elseif ( $form == '4')
+			{
+				$model[0] = 'pi3_idx';
+				$model[1] = 'pegawai_info_pendidikan_informal_m';
+			}
+			elseif ( $form == '5')
+			{
+				$model[0] = 'pi4_idx';
+				$model[1] = 'pegawai_info_bahasa_m';
+			}
+			elseif ( $form == '6')
+			{
+				$model[0] = 'pi5_idx';
+				$model[1] = 'pegawai_info_pekerjaan_m';
+			}
+
 			if ($_POST)
 			{
-				if ( $form == '2')
-				{
-					$model[0] = 'pi1_idx';
-					$model[1] = 'pegawai_info_keluarga_m';
-				}
-				elseif ( $form == '3')
-				{
-					$model[0] = 'pi2_idx';
-					$model[1] = 'pegawai_info_pendidikan_formal_m';
-				}
-				elseif ( $form == '4')
-				{
-					$model[0] = 'pi3_idx';
-					$model[1] = 'pegawai_info_pendidikan_informal_m';
-				}
-				elseif ( $form == '5')
-				{
-					$model[0] = 'pi4_idx';
-					$model[1] = 'pegawai_info_bahasa_m'; 
-				}
-				elseif ( $form == '6')
-				{
-					$model[0] = 'pi5_idx';
-					$model[1] = 'pegawai_info_pekerjaan_m';
-				}
-
 				if ($this->$model[1]->isValid())
 				{
 					if ($idx AND $this->$model[1]->getValue($model[0],$idx))
@@ -343,8 +343,8 @@ class Employee extends MY_Controller {
 			}
 			else
 			{
-				$this->params['data']		= $this->pegawai_info_keluarga_m->get_info_keluarga_idx($idx);
-				$this->params['labels']		= $this->pegawai_info_keluarga_m->getLabels();
+				$this->params['data']	= $this->$model[1]->get($idx, $model[0]);
+				$this->params['labels']	= $this->$model[1]->getLabels();
 				$this->params['form'] = $this->input->get('form');
 				$this->_view('main_blank', 'employee_more_info');
 			}

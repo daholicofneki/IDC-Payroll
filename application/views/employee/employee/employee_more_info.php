@@ -76,43 +76,43 @@
 <div id="form_info-3" style="display:none">
 <h3>Informasi Pendidikan Formal</h3>
 <ul>
-	<li><?php echo form_input('pi2_tingkat','','placeholder="Tingkat" size="5"')?></li>
-	<li><?php echo form_input('pi2_nama_sekolah','','placeholder="Nama Instansi" class="required"') ?></li>
-	<li><?php echo form_input('pi2_tahun_lulus','','placeholder="Tahun" size="5px"')?></li>
-	<li><?php echo form_input('pi2_jurusan','','placeholder="Jurusan"')?></li>
-	<li><?php echo form_input('pi2_sertifikasi','','placeholder="Sertifikasi"')?></li>
+	<li><?php echo form_input('pi2_tingkat',@$data->pi2_tingkat,'placeholder="Tingkat" size="5"')?></li>
+	<li><?php echo form_input('pi2_nama_sekolah',@$data->pi2_nama_sekolah,'placeholder="Nama Instansi" class="required"') ?></li>
+	<li><?php echo form_input('pi2_tahun_lulus',@$data->pi2_tahun_lulus,'placeholder="Tahun" size="5px"')?></li>
+	<li><?php echo form_input('pi2_jurusan',@$data->pi2_jurusan,'placeholder="Jurusan"')?></li>
+	<li><?php echo form_input('pi2_sertifikasi',@$data->pi2_sertifikasi,'placeholder="Sertifikasi"')?></li>
 	<li class="form_handle"><?php echo form_submit('save','Save Data', 'class="awesome medium blue"')?> <?php echo form_button('close','Close', 'class="awesome medium blue" onclick="tb_remove()"')?></li>
 </ul>
 </div>
 <div id="form_info-4" style="display:none">
 <h3>Informasi Pendidikan Informal</h3>
 <ul>
-	<li><?php echo form_input('pi3_jenis_kursus','','placeholder="Jenis Kursus"')?></li>
-	<li><?php echo form_input('pi3_nama_lembaga','','placeholder="Nama Lembaga" class="required"') ?></li>
-	<li><?php echo form_input('pi3_kualifikasi','','placeholder="Kualifikasi"')?></li>
-	<li><?php echo form_input('pi3_tahun','','placeholder="Tahun" size="5"')?></li>
+	<li><?php echo form_input('pi3_jenis_kursus',@$data->pi3_jenis_kursus,'placeholder="Jenis Kursus"')?></li>
+	<li><?php echo form_input('pi3_nama_lembaga',@$data->pi3_nama_lembaga,'placeholder="Nama Lembaga" class="required"') ?></li>
+	<li><?php echo form_input('pi3_kualifikasi',@$data->pi3_kualifikasi,'placeholder="Kualifikasi"')?></li>
+	<li><?php echo form_input('pi3_tahun',@$data->pi3_tahun,'placeholder="Tahun" size="5"')?></li>
 	<li class="form_handle"><?php echo form_submit('save','Save Data', 'class="awesome medium blue"')?> <?php echo form_button('close','Close', 'class="awesome medium blue" onclick="tb_remove()"')?></li>
 </ul>
 </div>
 <div id="form_info-5" style="display:none">
 <h3>Informasi Bahasa</h3>
 <ul>
-	<li><?php echo form_input('pi4_bahasa','','placeholder="Nama Bahasa"')?></li>
-	<li><?php echo form_label('Nilai Bicara')?><?php echo form_input_type('number','pi4_nilai_bicara','','min="0" max="5" style="width:50px"')?> dari 5</li>
-	<li><?php echo form_label('Nilai Membaca')?><?php echo form_input_type('number','pi4_nilai_membaca','','min="0" max="5" style="width:50px"')?> dari 5</li>
-	<li><?php echo form_label('Nilai Menulis')?><?php echo form_input_type('number','pi4_nilai_menulis','','min="0" max="5" style="width:50px"')?> dari 5</li>
+	<li><?php echo form_input('pi4_bahasa',@$data->pi4_bahasa,'placeholder="Nama Bahasa"')?></li>
+	<li><?php echo form_label('Nilai Bicara')?><?php echo form_input_type('number','pi4_nilai_bicara',@$data->pi4_nilai_bicara,'min="0" max="5" style="width:50px"')?> dari 5</li>
+	<li><?php echo form_label('Nilai Membaca')?><?php echo form_input_type('number','pi4_nilai_membaca',@$data->pi4_nilai_membaca,'min="0" max="5" style="width:50px"')?> dari 5</li>
+	<li><?php echo form_label('Nilai Menulis')?><?php echo form_input_type('number','pi4_nilai_menulis',@$data->pi4_nilai_menulis,'min="0" max="5" style="width:50px"')?> dari 5</li>
 	<li class="form_handle"><?php echo form_submit('save','Save Data', 'class="awesome medium blue"')?> <?php echo form_button('close','Close', 'class="awesome medium blue" onclick="tb_remove()"')?></li>
 </ul>
 </div>
 <div id="form_info-6" style="display:none">
 <h3>Informasi Riwayat Pekerjaan</h3>
 <ul>
-	<li><?php echo form_input('pi5_nama_perusahaan','','placeholder="Nama Pekerjaan"')?></li>
-	<li><?php echo form_input('pi5_dari','','placeholder="Dari" size="12px" id="riwayat_kerja_dari" placeholder="yyyy/mm/dd" class="required datepicker"')?></li>
-	<li><?php echo form_input('pi5_sampai','','placeholder="Sampai" size="12px" id="riwayat_kerja_sampai" placeholder="yyyy/mm/dd" class="required datepicker"')?></li>
-	<li><?php echo form_input('pi5_jabatan','','placeholder="Jabatan"')?></li>
-	<li><?php echo form_input('pi5_pekerjaan','','placeholder="Pekerjaan"')?></li>
-	<li>Rp <?php echo form_input('pi5_gaji','','placeholder="Gaji"')?></li>
+	<li><?php echo form_input('pi5_nama_perusahaan',@$data->pi5_nama_perusahaan,'placeholder="Nama Pekerjaan"')?></li>
+	<li><?php echo form_input('pi5_dari',@$data->pi5_dari,'placeholder="Dari" size="12px" id="riwayat_kerja_dari" placeholder="yyyy/mm/dd" class="required datepicker"')?></li>
+	<li><?php echo form_input('pi5_sampai',@$data->pi5_sampai,'placeholder="Sampai" size="12px" id="riwayat_kerja_sampai" placeholder="yyyy/mm/dd" class="required datepicker"')?></li>
+	<li><?php echo form_input('pi5_jabatan',@$data->pi5_jabatan,'placeholder="Jabatan"')?></li>
+	<li><?php echo form_input('pi5_pekerjaan',@$data->pi5_pekerjaan,'placeholder="Pekerjaan"')?></li>
+	<li>Rp <?php echo form_input('pi5_gaji',@$data->pi5_gaji,'placeholder="Gaji"')?></li>
 	<li class="form_handle"><?php echo form_submit('save','Save Data', 'class="awesome medium blue"')?> <?php echo form_button('close','Close', 'class="awesome medium blue" onclick="tb_remove()"')?></li>
 </ul>
 </div>

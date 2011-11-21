@@ -53,9 +53,4 @@ class Pegawai_info_keluarga_m extends MY_Model {
 		return parent :: get ();
 	}
 
-	public function get_info_keluarga_idx ($idx)
-	{
-		$this->db->where('pi1_idx', $idx);
-		return parent :: get ();
-	}
 }
