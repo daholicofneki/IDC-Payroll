@@ -33,10 +33,10 @@ class Pegawai_info_keluarga_m extends MY_Model {
 		$this->fields 	= array(
 			'pi1_nama' => array('Nama', TRUE, 'required'),
 			'pi1_jenis_kelamin' => array('Jenis Kelamin', TRUE, 'required'),
-			'pi1_umur' => array('Umur', TRUE),
+			'pi1_umur' => array('Umur', TRUE, 'required'),
 			'pi1_hubungan' => array('Hubungan Keluarga', TRUE, 'required'),
-			'pi1_pendidikan' => array('Pendidikan', TRUE),
-			'pi1_pekerjaan' => array('Pekerjaan', TRUE)
+			'pi1_pendidikan' => array('Pendidikan'),
+			'pi1_pekerjaan' => array('Pekerjaan')
 		);
 	}
 
@@ -49,8 +49,13 @@ class Pegawai_info_keluarga_m extends MY_Model {
 	public function get_info_keluarga ($pi_no)
 	{
 		$this->db->where('pi_no', $pi_no);
-		$this->db->order_by('pi1_umur');
+		$this->db->order_by('pi1_umur DESC');
 		return parent :: get ();
 	}
 
+	public function get_info_keluarga_idx ($idx)
+	{
+		$this->db->where('pi1_idx', $idx);
+		return parent :: get ();
+	}
 }

@@ -49,7 +49,7 @@ class Pegawai_info_pekerjaan_m extends MY_Model {
 	public function get_info_pekerjaan ($pi_no)
 	{
 		$this->db->where('pi_no', $pi_no);
-		$this->db->order_by('pi5_dari');
+		$this->db->order_by('pi5_sampai DESC, pi5_dari DESC');
 		return parent :: get ();
 	}
 

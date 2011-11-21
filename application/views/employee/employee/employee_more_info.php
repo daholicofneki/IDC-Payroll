@@ -34,7 +34,7 @@
 			    }
 			    else{
 				$('#error_console').html(response.text).addClass('info').fadeIn('slow');
-				ajax_link('<?php echo base_url().$module ; ?>/ajax_detail/<?php echo $this->uri->segment(4)?>/form2','#info2');
+				ajax_link('<?php echo base_url().$module ; ?>/employee_edit_ajax/<?php echo $this->uri->segment(4)?>/form-<?php echo $form ?>','#info<?php echo $form ?>');
 				tb_remove();
 			    }
 			    hide_loading();   
@@ -48,7 +48,6 @@
 	    setTimeout(function(){
 		$('#loading-layer').show();
 		$('#loading').show();
-		
 	    }, 100);
 	}
 
@@ -56,26 +55,25 @@
 	    setTimeout(function(){
 		$('#loading-layer').hide();
 		$('#loading').hide();
-	       
 	    }, 400);
 	}
 </script>
 
 <?php echo form_open(uri_string(),array('class'=>'form','id'=>'form','onSubmit'=>'return submit_form();'))?>
 <div id="error_console"></div>
-<div id="form_info-1" style="display:none">
+<div id="form_info-2" style="display:none">
 <h3>Informasi Keluarga</h3>
 <ul>
-	<li><?php echo form_input('pi1_nama','','placeholder="Nama Lengkap"')?></li>
-	<li><?php echo form_dropdown('pi1_jenis_kelamin',array ('L'=>'Laki-laki','P'=>'Perempuan'),'L','class="required"') ?></li>
-	<li><?php echo form_input('pi1_umur','','placeholder="Umur" size="5px" class="required num"')?></li>
-	<li><?php echo form_input('pi1_hubungan','','placeholder="Hubungan Keluarga"')?></li>
-	<li><?php echo form_input('pi1_pendidikan','','placeholder="Pendidikan" size="8"')?></li>
-	<li><?php echo form_input('pi1_pekerjaan','','placeholder="Pekerjaan"')?></li>
+	<li><?php echo form_input('pi1_nama',@$data->pi1_nama,'placeholder="Nama Lengkap"')?></li>
+	<li><?php echo form_dropdown('pi1_jenis_kelamin',array ('L'=>'Laki-laki','P'=>'Perempuan'),(@$data->pi1_jenis_kelamin=='')?'L':@$data->pi1_jenis_kelamin,'class="required"') ?></li>
+	<li><?php echo form_input('pi1_umur',@$data->pi1_umur,'placeholder="Umur" size="5px" class="required num"')?></li>
+	<li><?php echo form_input('pi1_hubungan',@$data->pi1_hubungan,'placeholder="Hubungan Keluarga"')?></li>
+	<li><?php echo form_input('pi1_pendidikan',@$data->pi1_pendidikan,'placeholder="Pendidikan" size="8"')?></li>
+	<li><?php echo form_input('pi1_pekerjaan',@$data->pi1_pekerjaan,'placeholder="Pekerjaan"')?></li>
 	<li class="form_handle"><?php echo form_submit('save','Save Data', 'class="awesome medium blue"')?> <?php echo form_button('close','Close', 'class="awesome medium blue" onclick="tb_remove()"')?></li>
 </ul>
 </div>
-<div id="form_info-2" style="display:none">
+<div id="form_info-3" style="display:none">
 <h3>Informasi Pendidikan Formal</h3>
 <ul>
 	<li><?php echo form_input('pi2_tingkat','','placeholder="Tingkat" size="5"')?></li>
@@ -86,7 +84,7 @@
 	<li class="form_handle"><?php echo form_submit('save','Save Data', 'class="awesome medium blue"')?> <?php echo form_button('close','Close', 'class="awesome medium blue" onclick="tb_remove()"')?></li>
 </ul>
 </div>
-<div id="form_info-3" style="display:none">
+<div id="form_info-4" style="display:none">
 <h3>Informasi Pendidikan Informal</h3>
 <ul>
 	<li><?php echo form_input('pi3_jenis_kursus','','placeholder="Jenis Kursus"')?></li>
@@ -96,7 +94,7 @@
 	<li class="form_handle"><?php echo form_submit('save','Save Data', 'class="awesome medium blue"')?> <?php echo form_button('close','Close', 'class="awesome medium blue" onclick="tb_remove()"')?></li>
 </ul>
 </div>
-<div id="form_info-4" style="display:none">
+<div id="form_info-5" style="display:none">
 <h3>Informasi Bahasa</h3>
 <ul>
 	<li><?php echo form_input('pi4_bahasa','','placeholder="Nama Bahasa"')?></li>
@@ -106,7 +104,7 @@
 	<li class="form_handle"><?php echo form_submit('save','Save Data', 'class="awesome medium blue"')?> <?php echo form_button('close','Close', 'class="awesome medium blue" onclick="tb_remove()"')?></li>
 </ul>
 </div>
-<div id="form_info-5" style="display:none">
+<div id="form_info-6" style="display:none">
 <h3>Informasi Riwayat Pekerjaan</h3>
 <ul>
 	<li><?php echo form_input('pi5_nama_perusahaan','','placeholder="Nama Pekerjaan"')?></li>

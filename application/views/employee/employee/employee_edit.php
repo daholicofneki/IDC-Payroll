@@ -116,7 +116,7 @@
 				<th>Hubungan</th>
 				<th>Pendidikan</th>
 				<th>Pekerjaan</th>
-				<th width="10px"><?php echo anchor($module.'/more_info/'.@$data->pi_no.'/1?height=400&width=320&modal=true&form=1','+', 'class="thickbox" title="Informasi Keluarga"')?></th>
+				<th width="10px"><?php echo anchor($module.'/more_info/'.@$data->pi_no.'/2?height=400&width=320&modal=true&form=2','+', 'class="thickbox" title="Informasi Keluarga"')?></th>
 			</tr>
 			</thead>
 			<tbody id="info2">
@@ -129,7 +129,7 @@
 				<td><?php echo $item->pi1_hubungan ?></td>
 				<td><?php echo $item->pi1_pendidikan ?></td>
 				<td><?php echo $item->pi1_pekerjaan ?></td>
-				<td><?php echo anchor($module.'/more_info_edit/'.@$data->pi_no.'/'.$item->pi1_idx.'/1?height=400&width=320&modal=true&form=1','+', 'class="thickbox"')?></td>
+				<td><?php echo anchor($module.'/more_info/'.@$data->pi_no.'/2/'.$item->pi1_idx.'?height=400&width=320&modal=true&form=2','+', 'class="thickbox"')?></td>
 			</tr>
 			<?php endforeach?>
 			<?php else:?>
@@ -150,10 +150,10 @@
 				<th>Tahun Lulus</th>
 				<th>Jurusan</th>
 				<th>Sertifikat</th>
-				<th width="10px"><?php echo anchor($module.'/more_info/'.@$data->pi_no.'/2?height=400&width=320&modal=true&form=2','+', 'class="thickbox" title="Informasi Pendidikan Formal"')?></th>
+				<th width="10px"><?php echo anchor($module.'/more_info/'.@$data->pi_no.'/3?height=400&width=320&modal=true&form=3','+', 'class="thickbox" title="Informasi Pendidikan Formal"')?></th>
 			</tr>
 			</thead>
-			<tbody>
+			<tbody id="info3">
 			<?php if ($info[1]):?>
 			<?php foreach ($info[1] as $item):?>
 			<tr>
@@ -162,7 +162,7 @@
 				<td><?php echo $item->pi2_tahun_lulus ?></td>
 				<td><?php echo $item->pi2_jurusan ?></td>
 				<td><?php echo $item->pi2_sertifikat ?></td>
-				<td><?php echo anchor($module.'/more_info_edit/'.@$data->pi_no.'/'.$item->pi2_idx.'/2?height=400&width=320&modal=true&form=1','+', 'class="thickbox"')?></td>
+				<td><?php echo anchor($module.'/more_info/'.@$data->pi_no.'/3/'.$item->pi2_idx.'?height=400&width=320&modal=true&form=3','+', 'class="thickbox"')?></td>
 			</tr>
 			<?php endforeach?>
 			<?php else:?>
@@ -182,10 +182,10 @@
 				<th>Nama Lembaga</th>
 				<th>Kualifikasi</th>
 				<th>Tahun</th>
-				<th width="10px"><?php echo anchor($module.'/more_info/'.@$data->pi_no.'/3?height=400&modal=true&width=320&form=3','+', 'class="thickbox" title="Informasi Pendidikan Informal"')?></th>
+				<th width="10px"><?php echo anchor($module.'/more_info/'.@$data->pi_no.'/4?height=400&modal=true&width=320&form=4','+', 'class="thickbox" title="Informasi Pendidikan Informal"')?></th>
 			</tr>
 			</thead>
-			<tbody>
+			<tbody id="info4">
 			<?php if ($info[2]):?>
 			<?php foreach ($info[2] as $item):?>
 			<tr>
@@ -193,7 +193,7 @@
 				<td><?php echo $item->pi3_nama_lembaga ?></td>
 				<td><?php echo $item->pi3_kualifikasi ?></td>
 				<td><?php echo $item->pi3_tahun ?></td>
-				<td><?php echo anchor($module.'/more_info_edit/'.@$data->pi_no.'/'.$item->pi3_idx.'/3?height=400&width=320&modal=true&form=1','+', 'class="thickbox"')?></td>
+				<td><?php echo anchor($module.'/more_info/'.@$data->pi_no.'/4/'.$item->pi3_idx.'?height=400&width=320&modal=true&form=4','+', 'class="thickbox"')?></td>
 			</tr>
 			<?php endforeach?>
 			<?php else:?>
@@ -213,10 +213,10 @@
 				<th>Nilai Bicara</th>
 				<th>Nilai Membaca</th>
 				<th>Nilai Menulis</th>
-				<th width="10px"><?php echo anchor($module.'/more_info/'.@$data->pi_no.'/4?height=400&modal=true&width=320&form=4','+', 'class="thickbox" title="Informasi Bahasa"')?></th>
+				<th width="10px"><?php echo anchor($module.'/more_info/'.@$data->pi_no.'/5?height=400&modal=true&width=320&form=5','+', 'class="thickbox" title="Informasi Bahasa"')?></th>
 			</tr>
 			</thead>
-			<tbody>
+			<tbody id="info5">
 			<?php if ($info[3]):?>
 			<?php foreach ($info[3] as $item):?>
 			<tr>
@@ -224,7 +224,7 @@
 				<td><?php echo $item->pi4_nilai_bicara ?></td>
 				<td><?php echo $item->pi4_nilai_membaca ?></td>
 				<td><?php echo $item->pi4_nilai_menulis ?></td>
-				<td><?php echo anchor($module.'/more_info_edit/'.@$data->pi_no.'/'.$item->pi4_idx.'/4?height=400&width=320&modal=true&form=1','+', 'class="thickbox"')?></td>
+				<td><?php echo anchor($module.'/more_info/'.@$data->pi_no.'/5/'.$item->pi4_idx.'?height=400&width=320&modal=true&form=5','+', 'class="thickbox"')?></td>
 			</tr>
 			<?php endforeach?>
 			<?php else:?>
@@ -246,10 +246,10 @@
 				<th>Jabatan</th>
 				<th>Pekerjaan</th>
 				<th>Gaji</th>
-				<th width="10px"><?php echo anchor($module.'/more_info/'.@$data->pi_no.'/5?height=400&width=320&modal=true&form=5','+', 'class="thickbox" title="Informasi Riwayat Pekerjaan"')?></th>
+				<th width="10px"><?php echo anchor($module.'/more_info/'.@$data->pi_no.'/6?height=400&width=320&modal=true&form=6','+', 'class="thickbox" title="Informasi Riwayat Pekerjaan"')?></th>
 			</tr>
 			</thead>
-			<tbody>
+			<tbody id="info6">
 			<?php if ($info[4]):?>
 			<?php foreach ($info[4] as $item):?>
 			<tr>
@@ -259,7 +259,7 @@
 				<td><?php echo $item->pi5_jabatan ?></td>
 				<td><?php echo $item->pi5_pekerjaan ?></td>
 				<td>Rp. <?php echo $item->pi5_gaji ?></td>
-				<td><?php echo anchor($module.'/more_info_edit/'.@$data->pi_no.'/'.$item->pi5_idx.'/5?height=400&width=320&modal=true&form=1','+', 'class="thickbox"')?></td>
+				<td><?php echo anchor($module.'/more_info/'.@$data->pi_no.'/6/'.$item->pi5_idx.'?height=400&width=320&modal=true&form=6','+', 'class="thickbox"')?></td>
 			</tr>
 			<?php endforeach?>
 			<?php else:?>
