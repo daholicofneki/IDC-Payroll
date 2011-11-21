@@ -1,4 +1,5 @@
 <script src="<?php echo base_url()?>static/js/jquery.validate.js" type="text/javascript"></script>
+<script src="<?php echo base_url()?>static/js/helper.js" type="text/javascript"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
 		$("#dob").datepicker({
@@ -118,7 +119,7 @@
 				<th width="10px"><?php echo anchor($module.'/more_info/'.@$data->pi_no.'/1?height=400&width=320&modal=true&form=1','+', 'class="thickbox" title="Informasi Keluarga"')?></th>
 			</tr>
 			</thead>
-			<tbody>
+			<tbody id="info2">
 			<?php if ($info[0]):?>
 			<?php foreach ($info[0] as $item):?>
 			<tr>
