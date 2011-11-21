@@ -137,7 +137,47 @@ class Employee extends MY_Controller {
 			redirect ($this->module.'/index');
 		}
 	}
-
+	
+	/**
+	 * Get Ajax data Tabel
+	 *
+	 * @access	public
+	 * @param	integer
+	 * @param 	string form
+	 * @return	void
+	 */
+	
+	public function ajax_detail ($id = FALSE, $idx_form = FALSE)
+	{
+		if ($id AND $this->employee_m->get($id))
+		{
+			if ( $idx_form = 'form2')
+			{
+				$data = $this->pegawai_info_keluarga_m->get_info_keluarga($id);
+				
+				echo '<tbody id="info2">';
+					if ( $data ):
+						foreach ($data as $item):
+						echo '<tr>';
+							echo '<td>'.$item->pi1_nama.'</td>';
+							echo '<td align="right">'. $item->pi1_umur .'</td>';
+							echo '<td>'. ($item->pi1_jenis_kelamin=='L')?'Laki-laki':'Perempuan' .'</td>';
+							echo '<td>'. $item->pi1_hubungan .'</td>';
+							echo '<td>'. $item->pi1_pendidikan .'</td>';
+							echo '<td>'. $item->pi1_pekerjaan .'</td>';
+							echo '<td>'.anchor($this->module.'/more_info_edit/'.@$data->pi_no.'/'.$item->pi1_idx.'/1?height=400&width=320&modal=true&form=1','+', 'class="thickbox"').'</td>';
+						echo '</tr>';
+						endforeach;
+					else:
+						echo '<tr>
+							<td>There is no data yet</td>
+						</tr>';
+					endif;
+				echo '</tbody>';
+			}
+		}
+	}
+	
 	public function more_info ($pi_no = FALSE, $form = FALSE , $idx = FALSE)
 	{
 		
@@ -180,26 +220,22 @@ class Employee extends MY_Controller {
 					{
 						if ($this->$model[1]->save($idx,$pi_no))
 						{
-							//setSucces('Data is saved');
-							echo 'Data tersimpan';
+							echo json_encode(array('status'=>'1', 'text'=> 'Unable is edited'));
 						}
 						else
 						{
-							//setError('Unable to save');
-							echo 'Error';
+							echo json_encode(array('status'=>'2', 'text'=> 'Unable to save data'));
 						}
 					}
 					else
 					{
 						if ($this->$model[1]->save('',$pi_no))
 						{
-							//setSucces('Data is saved');
-							echo 'Data tersimpan';
+							echo json_encode(array('status'=>'1', 'text'=> 'Data is saved'));
 						}
 						else
 						{
-							//setError('Unable to save');
-							echo 'Error';
+							echo json_encode(array('status'=>'2', 'text'=> 'Unable to save data'));
 						}
 					}
 					

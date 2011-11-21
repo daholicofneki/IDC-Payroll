@@ -24,7 +24,7 @@
 	function submit_form ()
 	{
 		$('#form').ajaxSubmit({
-			target : '#form',
+			target : '#error_console',
 			dataType : 'json',
 			beforeSubmit    : show_loading,
 			//error           : function (){alert("Error calling ajax");hide_loading();},
@@ -34,6 +34,7 @@
 			    }
 			    else{
 				$('#error_console').html(response.text).addClass('info').fadeIn('slow');
+				ajax_link('<?php echo base_url().$module ; ?>/ajax_detail/<?php echo $this->uri->segment(4)?>/form2','#info2');
 				tb_remove();
 			    }
 			    hide_loading();   
