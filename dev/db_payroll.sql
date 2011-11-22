@@ -161,3 +161,32 @@ COPY tb_pegawai_info_pendidikan_formal (pi2_idx, pi_no, pi2_tingkat, pi2_nama_se
 COPY tb_pegawai_info_pendidikan_informal (pi3_idx, pi_no, pi3_jenis_kursus, pi3_nama_lembaga, pi3_kualifikasi, pi3_tahun) FROM stdin;
 1	IP0001	Inggris	LIA	Bahasa Inggris	2007
 \.
+
+
+
+CREATE TABLE tb_peraturan
+(
+	idx SERIAL NOT NULL,
+	ptkp_tk0 numeric(9,2) NOT NULL DEFAULT 0,
+        ptkp_k0 numeric(9,2) NOT NULL DEFAULT 0,
+        ptkp_k1 numeric(9,2) NOT NULL DEFAULT 0,
+        ptkp_k2 numeric(9,2) NOT NULL DEFAULT 0,
+        ptkp_k3 numeric(9,2) NOT NULL DEFAULT 0,
+        
+        pph21_1_dari numeric(9,2) NOT NULL DEFAULT 0,
+        pph21_1_sampai numeric(9,2) NOT NULL DEFAULT 0,
+        pph21_1_persen numeric(3,2) NOT NULL DEFAULT 0,
+        pph21_2_dari numeric(9,2) NOT NULL DEFAULT 0,
+        pph21_2_sampai numeric(9,2) NOT NULL DEFAULT 0,
+        pph21_2_persen numeric(3,2) NOT NULL DEFAULT 0,
+        pph21_3_dari numeric(9,2) NOT NULL DEFAULT 0,
+        pph21_3_sampai numeric(9,2) NOT NULL DEFAULT 0,
+        pph21_3_persen numeric(3,2) NOT NULL DEFAULT 0,
+        pph21_4_dari numeric(9,2) NOT NULL DEFAULT 0,
+        pph21_4_persen numeric(3,2) NOT NULL DEFAULT 0,
+
+	lastupdated_by_account character varying(16) NOT NULL,
+	lastupdated_timestamp timestamp without time zone NOT NULL DEFAULT now(),
+
+	CONSTRAINT tb_peraturan_idx_pk PRIMARY KEY (idx)
+);

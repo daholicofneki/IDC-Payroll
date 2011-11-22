@@ -68,7 +68,7 @@ class MY_Controller extends CI_Controller {
 		$this->params['actions']		= $actions;
 		$this->params['module']			= $this->module;
 		$this->params['method']			= $this->method;
-		$this->params['breadcrumbs']	= anchor(base_url(), 'Base Home').' &raquo; '. anchor($this->module.'/index/'.$this->uri->segment(3), $this->title).' &raquo; '.$this->method;
+		$this->params['breadcrumbs']		= anchor(base_url(), 'Base Home').' &raquo; '. anchor($this->module.'/index/'.$this->uri->segment(3), $this->title).' &raquo; '.$this->method;
                 
 		// load template
 		if ( ! $this->input->is_ajax_request())

@@ -51,6 +51,37 @@
 			    </li>
 			</ul>
 		    </li>
+		    
+		    <li>
+			<h3 class="group">Peraturan Pemerintah</h3>
+			<ul>
+			    <li>
+				<?php echo anchor('employee/employee/add_new_employee','PTKP')?>
+			    </li>
+			    <li>
+				<?php echo anchor('employee/employee/index','PPH 21')?>
+			    </li>
+			    <li>
+				<?php echo anchor('employee/employee/index','Jamsostek')?>
+			    </li>
+			</ul>
+		    </li>
+		    <li>
+			<h3 class="group">Peraturan Perusahaan</h3>
+			<ul>
+			    <li>
+				<?php echo anchor('employee/employee/add_new_employee','Umum')?>
+			    </li>
+			    <li>
+				<?php echo anchor('employee/employee/index','Staff')?>
+			    </li>
+			    <li>
+				<?php echo anchor('employee/employee/index','Supir')?>
+			    </li>
+			    <li>
+				<?php echo anchor('employee/employee/index','SPG')?>
+			    </li>
+			</ul>
 		    </li>
 		</ul>
 	</div>
@@ -63,7 +94,7 @@
 <footer>
 	<div class="container">
 		<div class="span-24 last">
-			@2011 PT. Samudia Bahtera Halloooo
+			@2011 PT. Samudia Bahtera
 		</div>
 	</div>	
 </footer>
