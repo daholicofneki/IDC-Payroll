@@ -308,33 +308,28 @@ class Employee extends MY_Controller {
 					{
 						if ($this->$model[1]->save($idx,$pi_no))
 						{
-							$status[0] = '1';
-							$status[1] = 'Data is saved';
+							$status = array('1', 'Data is saved');
 						}
 						else
 						{
-							$status[0] = '2';
-							$status[1] = 'Unable to save data';
+							$status = array('2', 'Unable to save data');
 						}
 					}
 					else
 					{
 						if ($this->$model[1]->save('',$pi_no))
 						{
-							$status[0] = '1';
-							$status[1] = 'Data is saved';
+							$status = array('1', 'Data is saved');
 						}
 						else
 						{
-							$status[0] = '2';
-							$status[1] = 'Unable to save data';
+							$status = array('2', 'Unable to save data');
 						}
 					}
 				}
 				else
 				{
-					$status[0] = '2';
-					$status[1] = showErrors();
+					$status = array('2', showErrors());
 				}
 				echo json_encode(array('status'=>$status[0], 'text'=>$status[1]));
 			}
@@ -380,24 +375,19 @@ class Employee extends MY_Controller {
 	{
 		switch ($form_id) {
 			case 2:
-				$model[0] = 'pi1_idx';
-				$model[1] = 'pegawai_info_keluarga_m';
+				$model = array('pi1_idx', 'pegawai_info_keluarga_m');
 				break;
 			case 3:
-				$model[0] = 'pi2_idx';
-				$model[1] = 'pegawai_info_pendidikan_formal_m';
+				$model = array('pi2_idx', 'pegawai_info_pendidikan_formal_m');
 				break;
 			case 4:
-				$model[0] = 'pi3_idx';
-				$model[1] = 'pegawai_info_pendidikan_informal_m';
+				$model = array('pi3_idx', 'pegawai_info_pendidikan_informal_m');
 				break;
 			case 5:
-				$model[0] = 'pi4_idx';
-				$model[1] = 'pegawai_info_bahasa_m';
+				$model = array('pi4_idx', 'pegawai_info_bahasa_m');
 				break;
 			case 6:
-				$model[0] = 'pi5_idx';
-				$model[1] = 'pegawai_info_pekerjaan_m';
+				$model = array('pi5_idx', 'pegawai_info_pekerjaan_m');
 				break;
 		}
 
