@@ -18,10 +18,10 @@
 		</div>
 		<div class="span-24 last navbar">        
 		    <ul class="nq_menu-nav">
-			<li><a href="#">Setup</a></li>
+			<li><?php echo anchor('regulation/setup','Regulation')?></li>
 			<li><a href="#">Sallary</a></li>
 			<li><a href="#">Time &amp; Absence</a></li>
-			<li><a href="#">Employee</a></li>
+			<li><?php echo anchor('employee/employee','Employee')?></li>
 		    </ul>
 		</div>
         </div>
@@ -40,19 +40,17 @@
 			    </li>
 			</ul>
 		    </li>
-		    <?php if ($module == 'employee/employee'):?>
 		    <li>
 			<h3 class="group">Riwayat Pekerjaan</h3>
 			<ul>
 			    <li>
-				<?php echo anchor('employee/job_history/add_new_job','Tambah Pekerjaan')?>
+				<?php echo anchor('employee/job_history_add','Tambah Pekerjaan')?>
 			    </li>
 			    <li>
-				<?php echo anchor('employee/job_history/index','Daftar')?>
+				<?php echo anchor('employee/job_history','Daftar')?>
 			    </li>
 			</ul>
 		    </li>
-		    <?php endif?>
 		    </li>
 		</ul>
 	</div>

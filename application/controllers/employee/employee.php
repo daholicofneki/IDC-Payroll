@@ -24,7 +24,7 @@
 
 class Employee extends MY_Controller {
 
-	public $module = 'employee/employee';
+	public $module = array('employee/employee', 'employee', 'employee');
 
 	/**
 	 * Constructor

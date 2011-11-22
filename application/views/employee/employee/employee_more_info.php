@@ -34,7 +34,7 @@
 			    }
 			    else{
 				$('#error_console').html(response.text).addClass('info').fadeIn('slow');
-				ajax_link('<?php echo base_url().$module ; ?>/employee_edit_ajax/<?php echo $this->uri->segment(4)?>/form-<?php echo $form ?>','#info<?php echo $form ?>');
+				ajax_link('<?php echo base_url().$module[0] ; ?>/employee_edit_ajax/<?php echo $this->uri->segment(4)?>/form-<?php echo $form ?>','#info<?php echo $form ?>');
 				tb_remove();
 			    }
 			    hide_loading();   

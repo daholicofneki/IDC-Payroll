@@ -90,7 +90,7 @@ class MY_Controller extends CI_Controller {
 				->add_title_segment($this->method)
 				->set_template('layouts/'.$template) // application/views/layouts/default.php
 				// and here we go ............................
-				->build($this->module.'/'.$actions, $this->params);
+				->build($this->module[0].'/'.$actions, $this->params);
         }
         
         // ---------------------------------------------------------------------

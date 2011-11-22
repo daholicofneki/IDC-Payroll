@@ -90,7 +90,7 @@
 
 	<li class="form_handle">
             <?php echo form_submit('save','Save Data Employee', 'class="awesome medium blue"')?>
-	    <?php echo anchor('employee/'. $module.'/index','Cancel Save', 'class="awesome medium red"')?>
+	    <?php echo anchor($module[0].'/index','Cancel Save', 'class="awesome medium red"')?>
         </li>
 
     </ul>
