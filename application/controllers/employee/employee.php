@@ -308,29 +308,35 @@ class Employee extends MY_Controller {
 					{
 						if ($this->$model[1]->save($idx,$pi_no))
 						{
-							echo json_encode(array('status'=>'1', 'text'=> 'Unable to edited'));
+							$status[0] = '1';
+							$status[1] = 'Data is saved';
 						}
 						else
 						{
-							echo json_encode(array('status'=>'2', 'text'=> 'Unable to save data'));
+							$status[0] = '2';
+							$status[1] = 'Unable to save data';
 						}
 					}
 					else
 					{
 						if ($this->$model[1]->save('',$pi_no))
 						{
-							echo json_encode(array('status'=>'1', 'text'=> 'Data is saved'));
+							$status[0] = '1';
+							$status[1] = 'Data is saved';
 						}
 						else
 						{
-							echo json_encode(array('status'=>'2', 'text'=> 'Unable to save data'));
+							$status[0] = '2';
+							$status[1] = 'Unable to save data';
 						}
 					}
 				}
 				else
 				{
-					echo json_encode(array('status'=>'2', 'text'=> showErrors ()));
+					$status[0] = '2';
+					$status[1] = showErrors();
 				}
+				echo json_encode(array('status'=>$status[0], 'text'=>$status[1]));
 			}
 			else
 			{
