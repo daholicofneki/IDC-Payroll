@@ -98,9 +98,9 @@
 <h3>Informasi Bahasa</h3>
 <ul>
 	<li><?php echo form_input('pi4_bahasa',@$data->pi4_bahasa,'placeholder="Nama Bahasa"')?></li>
-	<li><?php echo form_label('Nilai Bicara')?><?php echo form_input_type('number','pi4_nilai_bicara',@$data->pi4_nilai_bicara,'min="0" max="5" style="width:50px"')?> dari 5</li>
-	<li><?php echo form_label('Nilai Membaca')?><?php echo form_input_type('number','pi4_nilai_membaca',@$data->pi4_nilai_membaca,'min="0" max="5" style="width:50px"')?> dari 5</li>
-	<li><?php echo form_label('Nilai Menulis')?><?php echo form_input_type('number','pi4_nilai_menulis',@$data->pi4_nilai_menulis,'min="0" max="5" style="width:50px"')?> dari 5</li>
+	<li><?php echo form_label('Nilai Bicara')?><?php echo form_input_type('number','pi4_nilai_bicara',(@$data->pi4_nilai_bicara=='')?0:@$data->pi4_nilai_bicara,'min="0" max="5" style="width:50px"')?> dari 5</li>
+	<li><?php echo form_label('Nilai Membaca')?><?php echo form_input_type('number','pi4_nilai_membaca',(@$data->pi4_nilai_membaca=='')?0:@$data->pi4_nilai_membaca,'min="0" max="5" style="width:50px"')?> dari 5</li>
+	<li><?php echo form_label('Nilai Menulis')?><?php echo form_input_type('number','pi4_nilai_menulis',(@$data->pi4_nilai_menulis=='')?0:@$data->pi4_nilai_menulis,'min="0" max="5" style="width:50px"')?> dari 5</li>
 	<li class="form_handle"><?php echo form_submit('save','Save Data', 'class="awesome medium blue"')?> <?php echo form_button('close','Close', 'class="awesome medium blue" onclick="tb_remove()"')?></li>
 </ul>
 </div>

@@ -160,13 +160,16 @@ class Employee extends MY_Controller {
 						foreach ($data as $item):
 						$item->pi1_jenis_kelamin = ($item->pi1_jenis_kelamin == 'L') ? 'Laki-laki':'Perempuan';
 						echo "<tr>\n";
-							echo "\t<td>". $item->pi1_nama ."</td>\n";
-							echo "\t<td align=\"right\">". $item->pi1_umur ."</td>\n";
-							echo "\t<td>". $item->pi1_jenis_kelamin ."</td>\n";
-							echo "\t<td>". $item->pi1_hubungan . "</td>\n";
-							echo "\t<td>". $item->pi1_pendidikan . "</td>\n";
-							echo "\t<td>". $item->pi1_pekerjaan . "</td>\n";
-							echo "\t<td>". anchor($this->module.'/more_info/'.@$item->pi_no.'/'.$item->pi1_idx.'/1?height=400&width=320&modal=true&form=1','+', 'class="thickbox"')."</td>\n";
+						echo "\t<td>". $item->pi1_nama ."</td>\n";
+						echo "\t<td align=\"right\">". $item->pi1_umur ."</td>\n";
+						echo "\t<td>". $item->pi1_jenis_kelamin ."</td>\n";
+						echo "\t<td>". $item->pi1_hubungan . "</td>\n";
+						echo "\t<td>". $item->pi1_pendidikan . "</td>\n";
+						echo "\t<td>". $item->pi1_pekerjaan . "</td>\n";
+						echo "\t<td>\n".
+							anchor($this->module.'/more_info/'.@$item->pi_no.'/2/'.$item->pi1_idx.'?height=400&width=320&modal=true&form=2','&nbsp;', 'class="i-edit thickbox"')."\n".
+							anchor($this->module.'/more_info_delete/'.@$item->pi_no.'/2/'.$item->pi1_idx.'?height=400&width=320&modal=true&form=2','&nbsp;', 'class="i-delete"')."\n".
+						      "\t</td>\n";
 						echo "</tr>\n";
 						endforeach;
 					else:
@@ -184,12 +187,15 @@ class Employee extends MY_Controller {
 					if ( $data ):
 						foreach ($data as $item):
 						echo "<tr>\n";
-							echo "\t<td>". $item->pi2_tingkat ."</td>\n";
-							echo "\t<td>". $item->pi2_nama_sekolah ."</td>\n";
-							echo "\t<td>". $item->pi2_tahun_lulus ."</td>\n";
-							echo "\t<td>". $item->pi2_jurusan ."</td>\n";
-							echo "\t<td>". $item->pi2_sertifikat ."</td>\n";
-							echo "\t<td>". anchor($this->module.'/more_info/'.@$item->pi_no.'/'.$item->pi2_idx.'/1?height=400&width=320&modal=true&form=2','+', 'class="thickbox"'). "</td>\n";
+						echo "\t<td>". $item->pi2_tingkat ."</td>\n";
+						echo "\t<td>". $item->pi2_nama_sekolah ."</td>\n";
+						echo "\t<td>". $item->pi2_tahun_lulus ."</td>\n";
+						echo "\t<td>". $item->pi2_jurusan ."</td>\n";
+						echo "\t<td>". $item->pi2_sertifikat ."</td>\n";
+						echo "\t<td>\n".
+							anchor($this->module.'/more_info/'.@$item->pi_no.'/3/'.$item->pi2_idx.'?height=400&width=320&modal=true&form=3','&nbsp;', 'class="i-edit thickbox"')."\n".
+							anchor($this->module.'/more_info_delete/'.@$item->pi_no.'/3/'.$item->pi2_idx.'?height=400&width=320&modal=true&form=3','&nbsp;', 'class="i-delete"')."\n".
+						      "\t</td>\n";
 						echo "</tr>\n";
 						endforeach;
 					else:
@@ -207,11 +213,14 @@ class Employee extends MY_Controller {
 					if ( $data ):
 						foreach ($data as $item):
 						echo "<tr>";
-							echo "\t<td>". $item->pi3_jenis_kursus ."</td>\n";
-							echo "\t<td>". $item->pi3_nama_lembaga ."</td>\n";
-							echo "\t<td>". $item->pi3_kualifikasi ."</td>\n";
-							echo "\t<td>". $item->pi3_tahun ."</td>\n";
-							echo "\t<td>". anchor($this->module.'/more_info/'.@$item->pi_no.'/'.$item->pi3_idx.'/1?height=400&width=320&modal=true&form=3','+', 'class="thickbox"') ."</td>\n";
+						echo "\t<td>". $item->pi3_jenis_kursus ."</td>\n";
+						echo "\t<td>". $item->pi3_nama_lembaga ."</td>\n";
+						echo "\t<td>". $item->pi3_kualifikasi ."</td>\n";
+						echo "\t<td>". $item->pi3_tahun ."</td>\n";
+						echo "\t<td>\n".
+							anchor($this->module.'/more_info/'.@$item->pi_no.'/4/'.$item->pi3_idx.'?height=400&width=320&modal=true&form=4','&nbsp;', 'class="i-edit thickbox"')."\n".
+							anchor($this->module.'/more_info_delete/'.@$item->pi_no.'/4/'.$item->pi3_idx.'?height=400&width=320&modal=true&form=4','&nbsp;', 'class="i-delete"')."\n".
+						      "\t</td>\n";
 						echo "</tr>";
 						endforeach;
 					else:
@@ -229,11 +238,14 @@ class Employee extends MY_Controller {
 					if ( $data ):
 						foreach ($data as $item):
 						echo "<tr>";
-							echo "\t<td>". $item->pi4_bahasa ."</td>\n";
-							echo "\t<td>". $item->pi4_nilai_bicara ."</td>\n";
-							echo "\t<td>". $item->pi4_nilai_membaca ."</td>\n";
-							echo "\t<td>". $item->pi4_nilai_menulis ."</td>\n";
-							echo "\t<td>". anchor($this->module.'/more_info/'.@$item->pi_no.'/'.$item->pi4_idx.'/1?height=400&width=320&modal=true&form=4','+', 'class="thickbox"') ."</td>\n";
+						echo "\t<td>". $item->pi4_bahasa ."</td>\n";
+						echo "\t<td style=\"text-align:center\">"; for($i=0; $i<$item->pi4_nilai_bicara; $i++) { echo "* "; } echo "</td>\n";
+						echo "\t<td style=\"text-align:center\">"; for($i=0; $i<$item->pi4_nilai_membaca; $i++) { echo "* "; } echo "</td>\n";
+						echo "\t<td style=\"text-align:center\">"; for($i=0; $i<$item->pi4_nilai_menulis; $i++) { echo "* "; } echo "</td>\n";
+						echo "\t<td>\n".
+							anchor($this->module.'/more_info/'.@$item->pi_no.'/5/'.$item->pi4_idx.'?height=400&width=320&modal=true&form=5','&nbsp;', 'class="i-edit thickbox"')."\n".
+							anchor($this->module.'/more_info_delete/'.@$item->pi_no.'/5/'.$item->pi4_idx.'?height=400&width=320&modal=true&form=5','&nbsp;', 'class="i-delete"')."\n".
+						      "\t</td>\n";
 						echo "</tr>";
 						endforeach;
 					else:
@@ -251,13 +263,16 @@ class Employee extends MY_Controller {
 					if ( $data ):
 						foreach ($data as $item):
 						echo "<tr>";
-							echo "\t<td>". $item->pi5_nama_perusahaan."</td>\n";
-							echo "\t<td>". $item->pi5_dari ."</td>\n";
-							echo "\t<td>". $item->pi5_sampai ."</td>\n";
-							echo "\t<td>". $item->pi5_jabatan ."</td>\n";
-							echo "\t<td>". $item->pi5_pekerjaan ."</td>\n";
-							echo '<td>Rp. '. $item->pi5_gaji ."</td>\n";
-							echo "\t<td>". anchor($this->module.'/more_info/'.@$item->pi_no.'/'.$item->pi5_idx.'/1?height=400&width=320&modal=true&form=5','+', 'class="thickbox"') ."</td>\n";
+						echo "\t<td>". $item->pi5_nama_perusahaan."</td>\n";
+						echo "\t<td>". $item->pi5_dari ."</td>\n";
+						echo "\t<td>". $item->pi5_sampai ."</td>\n";
+						echo "\t<td>". $item->pi5_jabatan ."</td>\n";
+						echo "\t<td>". $item->pi5_pekerjaan ."</td>\n";
+						echo '<td>Rp. '. $item->pi5_gaji ."</td>\n";
+						echo "\t<td>\n".
+							anchor($this->module.'/more_info/'.@$item->pi_no.'/6/'.$item->pi5_idx.'?height=400&width=320&modal=true&form=6','&nbsp;', 'class="i-edit thickbox"')."\n".
+							anchor($this->module.'/more_info_delete/'.@$item->pi_no.'/6/'.$item->pi5_idx.'?height=400&width=320&modal=true&form=6','&nbsp;', 'class="i-delete"')."\n".
+						      "\t</td>\n";
 						echo "</tr>";
 						endforeach;
 					else:
@@ -283,31 +298,7 @@ class Employee extends MY_Controller {
 	{
 		if ($this->employee_m->getValue('pi_no', $pi_no))
 		{
-			if ( $form == '2')
-			{
-				$model[0] = 'pi1_idx';
-				$model[1] = 'pegawai_info_keluarga_m';
-			}
-			elseif ( $form == '3')
-			{
-				$model[0] = 'pi2_idx';
-				$model[1] = 'pegawai_info_pendidikan_formal_m';
-			}
-			elseif ( $form == '4')
-			{
-				$model[0] = 'pi3_idx';
-				$model[1] = 'pegawai_info_pendidikan_informal_m';
-			}
-			elseif ( $form == '5')
-			{
-				$model[0] = 'pi4_idx';
-				$model[1] = 'pegawai_info_bahasa_m';
-			}
-			elseif ( $form == '6')
-			{
-				$model[0] = 'pi5_idx';
-				$model[1] = 'pegawai_info_pekerjaan_m';
-			}
+			$model = $this->_get_type_form($form);
 
 			if ($_POST)
 			{
@@ -351,6 +342,61 @@ class Employee extends MY_Controller {
 		}
 	}
 
+	/**
+	 * Delete detail employee
+	 *
+	 * @access	public
+	 * @param 	char		pi_no
+	 * @param 	integer		form
+	 * @param 	integer		idx
+	 * @return	void
+	 */
+	public function more_info_delete ($id, $form_id, $idx)
+	{
+		$model = $this->_get_type_form($form_id);
+
+		if ($idx AND $this->$model[1]->get($idx))
+		{
+			$this->$model[1]->delete($idx);
+			redirect ($this->module .'/edit_employee/'.$id.'#info-'.$form_id);
+		}
+	}
+
+
+	/**
+	 * Get type form model
+	 *
+	 * @access	private
+	 * @param 	integer
+	 * @return	array
+	 */
+	private function _get_type_form ($form_id)
+	{
+		switch ($form_id) {
+			case 2:
+				$model[0] = 'pi1_idx';
+				$model[1] = 'pegawai_info_keluarga_m';
+				break;
+			case 3:
+				$model[0] = 'pi2_idx';
+				$model[1] = 'pegawai_info_pendidikan_formal_m';
+				break;
+			case 4:
+				$model[0] = 'pi3_idx';
+				$model[1] = 'pegawai_info_pendidikan_informal_m';
+				break;
+			case 5:
+				$model[0] = 'pi4_idx';
+				$model[1] = 'pegawai_info_bahasa_m';
+				break;
+			case 6:
+				$model[0] = 'pi5_idx';
+				$model[1] = 'pegawai_info_pekerjaan_m';
+				break;
+		}
+
+		return $model;
+	}
 }
 /* End class employee */
 /* Location ./application/controllers/employee.php */

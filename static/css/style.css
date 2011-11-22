@@ -161,3 +161,9 @@ textarea.hint {border-color: #DD4B39; }
 .orange.awesome:hover					{ background-color: #d45500; }
 .yellow.awesome, .yellow.awesome:visited		{ background-color: #ffb515; }
 .yellow.awesome:hover					{ background-color: #fc9200; }
+
+
+.i-add		{ background: url(../image/bullet_plus.png) left no-repeat; padding-left:10px; }
+.i-edit		{ background: url(../image/bullet_edit.png) left no-repeat; padding-left:10px; }
+.i-delete	{ background: url(../image/bullet_cross.png) left no-repeat; padding-left:10px; }
+
