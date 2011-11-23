@@ -81,7 +81,7 @@ class Employee extends MY_Controller {
 				if ($this->employee_m->save())
 				{
 					setSucces('Data is saved');
-					redirect ($this->module.'/edit_employee/'.$this->input->post('emp_idx'));
+					redirect ($this->module[0].'/edit_employee/'.$this->input->post('emp_idx'));
 				}
 				else
 				{
@@ -135,7 +135,7 @@ class Employee extends MY_Controller {
 		}
 		else
 		{
-			redirect ($this->module.'/index');
+			redirect ($this->module[0].'/index');
 		}
 	}
 	
@@ -167,8 +167,8 @@ class Employee extends MY_Controller {
 						echo "\t<td>". $item->pi1_pendidikan . "</td>\n";
 						echo "\t<td>". $item->pi1_pekerjaan . "</td>\n";
 						echo "\t<td>\n".
-							anchor($this->module.'/more_info/'.@$item->pi_no.'/2/'.$item->pi1_idx.'?height=400&width=320&modal=true&form=2','&nbsp;', 'class="i-edit thickbox"')."\n".
-							anchor($this->module.'/more_info_delete/'.@$item->pi_no.'/2/'.$item->pi1_idx.'?height=400&width=320&modal=true&form=2','&nbsp;', 'class="i-delete"')."\n".
+							anchor($this->module[0].'/more_info/'.@$item->pi_no.'/2/'.$item->pi1_idx.'?height=400&width=320&modal=true','&nbsp;', 'class="i-edit thickbox"')."\n".
+							anchor($this->module[0].'/more_info_delete/'.@$item->pi_no.'/2/'.$item->pi1_idx.'?height=400&width=320&modal=true','&nbsp;', 'class="i-delete"')."\n".
 						      "\t</td>\n";
 						echo "</tr>\n";
 						endforeach;
@@ -193,8 +193,8 @@ class Employee extends MY_Controller {
 						echo "\t<td>". $item->pi2_jurusan ."</td>\n";
 						echo "\t<td>". $item->pi2_sertifikat ."</td>\n";
 						echo "\t<td>\n".
-							anchor($this->module.'/more_info/'.@$item->pi_no.'/3/'.$item->pi2_idx.'?height=400&width=320&modal=true&form=3','&nbsp;', 'class="i-edit thickbox"')."\n".
-							anchor($this->module.'/more_info_delete/'.@$item->pi_no.'/3/'.$item->pi2_idx.'?height=400&width=320&modal=true&form=3','&nbsp;', 'class="i-delete"')."\n".
+							anchor($this->module[0].'/more_info/'.@$item->pi_no.'/3/'.$item->pi2_idx.'?height=400&width=320&modal=true','&nbsp;', 'class="i-edit thickbox"')."\n".
+							anchor($this->module[0].'/more_info_delete/'.@$item->pi_no.'/3/'.$item->pi2_idx.'?height=400&width=320&modal=true','&nbsp;', 'class="i-delete"')."\n".
 						      "\t</td>\n";
 						echo "</tr>\n";
 						endforeach;
@@ -218,8 +218,8 @@ class Employee extends MY_Controller {
 						echo "\t<td>". $item->pi3_kualifikasi ."</td>\n";
 						echo "\t<td>". $item->pi3_tahun ."</td>\n";
 						echo "\t<td>\n".
-							anchor($this->module.'/more_info/'.@$item->pi_no.'/4/'.$item->pi3_idx.'?height=400&width=320&modal=true&form=4','&nbsp;', 'class="i-edit thickbox"')."\n".
-							anchor($this->module.'/more_info_delete/'.@$item->pi_no.'/4/'.$item->pi3_idx.'?height=400&width=320&modal=true&form=4','&nbsp;', 'class="i-delete"')."\n".
+							anchor($this->module[0].'/more_info/'.@$item->pi_no.'/4/'.$item->pi3_idx.'?height=400&width=320&modal=true','&nbsp;', 'class="i-edit thickbox"')."\n".
+							anchor($this->module[0].'/more_info_delete/'.@$item->pi_no.'/4/'.$item->pi3_idx.'?height=400&width=320&modal=true','&nbsp;', 'class="i-delete"')."\n".
 						      "\t</td>\n";
 						echo "</tr>";
 						endforeach;
@@ -243,8 +243,8 @@ class Employee extends MY_Controller {
 						echo "\t<td style=\"text-align:center\">"; for($i=0; $i<$item->pi4_nilai_membaca; $i++) { echo "* "; } echo "</td>\n";
 						echo "\t<td style=\"text-align:center\">"; for($i=0; $i<$item->pi4_nilai_menulis; $i++) { echo "* "; } echo "</td>\n";
 						echo "\t<td>\n".
-							anchor($this->module.'/more_info/'.@$item->pi_no.'/5/'.$item->pi4_idx.'?height=400&width=320&modal=true&form=5','&nbsp;', 'class="i-edit thickbox"')."\n".
-							anchor($this->module.'/more_info_delete/'.@$item->pi_no.'/5/'.$item->pi4_idx.'?height=400&width=320&modal=true&form=5','&nbsp;', 'class="i-delete"')."\n".
+							anchor($this->module[0].'/more_info/'.@$item->pi_no.'/5/'.$item->pi4_idx.'?height=400&width=320&modal=true','&nbsp;', 'class="i-edit thickbox"')."\n".
+							anchor($this->module[0].'/more_info_delete/'.@$item->pi_no.'/5/'.$item->pi4_idx.'?height=400&width=320&modal=true','&nbsp;', 'class="i-delete"')."\n".
 						      "\t</td>\n";
 						echo "</tr>";
 						endforeach;
@@ -270,8 +270,8 @@ class Employee extends MY_Controller {
 						echo "\t<td>". $item->pi5_pekerjaan ."</td>\n";
 						echo '<td>Rp. '. $item->pi5_gaji ."</td>\n";
 						echo "\t<td>\n".
-							anchor($this->module.'/more_info/'.@$item->pi_no.'/6/'.$item->pi5_idx.'?height=400&width=320&modal=true&form=6','&nbsp;', 'class="i-edit thickbox"')."\n".
-							anchor($this->module.'/more_info_delete/'.@$item->pi_no.'/6/'.$item->pi5_idx.'?height=400&width=320&modal=true&form=6','&nbsp;', 'class="i-delete"')."\n".
+							anchor($this->module[0].'/more_info/'.@$item->pi_no.'/6/'.$item->pi5_idx.'?height=400&width=320&modal=true','&nbsp;', 'class="i-edit thickbox"')."\n".
+							anchor($this->module[0].'/more_info_delete/'.@$item->pi_no.'/6/'.$item->pi5_idx.'?height=400&width=320&modal=true','&nbsp;', 'class="i-delete"')."\n".
 						      "\t</td>\n";
 						echo "</tr>";
 						endforeach;
@@ -335,9 +335,9 @@ class Employee extends MY_Controller {
 			}
 			else
 			{
-				$this->params['data']	= $this->$model[1]->get($idx, $model[0]);
-				$this->params['labels']	= $this->$model[1]->getLabels();
-				$this->params['form'] = $this->input->get('form');
+				$this->params['data'] = $this->$model[1]->get($idx, $model[0]);
+				$this->params['labels'] = $this->$model[1]->getLabels();
+				$this->params['form'] = $form;
 				$this->_view('main_blank', 'employee_more_info');
 			}
 		}
@@ -359,7 +359,7 @@ class Employee extends MY_Controller {
 		if ($idx AND $this->$model[1]->get($idx))
 		{
 			$this->$model[1]->delete($idx);
-			redirect ($this->module .'/edit_employee/'.$id.'#info-'.$form_id);
+			redirect ($this->module[0] .'/edit_employee/'.$id.'#info-'.$form_id);
 		}
 	}
 

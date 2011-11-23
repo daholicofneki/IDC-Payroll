@@ -116,7 +116,7 @@
 				<th>Hubungan</th>
 				<th>Pendidikan</th>
 				<th>Pekerjaan</th>
-				<th width="40px"><?php echo anchor($module[0].'/more_info/'.@$data->pi_no.'/2?height=400&width=320&modal=true&form=2','&nbsp;', 'class="i-add thickbox" title="Informasi Keluarga"')?></th>
+				<th width="40px"><?php echo anchor($module[0].'/more_info/'.@$data->pi_no.'/2?height=400&width=320&modal=true','&nbsp;', 'class="i-add thickbox" title="Informasi Keluarga"')?></th>
 			</tr>
 			</thead>
 			<tbody id="info2">
@@ -130,8 +130,8 @@
 				<td><?php echo $item->pi1_pendidikan ?></td>
 				<td><?php echo $item->pi1_pekerjaan ?></td>
 				<td align="right">
-					<?php echo anchor($module[0].'/more_info/'.@$data->pi_no.'/2/'.$item->pi1_idx.'?height=400&width=320&modal=true&form=2','&nbsp;', 'class="i-edit thickbox"')?>
-					<?php echo anchor($module[0].'/more_info_delete/'.@$data->pi_no.'/2/'.$item->pi1_idx.'?height=400&width=320&modal=true&form=2','&nbsp;', 'class="i-delete"')?>
+					<?php echo anchor($module[0].'/more_info/'.@$data->pi_no.'/2/'.$item->pi1_idx.'?height=400&width=320&modal=true','&nbsp;', 'class="i-edit thickbox"')?>
+					<?php echo anchor($module[0].'/more_info_delete/'.@$data->pi_no.'/2/'.$item->pi1_idx.'?height=400&width=320&modal=true','&nbsp;', 'class="i-delete"')?>
 				</td>
 			</tr>
 			<?php endforeach?>
@@ -153,7 +153,7 @@
 				<th>Tahun Lulus</th>
 				<th>Jurusan</th>
 				<th>Sertifikat</th>
-				<th width="40px"><?php echo anchor($module[0].'/more_info/'.@$data->pi_no.'/3?height=400&width=320&modal=true&form=3','&nbsp;', 'class="i-add thickbox" title="Informasi Pendidikan Formal"')?></th>
+				<th width="40px"><?php echo anchor($module[0].'/more_info/'.@$data->pi_no.'/3?height=400&width=320&modal=true','&nbsp;', 'class="i-add thickbox" title="Informasi Pendidikan Formal"')?></th>
 			</tr>
 			</thead>
 			<tbody id="info3">
@@ -166,8 +166,8 @@
 				<td><?php echo $item->pi2_jurusan ?></td>
 				<td><?php echo $item->pi2_sertifikat ?></td>
 				<td>
-					<?php echo anchor($module[0].'/more_info/'.@$data->pi_no.'/3/'.$item->pi2_idx.'?height=400&width=320&modal=true&form=3','&nbsp;', 'class="i-edit thickbox"')?>
-					<?php echo anchor($module[0].'/more_info_delete/'.@$data->pi_no.'/3/'.$item->pi2_idx.'?height=400&width=320&modal=true&form=3','&nbsp;', 'class="i-delete"')?>
+					<?php echo anchor($module[0].'/more_info/'.@$data->pi_no.'/3/'.$item->pi2_idx.'?height=400&width=320&modal=true','&nbsp;', 'class="i-edit thickbox"')?>
+					<?php echo anchor($module[0].'/more_info_delete/'.@$data->pi_no.'/3/'.$item->pi2_idx.'?height=400&width=320&modal=true','&nbsp;', 'class="i-delete"')?>
 				</td>
 			</tr>
 			<?php endforeach?>
@@ -188,7 +188,7 @@
 				<th>Nama Lembaga</th>
 				<th>Kualifikasi</th>
 				<th>Tahun</th>
-				<th width="40px"><?php echo anchor($module[0].'/more_info/'.@$data->pi_no.'/4?height=400&modal=true&width=320&form=4','&nbsp;', 'class="i-add thickbox" title="Informasi Pendidikan Informal"')?></th>
+				<th width="40px"><?php echo anchor($module[0].'/more_info/'.@$data->pi_no.'/4?height=400&modal=true&width=320','&nbsp;', 'class="i-add thickbox" title="Informasi Pendidikan Informal"')?></th>
 			</tr>
 			</thead>
 			<tbody id="info4">
@@ -200,8 +200,8 @@
 				<td><?php echo $item->pi3_kualifikasi ?></td>
 				<td><?php echo $item->pi3_tahun ?></td>
 				<td>
-					<?php echo anchor($module[0].'/more_info/'.@$data->pi_no.'/4/'.$item->pi3_idx.'?height=400&width=320&modal=true&form=4','&nbsp;', 'class="i-edit thickbox"')?>
-					<?php echo anchor($module[0].'/more_info_delete/'.@$data->pi_no.'/4/'.$item->pi3_idx.'?height=400&width=320&modal=true&form=4','&nbsp;', 'class="i-delete"')?>
+					<?php echo anchor($module[0].'/more_info/'.@$data->pi_no.'/4/'.$item->pi3_idx.'?height=400&width=320&modal=true','&nbsp;', 'class="i-edit thickbox"')?>
+					<?php echo anchor($module[0].'/more_info_delete/'.@$data->pi_no.'/4/'.$item->pi3_idx.'?height=400&width=320&modal=true','&nbsp;', 'class="i-delete"')?>
 				</td>
 			</tr>
 			<?php endforeach?>
@@ -222,7 +222,7 @@
 				<th>Nilai Bicara</th>
 				<th>Nilai Membaca</th>
 				<th>Nilai Menulis</th>
-				<th width="40px"><?php echo anchor($module[0].'/more_info/'.@$data->pi_no.'/5?height=400&modal=true&width=320&form=5','&nbsp;', 'class="i-add thickbox" title="Informasi Bahasa"')?></th>
+				<th width="40px"><?php echo anchor($module[0].'/more_info/'.@$data->pi_no.'/5?height=400&modal=true&width=320','&nbsp;', 'class="i-add thickbox" title="Informasi Bahasa"')?></th>
 			</tr>
 			</thead>
 			<tbody id="info5">
@@ -234,8 +234,8 @@
 				<td style="text-align:center"><?php for($i=0; $i<$item->pi4_nilai_membaca; $i++) { echo "* "; } ?></td>
 				<td style="text-align:center"><?php for($i=0; $i<$item->pi4_nilai_menulis; $i++) { echo "* "; } ?></td>
 				<td>
-					<?php echo anchor($module[0].'/more_info/'.@$data->pi_no.'/5/'.$item->pi4_idx.'?height=400&width=320&modal=true&form=5','&nbsp;', 'class="i-edit thickbox"')?>
-					<?php echo anchor($module[0].'/more_info_delete/'.@$data->pi_no.'/5/'.$item->pi4_idx.'?height=400&width=320&modal=true&form=5','&nbsp;', 'class="i-delete"')?>
+					<?php echo anchor($module[0].'/more_info/'.@$data->pi_no.'/5/'.$item->pi4_idx.'?height=400&width=320&modal=true','&nbsp;', 'class="i-edit thickbox"')?>
+					<?php echo anchor($module[0].'/more_info_delete/'.@$data->pi_no.'/5/'.$item->pi4_idx.'?height=400&width=320&modal=true','&nbsp;', 'class="i-delete"')?>
 				</td>
 			</tr>
 			<?php endforeach?>
@@ -259,7 +259,7 @@
 				<th>Pekerjaan</th>
 				<th>Gaji</th>
 				<th width="40px">
-					<?php echo anchor($module[0].'/more_info/'.@$data->pi_no.'/6?height=400&width=320&modal=true&form=6','&nbsp;', 'class="i-add thickbox" title="Informasi Riwayat Pekerjaan"')?>
+					<?php echo anchor($module[0].'/more_info/'.@$data->pi_no.'/6?height=400&width=320&modal=true','&nbsp;', 'class="i-add thickbox" title="Informasi Riwayat Pekerjaan"')?>
 				</th>
 			</tr>
 			</thead>
@@ -274,8 +274,8 @@
 				<td><?php echo $item->pi5_pekerjaan ?></td>
 				<td>Rp. <?php echo $item->pi5_gaji ?></td>
 				<td>
-					<?php echo anchor($module[0].'/more_info/'.@$data->pi_no.'/6/'.$item->pi5_idx.'?height=400&width=320&modal=true&form=6','&nbsp;', 'class="i-edit thickbox"')?>
-					<?php echo anchor($module[0].'/more_info_delete/'.@$data->pi_no.'/6/'.$item->pi5_idx.'?height=400&width=320&modal=true&form=6','&nbsp;', 'class="i-delete"')?>
+					<?php echo anchor($module[0].'/more_info/'.@$data->pi_no.'/6/'.$item->pi5_idx.'?height=400&width=320&modal=true','&nbsp;', 'class="i-edit thickbox"')?>
+					<?php echo anchor($module[0].'/more_info_delete/'.@$data->pi_no.'/6/'.$item->pi5_idx.'?height=400&width=320&modal=true','&nbsp;', 'class="i-delete"')?>
 				</td>
 			</tr>
 			<?php endforeach?>
