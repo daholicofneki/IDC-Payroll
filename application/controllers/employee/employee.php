@@ -45,7 +45,7 @@ class Employee extends MY_Controller {
 	}
 	
 	/**
-	 * Jika memiliki index yang di modifikasi
+	 * Index
 	 *
 	 * @access	public
 	 * @return	parent class function
@@ -395,4 +395,4 @@ class Employee extends MY_Controller {
 	}
 }
 /* End class employee */
-/* Location ./application/controllers/employee.php */
+/* Location ./application/controllers/employee/employee.php */
