@@ -56,13 +56,7 @@
 			<h3 class="group">Peraturan Pemerintah</h3>
 			<ul>
 			    <li>
-				<?php echo anchor('employee/employee/add_new_employee','PTKP')?>
-			    </li>
-			    <li>
-				<?php echo anchor('employee/employee/index','PPH 21')?>
-			    </li>
-			    <li>
-				<?php echo anchor('employee/employee/index','Jamsostek')?>
+				<?php echo anchor('regulation/setup/pemerintah','Pemerintah')?>
 			    </li>
 			</ul>
 		    </li>
@@ -70,16 +64,16 @@
 			<h3 class="group">Peraturan Perusahaan</h3>
 			<ul>
 			    <li>
-				<?php echo anchor('employee/employee/add_new_employee','Umum')?>
+				<?php echo anchor('regulation/setup/perusahaan#umum','Umum')?>
 			    </li>
 			    <li>
-				<?php echo anchor('employee/employee/index','Staff')?>
+				<?php echo anchor('regulation/setup/perusahaan#staff','Staff')?>
 			    </li>
 			    <li>
-				<?php echo anchor('employee/employee/index','Supir')?>
+				<?php echo anchor('regulation/setup/perusahaan#supir','Supir')?>
 			    </li>
 			    <li>
-				<?php echo anchor('employee/employee/index','SPG')?>
+				<?php echo anchor('regulation/setup/perusahaan#spg','SPG')?>
 			    </li>
 			</ul>
 		    </li>
