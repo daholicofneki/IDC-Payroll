@@ -167,26 +167,40 @@ COPY tb_pegawai_info_pendidikan_informal (pi3_idx, pi_no, pi3_jenis_kursus, pi3_
 CREATE TABLE tb_peraturan
 (
 	idx SERIAL NOT NULL,
-	ptkp_tk0 numeric(9,2) NOT NULL DEFAULT 0,
-        ptkp_k0 numeric(9,2) NOT NULL DEFAULT 0,
-        ptkp_k1 numeric(9,2) NOT NULL DEFAULT 0,
-        ptkp_k2 numeric(9,2) NOT NULL DEFAULT 0,
-        ptkp_k3 numeric(9,2) NOT NULL DEFAULT 0,
+	ptkp_tk0 numeric(12, 2) NOT NULL DEFAULT 0,
+        ptkp_k0 numeric(12, 2) NOT NULL DEFAULT 0,
+        ptkp_k1 numeric(12, 2) NOT NULL DEFAULT 0,
+        ptkp_k2 numeric(12, 2) NOT NULL DEFAULT 0,
+        ptkp_k3 numeric(12, 2) NOT NULL DEFAULT 0,
         
-        pph21_1_dari numeric(9,2) NOT NULL DEFAULT 0,
-        pph21_1_sampai numeric(9,2) NOT NULL DEFAULT 0,
-        pph21_1_persen numeric(3,2) NOT NULL DEFAULT 0,
-        pph21_2_dari numeric(9,2) NOT NULL DEFAULT 0,
-        pph21_2_sampai numeric(9,2) NOT NULL DEFAULT 0,
-        pph21_2_persen numeric(3,2) NOT NULL DEFAULT 0,
-        pph21_3_dari numeric(9,2) NOT NULL DEFAULT 0,
-        pph21_3_sampai numeric(9,2) NOT NULL DEFAULT 0,
-        pph21_3_persen numeric(3,2) NOT NULL DEFAULT 0,
-        pph21_4_dari numeric(9,2) NOT NULL DEFAULT 0,
-        pph21_4_persen numeric(3,2) NOT NULL DEFAULT 0,
+        pph21_1_dari numeric(12, 2) NOT NULL DEFAULT 0,
+        pph21_1_sampai numeric(12, 2) NOT NULL DEFAULT 0,
+        pph21_1_persen numeric(5,3) NOT NULL DEFAULT 0,
+        pph21_2_dari numeric(12, 2) NOT NULL DEFAULT 0,
+        pph21_2_sampai numeric(12, 2) NOT NULL DEFAULT 0,
+        pph21_2_persen numeric(5,3) NOT NULL DEFAULT 0,
+        pph21_3_dari numeric(12, 2) NOT NULL DEFAULT 0,
+        pph21_3_sampai numeric(12, 2) NOT NULL DEFAULT 0,
+        pph21_3_persen numeric(5,3) NOT NULL DEFAULT 0,
+        pph21_4_dari numeric(12,2) NOT NULL DEFAULT 0,
+        pph21_4_persen numeric(5,3) NOT NULL DEFAULT 0,
+
+        jamsostek_ditanggung_persen numeric(5,3) NOT NULL DEFAULT 0,
+        jamsostek_dibayar_persen numeric(5,3) NOT NULL DEFAULT 0,
+        jpk_lajang_persen numeric(5,3) NOT NULL DEFAULT 0,
+        jpk_berkeluarga_persen numeric(5,3) NOT NULL DEFAULT 0,
+        
+        biaya_jabatan_1_persen numeric(5,3) NOT NULL DEFAULT 0,
+        biaya_jabatan_2 numeric(12, 2) NOT NULL DEFAULT 0,
+        biaya_jabatan_3 numeric(12, 2) NOT NULL DEFAULT 0,
 
 	lastupdated_by_account character varying(16) NOT NULL,
 	lastupdated_timestamp timestamp without time zone NOT NULL DEFAULT now(),
 
 	CONSTRAINT tb_peraturan_idx_pk PRIMARY KEY (idx)
 );
+
+COPY tb_peraturan (idx, ptkp_tk0, ptkp_k0, ptkp_k1, ptkp_k2,ptkp_k3, pph21_1_dari, pph21_1_sampai,pph21_1_persen,pph21_2_dari,pph21_2_sampai,pph21_2_persen,pph21_3_dari,pph21_3_sampai,pph21_3_persen,pph21_4_dari,pph21_4_persen,jamsostek_ditanggung_persen,jamsostek_dibayar_persen,jpk_lajang_persen,jpk_berkeluarga_persen,biaya_jabatan_1_persen,biaya_jabatan_2,biaya_jabatan_3,lastupdated_by_account,lastupdated_timestamp) FROM stdin;
+1       1320000.00      1430000.00      1540000.00      1650000.00      1760000.00      0.00    50000000.00        5.000        50000001.00        250000000.00        15.000        250000001.00        500000000.00        25.000        500000001.00        30.000        2.000        0.540        3.000        6.000        5.000        500000.00        500000.00        neki        2011-11-24 15:26:13
+\.
+
