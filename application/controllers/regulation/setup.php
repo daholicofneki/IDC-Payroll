@@ -47,13 +47,21 @@ class Setup extends MY_Controller {
 	 */
 	public function index ()
 	{
-		// another data
-		$this->params['data'] = $this->peraturan_m->get();
-
-		// call parent class function
-		//return parent :: index ('');
-		$this->_view('main_1_3', 'regulation');
+		$this->_view('main_1_3', 'index');
 	}
+
+	public function pemerintah ()
+	{
+                $this->params['data'] = $this->peraturan_m->get(1);
+		$this->_view('main_1_3', 'pemerintah');
+	}
+
+	public function perusahaan ()
+	{
+		$this->params['data'] = $this->peraturan_m->get();
+		$this->_view('main_1_3', 'perusahaan');
+	}
+
 }
 /* End class setup */
 /* Location ./application/controllers/regulation/setup.php */
