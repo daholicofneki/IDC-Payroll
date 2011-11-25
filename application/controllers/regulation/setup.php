@@ -58,7 +58,7 @@ class Setup extends MY_Controller {
 
 	public function perusahaan ()
 	{
-		$this->params['data'] = $this->peraturan_m->get();
+		$this->params['data'] = $this->peraturan_m->get(1);
 		$this->_view('main_1_3', 'perusahaan');
 	}
 

@@ -131,7 +131,7 @@
 				<td><?php echo $item->pi1_pekerjaan ?></td>
 				<td align="right">
 					<?php echo anchor($module[0].'/more_info/'.@$data->pi_no.'/2/'.$item->pi1_idx.'?height=400&width=320&modal=true','&nbsp;', 'class="i-edit thickbox"')?>
-					<?php echo anchor($module[0].'/more_info_delete/'.@$data->pi_no.'/2/'.$item->pi1_idx.'?height=400&width=320&modal=true','&nbsp;', 'class="i-delete"')?>
+					<?php echo anchor($module[0].'/more_info_delete/'.@$data->pi_no.'/2/'.$item->pi1_idx.'?height=400&width=320&modal=true','&nbsp;', 'class="i-cross"')?>
 				</td>
 			</tr>
 			<?php endforeach?>
@@ -167,7 +167,7 @@
 				<td><?php echo $item->pi2_sertifikat ?></td>
 				<td>
 					<?php echo anchor($module[0].'/more_info/'.@$data->pi_no.'/3/'.$item->pi2_idx.'?height=400&width=320&modal=true','&nbsp;', 'class="i-edit thickbox"')?>
-					<?php echo anchor($module[0].'/more_info_delete/'.@$data->pi_no.'/3/'.$item->pi2_idx.'?height=400&width=320&modal=true','&nbsp;', 'class="i-delete"')?>
+					<?php echo anchor($module[0].'/more_info_delete/'.@$data->pi_no.'/3/'.$item->pi2_idx.'?height=400&width=320&modal=true','&nbsp;', 'class="i-cross"')?>
 				</td>
 			</tr>
 			<?php endforeach?>
@@ -201,7 +201,7 @@
 				<td><?php echo $item->pi3_tahun ?></td>
 				<td>
 					<?php echo anchor($module[0].'/more_info/'.@$data->pi_no.'/4/'.$item->pi3_idx.'?height=400&width=320&modal=true','&nbsp;', 'class="i-edit thickbox"')?>
-					<?php echo anchor($module[0].'/more_info_delete/'.@$data->pi_no.'/4/'.$item->pi3_idx.'?height=400&width=320&modal=true','&nbsp;', 'class="i-delete"')?>
+					<?php echo anchor($module[0].'/more_info_delete/'.@$data->pi_no.'/4/'.$item->pi3_idx.'?height=400&width=320&modal=true','&nbsp;', 'class="i-cross"')?>
 				</td>
 			</tr>
 			<?php endforeach?>
@@ -235,7 +235,7 @@
 				<td style="text-align:center"><?php for($i=0; $i<$item->pi4_nilai_menulis; $i++) { echo "* "; } ?></td>
 				<td>
 					<?php echo anchor($module[0].'/more_info/'.@$data->pi_no.'/5/'.$item->pi4_idx.'?height=400&width=320&modal=true','&nbsp;', 'class="i-edit thickbox"')?>
-					<?php echo anchor($module[0].'/more_info_delete/'.@$data->pi_no.'/5/'.$item->pi4_idx.'?height=400&width=320&modal=true','&nbsp;', 'class="i-delete"')?>
+					<?php echo anchor($module[0].'/more_info_delete/'.@$data->pi_no.'/5/'.$item->pi4_idx.'?height=400&width=320&modal=true','&nbsp;', 'class="i-cross"')?>
 				</td>
 			</tr>
 			<?php endforeach?>
@@ -275,7 +275,7 @@
 				<td>Rp. <?php echo $item->pi5_gaji ?></td>
 				<td>
 					<?php echo anchor($module[0].'/more_info/'.@$data->pi_no.'/6/'.$item->pi5_idx.'?height=400&width=320&modal=true','&nbsp;', 'class="i-edit thickbox"')?>
-					<?php echo anchor($module[0].'/more_info_delete/'.@$data->pi_no.'/6/'.$item->pi5_idx.'?height=400&width=320&modal=true','&nbsp;', 'class="i-delete"')?>
+					<?php echo anchor($module[0].'/more_info_delete/'.@$data->pi_no.'/6/'.$item->pi5_idx.'?height=400&width=320&modal=true','&nbsp;', 'class="i-cross"')?>
 				</td>
 			</tr>
 			<?php endforeach?>
