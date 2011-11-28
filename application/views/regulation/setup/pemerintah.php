@@ -84,24 +84,38 @@
     </tbody>
 </table>
 <div class="info">Jamsostek &amp; JPK</div>
-	<b>Jamsostek</b>
-	<p>Jamsostek Yang Ditanggung Karyawan</p>
-		<div align="center"><?php echo number_format(@$data->jamsostek_ditanggung_persen) ?> %   X   Gaji Pokok</div>
-	<p>Jamsostek Dibayar Pemberi Kerja</p>
-		<div align="center"><?php echo number_format(@$data->jamsostek_dibayar_persen,2) ?> %   X   Gaji Pokok</div>
-	<b>JPK</b>
-	<p>Bagi Peserta Lajang</p>
-	<div>
-		<div align="center"><?php echo number_format(@$data->jpk_lajang_persen) ?> %   X   Rp. 1.000.000,-</div>
-	</div>
-	<p>Bagi Peserta Berkeluarga</p>
-	<div>
-		<div align="center"><?php echo number_format(@$data->jpk_berkeluarga_persen) ?> %   X   Rp. 1.000.000,-</div>
-	</div>
+<table>
+	<tr>
+		<td colspan="2"><b>Jamsostek</b></td>
+	</tr>
+	<tr>
+		<td>Jamsostek Yang Ditanggung Karyawan</td>
+		<td><?php echo number_format(@$data->jamsostek_ditanggung_persen,2) ?> %   X   Gaji Pokok</td>
+	</tr>
+	<tr>
+		<td>Jamsostek Dibayar Pemberi Kerja</td>
+		<td><?php echo number_format(@$data->jamsostek_dibayar_persen,2) ?> %   X   Gaji Pokok</td>
+	</tr>
+	<tr>
+		<td colspan="2"><br /><br /><b>JPK</b></td>
+	</tr>
+	<tr>
+		<td>Bagi Peserta Lajang</td>
+		<td><?php echo number_format(@$data->jpk_lajang_persen,2) ?> %   X   Rp. 1.000.000,-</td>
+	</tr>
+	<tr>
+		<td>Bagi Peserta Berkeluarga</td>
+		<td><?php echo number_format(@$data->jpk_berkeluarga_persen,2) ?> %   X   Rp. 1.000.000,-</td>
+	</tr>
+</table>
 <div class="info">Biaya Jabatan</div>
-<div>
-	<p>Biaya Jabatan per bulan</p>
-	<div>( Gaji Bruto  X <?php echo number_format(@$data->biaya_jabatan_1_persen) ?> % )   <  <?php echo number_format(@$data->biaya_jabatan_2) ?> % )</div>
-	<p>Biaya Jabatan Bonus & THR</p>
-	<div><?php echo number_format(@$data->biaya_jabatan_3) ?> - Biaya Jabatan</div>
-</div>
+<table>
+	<tr>
+		<td>Biaya Jabatan per bulan</td>
+		<td>( Gaji Bruto  x <?php echo number_format(@$data->biaya_jabatan_1_persen,2 )?> % )   <  <?php echo number_format(@$data->biaya_jabatan_2) ?> )</td>
+	</tr>
+	<tr>
+		<td>Biaya Jabatan Bonus & THR</td>
+		<td><?php echo number_format(@$data->biaya_jabatan_3) ?> - Biaya Jabatan</td>
+	</tr>
+</table>
