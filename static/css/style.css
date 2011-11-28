@@ -167,3 +167,21 @@ textarea.hint {border-color: #DD4B39; }
 .i-edit		{ background: url(../image/bullet_edit.png) left no-repeat; padding-left:10px; }
 .i-cross	{ background: url(../image/bullet_cross.png) left no-repeat; padding-left:10px; }
 .i-tick		{ background: url(../image/bullet_tick.png) left no-repeat; padding-left:10px; }
+
+
+
+/*
+ Bootstrap, from Twitter
+ http://twitter.github.com/bootstrap/
+*/
+table{width:100%;margin-bottom:18px;padding:0;font-size:12px;border-collapse:collapse;}table th,table td{padding:7px 7px 5px;line-height:18px;text-align:left;}
+table th{padding-top:5px;font-weight:bold;vertical-align:middle;}
+table td{vertical-align:top;border-top:1px solid #ddd;}
+table thead th {text-align:center}
+table tbody th{border-top:1px solid #ddd;vertical-align:top;}
+.condensed-table th,.condensed-table td{padding:5px 5px 4px;}
+.bordered-table{border:1px solid #ddd;border-collapse:separate;*border-collapse:collapse;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;}.bordered-table th+th,.bordered-table td+td,.bordered-table th+td{border-left:1px solid #ddd;}
+.bordered-table thead tr:first-child th:first-child,.bordered-table tbody tr:first-child td:first-child{-webkit-border-radius:4px 0 0 0;-moz-border-radius:4px 0 0 0;border-radius:4px 0 0 0;}
+.bordered-table thead tr:first-child th:last-child,.bordered-table tbody tr:first-child td:last-child{-webkit-border-radius:0 4px 0 0;-moz-border-radius:0 4px 0 0;border-radius:0 4px 0 0;}
+.bordered-table tbody tr:last-child td:first-child{-webkit-border-radius:0 0 0 4px;-moz-border-radius:0 0 0 4px;border-radius:0 0 0 4px;}
+.bordered-table tbody tr:last-child td:last-child{-webkit-border-radius:0 0 4px 0;-moz-border-radius:0 0 4px 0;border-radius:0 0 4px 0;}
