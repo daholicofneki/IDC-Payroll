@@ -62,6 +62,29 @@ class Setup extends MY_Controller {
 		$this->_view('main_1_3', 'perusahaan');
 	}
 
+	public function pemerintah_edit ($id = 1)
+	{
+		if ($this->input->post('save'))
+		{
+			if ($this->peraturan_m->isValid())
+			{
+				if ($this->peraturan_m->save($id))
+				{
+					setSucces('Data is edited');
+				}
+				else
+				{
+					setError('Unable to save');
+				}
+			}
+		}
+		else
+		{
+			$this->params['data'] = $this->peraturan_m->get(1);
+			$this->_view('main_1_3', 'pemerintah_edit');
+		}
+	}
+
 }
 /* End class setup */
 /* Location ./application/controllers/regulation/setup.php */

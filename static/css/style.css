@@ -167,8 +167,7 @@ textarea.hint {border-color: #DD4B39; }
 .i-edit		{ background: url(../image/bullet_edit.png) left no-repeat; padding-left:10px; }
 .i-cross	{ background: url(../image/bullet_cross.png) left no-repeat; padding-left:10px; }
 .i-tick		{ background: url(../image/bullet_tick.png) left no-repeat; padding-left:10px; }
-
-
+.num 		{ text-align: right; }
 
 /*
  Bootstrap, from Twitter

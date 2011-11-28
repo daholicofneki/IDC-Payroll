@@ -46,8 +46,15 @@ class Peraturan_m extends MY_Model {
 			'pph21_3_sampai' => array('PPH 21 sampai', TRUE, 'decimal'),
 			'pph21_3_persen' => array('Persentase PPH 21', TRUE, 'decimal'),
 			'pph21_4_dari' => array('PPH 21 dari', TRUE, 'decimal'),
-			'pph21_4_persen' => array('Persentase PPH 21', TRUE, 'decimal')
-			
+			'pph21_4_persen' => array('Persentase PPH 21', TRUE, 'decimal'),
+
+			'jamsostek_ditanggung_persen' => array('Jamsostek ditanggung', TRUE, 'decimal'),
+			'jamsostek_dibayar_persen' => array('Jamsostek dibayar', TRUE, 'decimal'),
+			'jpk_lajang_persen' => array('JPK Lajang', TRUE, 'decimal'),
+			'jpk_berkeluarga_persen' => array('JPK Berkeluarga', TRUE, 'decimal'),
+			'biaya_jabatan_1_persen' => array('Biaya jabatan', TRUE, 'decimal'),
+			'biaya_jabatan_2' => array('Biaya jabatan', TRUE, 'decimal'),
+			'biaya_jabatan_3' => array('Biaya jabatan', TRUE, 'decimal')
 		);
 	}
 }
