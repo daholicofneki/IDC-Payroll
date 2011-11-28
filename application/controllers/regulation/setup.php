@@ -78,11 +78,8 @@ class Setup extends MY_Controller {
 				}
 			}
 		}
-		else
-		{
-			$this->params['data'] = $this->peraturan_m->get(1);
-			$this->_view('main_1_3', 'pemerintah_edit');
-		}
+		$this->params['data'] = $this->peraturan_m->get(1);
+		$this->_view('main_1_3', 'pemerintah_edit');
 	}
 
 }

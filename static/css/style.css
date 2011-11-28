@@ -167,7 +167,6 @@ textarea.hint {border-color: #DD4B39; }
 .i-edit		{ background: url(../image/bullet_edit.png) left no-repeat; padding-left:10px; }
 .i-cross	{ background: url(../image/bullet_cross.png) left no-repeat; padding-left:10px; }
 .i-tick		{ background: url(../image/bullet_tick.png) left no-repeat; padding-left:10px; }
-.num 		{ text-align: right; }
 
 /*
  Bootstrap, from Twitter
@@ -184,3 +183,45 @@ table tbody th{border-top:1px solid #ddd;vertical-align:top;}
 .bordered-table thead tr:first-child th:last-child,.bordered-table tbody tr:first-child td:last-child{-webkit-border-radius:0 4px 0 0;-moz-border-radius:0 4px 0 0;border-radius:0 4px 0 0;}
 .bordered-table tbody tr:last-child td:first-child{-webkit-border-radius:0 0 0 4px;-moz-border-radius:0 0 0 4px;border-radius:0 0 0 4px;}
 .bordered-table tbody tr:last-child td:last-child{-webkit-border-radius:0 0 4px 0;-moz-border-radius:0 0 4px 0;border-radius:0 0 4px 0;}
+
+
+/********************* for verify ***********************/
+.reqn    { text-align:right; }
+/*
+.req     { background-image :  url('../_images/properties/required.gif'); background-position:top left; background-repeat: no-repeat; font-family: "u";font-size: 9pt;padding-left: 1;padding-top: 3;padding-bottom: 0;padding-right: 2;background-color: #FFFFFF;border:#D0DDE6 1px solid;}
+.reqn    { background-position:top left; background-repeat: no-repeat; text-align:right; font-family: "u";font-size: 9pt;padding-left: 1;padding-top: 3;padding-bottom: 0;padding-right: 2;background-color: #FFFFFF;border:#D0DDE6 1px solid;}
+.reqnc   { background-image :  url('../_images/properties/required.gif'); background-position:top left; background-repeat: no-repeat; text-align:right; font-family: "u";font-size: 9pt;padding-left: 1;padding-top: 3;padding-bottom: 0;padding-right: 2;background-color: #FFFFFF;border:#D0DDE6 1px solid;}
+.reqh    { background-image :  url('../_images/properties/required.gif'); background-position:top left; background-repeat: no-repeat; text-align:right;font-family: "u";font-size: 9pt;padding-left: 1;padding-top: 3;padding-bottom: 0;padding-right: 2;background-color: #FFFFFF;border:#D0DDE6 1px solid;}
+.reqc    { background-image :  url('../_images/properties/required.gif'); background-position:top left; background-repeat: no-repeat; font-family: "u";font-size: 9pt;padding-left: 1;padding-top: 3;padding-bottom: 0;padding-right: 2;background-color: #FFFFFF;border:#D0DDE6 1px solid;}
+.reqd    { background-image :  url('../_images/properties/required.gif'); background-position:top left; background-repeat: no-repeat; font-family: "u";font-size: 9pt;padding-left: 1;padding-top: 3;padding-bottom: 0;padding-right: 2;background-color: #FFFFFF;border:#D0DDE6 1px solid;}
+.reql    { background-image :  url('../_images/properties/required.gif'); background-position:top left; background-repeat: no-repeat; font-family: "u";font-size: 9pt;padding-left: 1;padding-top: 3;padding-bottom: 0;padding-right: 2;background-color: #FFFFFF;border:#D0DDE6 1px solid;}
+.reqa    { background-image :  url('../_images/properties/required.gif'); background-position:top left; background-repeat: no-repeat; font-family: "u";font-size: 9pt;padding-left: 1;padding-top: 3;padding-bottom: 0;padding-right: 2;background-color: #FFFFFF;border:#D0DDE6 1px solid;}
+.reqab   { background-image :  url('../_images/properties/required.gif'); background-position:top left; background-repeat: no-repeat; font-family: "u";font-size: 9pt;padding-left: 1;padding-top: 3;padding-bottom: 0;padding-right: 2;background-color: #FFFFFF;border:#D0DDE6 1px solid;}
+.reqan   { background-image :  url('../_images/properties/required.gif'); background-position:top left; background-repeat: no-repeat; font-family: "u";font-size: 9pt;padding-left: 1;padding-top: 3;padding-bottom: 0;padding-right: 2;background-color: #FFFFFF;border:#D0DDE6 1px solid;}
+.reqanl  { background-image :  url('../_images/properties/required.gif'); background-position:top left; background-repeat: no-repeat; font-family: "u";font-size: 9pt;padding-left: 1;padding-top: 3;padding-bottom: 0;padding-right: 2;background-color: #FFFFFF;border:#D0DDE6 1px solid;}
+.reqanb  { background-image :  url('../_images/properties/required.gif'); background-position:top left; background-repeat: no-repeat; font-family: "u";font-size: 9pt;padding-left: 1;padding-top: 3;padding-bottom: 0;padding-right: 2;background-color: #FFFFFF;border:#D0DDE6 1px solid;}
+.reqane  { background-image :  url('../_images/properties/required.gif'); background-position:top left; background-repeat: no-repeat; font-family: "u";font-size: 9pt;padding-left: 1;padding-top: 3;padding-bottom: 0;padding-right: 2;background-color: #FFFFFF;border:#D0DDE6 1px solid;}
+.reqane2 { background-image :  url('../_images/properties/required.gif'); background-position:top left; background-repeat: no-repeat; font-family: "u";font-size: 9pt;padding-left: 1;padding-top: 3;padding-bottom: 0;padding-right: 2;background-color: #FFFFFF;border:#D0DDE6 1px solid;}
+.reqp    { background-image :  url('../_images/properties/required.gif'); background-position:top left; background-repeat: no-repeat; font-family: "u";font-size: 9pt;padding-left: 1;padding-top: 3;padding-bottom: 0;padding-right: 2;background-color: #FFFFFF;border:#D0DDE6 1px solid;}
+.reqe    { background-image :  url('../_images/properties/required.gif'); background-position:top left; background-repeat: no-repeat; font-family: "u";font-size: 9pt;padding-left: 1;padding-top: 3;padding-bottom: 0;padding-right: 2;background-color: #FFFFFF;border:#D0DDE6 1px solid;}
+*/
+
+/********************* format check *********************/
+/*
+.fmt     { font-family: "u";font-size: 9pt;padding-left: 1;padding-top: 3;padding-bottom: 0;padding-right: 2;background-color: #FFFFFF;border:#D0DDE6 1px solid;} 
+.fmtn    { text-align:right; font-family: "u";font-size: 9pt;padding-left: 1;padding-top: 3;padding-bottom: 0;padding-right: 2;background-color: #FFFFFF;border:#D0DDE6 1px solid;}
+.fmtnc   { text-align:right; font-family: "u";font-size: 9pt;padding-left: 1;padding-top: 3;padding-bottom: 0;padding-right: 2;background-color: #FFFFFF;border:#D0DDE6 1px solid;}
+.fmth    { text-align:right; font-family: "u";font-size: 9pt;padding-left: 1;padding-top: 3;padding-bottom: 0;padding-right: 2;background-color: #FFFFFF;border:#D0DDE6 1px solid;}
+.fmtc    { font-family: "u";font-size: 9pt;padding-left: 1;padding-top: 3;padding-bottom: 0;padding-right: 2;background-color: #FFFFFF;border:#D0DDE6 1px solid;}
+.fmtd    { font-family: "u";font-size: 9pt;padding-left: 1;padding-top: 3;padding-bottom: 0;padding-right: 2;background-color: #FFFFFF;border:#D0DDE6 1px solid;}
+.fmtl    { font-family: "u";font-size: 9pt;padding-left: 1;padding-top: 3;padding-bottom: 0;padding-right: 2;background-color: #FFFFFF;border:#D0DDE6 1px solid;}
+.fmta    { font-family: "u";font-size: 9pt;padding-left: 1;padding-top: 3;padding-bottom: 0;padding-right: 2;background-color: #FFFFFF;border:#D0DDE6 1px solid;}
+.fmtab   { font-family: "u";font-size: 9pt;padding-left: 1;padding-top: 3;padding-bottom: 0;padding-right: 2;background-color: #FFFFFF;border:#D0DDE6 1px solid;}
+.fmtan   { font-family: "u";font-size: 9pt;padding-left: 1;padding-top: 3;padding-bottom: 0;padding-right: 2;background-color: #FFFFFF;border:#D0DDE6 1px solid;}
+.fmtanl  { font-family: "u";font-size: 9pt;padding-left: 1;padding-top: 3;padding-bottom: 0;padding-right: 2;background-color: #FFFFFF;border:#D0DDE6 1px solid;}
+.fmtanb  { font-family: "u";font-size: 9pt;padding-left: 1;padding-top: 3;padding-bottom: 0;padding-right: 2;background-color: #FFFFFF;border:#D0DDE6 1px solid;}
+.fmtane  { font-family: "u";font-size: 9pt;padding-left: 1;padding-top: 3;padding-bottom: 0;padding-right: 2;background-color: #FFFFFF;border:#D0DDE6 1px solid;}
+.fmtane2 { font-family: "u";font-size: 9pt;padding-left: 1;padding-top: 3;padding-bottom: 0;padding-right: 2;background-color: #FFFFFF;border:#D0DDE6 1px solid;}
+.fmtp    { font-family: "u";font-size: 9pt;padding-left: 1;padding-top: 3;padding-bottom: 0;padding-right: 2;background-color: #FFFFFF;border:#D0DDE6 1px solid;}
+.fmte    { font-family: "u";font-size: 9pt;padding-left: 1;padding-top: 3;padding-bottom: 0;padding-right: 2;background-color: #FFFFFF;border:#D0DDE6 1px solid;}
+*/
