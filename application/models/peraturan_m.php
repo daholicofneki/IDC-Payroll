@@ -60,6 +60,29 @@ class Peraturan_m extends MY_Model {
 
 	public function save ($idx = FALSE)
 	{
+		$this->db->set('ptkp_tk0', str_replace(",","",$this->input->post('ptkp_tk0')));
+		$this->db->set('ptkp_k0', str_replace(",","",$this->input->post('ptkp_k0')));
+		$this->db->set('ptkp_k1', str_replace(",","",$this->input->post('ptkp_k1')));
+		$this->db->set('ptkp_k2', str_replace(",","",$this->input->post('ptkp_k2')));
+		$this->db->set('ptkp_k3', str_replace(",","",$this->input->post('ptkp_k3')));
+		$this->db->set('pph21_1_dari', str_replace(",","",$this->input->post('pph21_1_dari')));
+		$this->db->set('pph21_1_sampai', str_replace(",","",$this->input->post('pph21_1_sampai')));
+		$this->db->set('pph21_1_persen', str_replace(",","",$this->input->post('pph21_1_persen')));
+		$this->db->set('pph21_2_dari', str_replace(",","",$this->input->post('pph21_2_dari')));
+		$this->db->set('pph21_2_sampai', str_replace(",","",$this->input->post('pph21_2_sampai')));
+		$this->db->set('pph21_2_persen', str_replace(",","",$this->input->post('pph21_2_persen')));
+		$this->db->set('pph21_3_dari', str_replace(",","",$this->input->post('pph21_3_dari')));
+		$this->db->set('pph21_3_sampai', str_replace(",","",$this->input->post('pph21_3_sampai')));
+		$this->db->set('pph21_3_persen', str_replace(",","",$this->input->post('pph21_3_persen')));
+		$this->db->set('pph21_4_dari', str_replace(",","",$this->input->post('pph21_4_dari')));
+		$this->db->set('pph21_4_persen', str_replace(",","",$this->input->post('pph21_4_persen')));
+		$this->db->set('jamsostek_ditanggung_persen', str_replace(",","",$this->input->post('jamsostek_ditanggung_persen')));
+		$this->db->set('jamsostek_dibayar_persen', str_replace(",","",$this->input->post('jamsostek_dibayar_persen')));
+		$this->db->set('jpk_lajang_persen', str_replace(",","",$this->input->post('jpk_lajang_persen')));
+		$this->db->set('jpk_berkeluarga_persen', str_replace(",","",$this->input->post('jpk_berkeluarga_persen')));
+		$this->db->set('biaya_jabatan_1_persen', str_replace(",","",$this->input->post('biaya_jabatan_1_persen')));
+		$this->db->set('biaya_jabatan_2', str_replace(",","",$this->input->post('biaya_jabatan_2')));
+		$this->db->set('biaya_jabatan_3', str_replace(",","",$this->input->post('biaya_jabatan_3')));
 		return parent :: save ($idx);	
 	}
 }
