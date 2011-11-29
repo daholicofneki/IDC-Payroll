@@ -135,35 +135,6 @@ CREATE TABLE tb_pegawai_info_pekerjaan
 		ON UPDATE CASCADE ON DELETE CASCADE
 );
 
-COPY tb_pegawai (pi_no, pi_nama_lengkap, pi_nama_kecil, pi_jenis_kelamin, pi_tempat_lahir, pi_tanggal_lahir, pi_no_telepon1, pi_no_telepon2, pi_email, pi_alamat, pi_status_nikah, pi_jumlah_anak, pi_kewarganegaraan, pi_suku, pi_no_ktp, pi_no_sim, pi_no_jamsostek, pi_status_pajak, pi_npwp, pi_foto, pi_keluarga, pi_pendidikan_formal, pi_pendidikan_informal, pi_bahasa, pi_riwayat_pekerjaan, pi_lastupdated_by_account, pi_lastupdated_timestamp) FROM stdin;
-IP0001	Neki Arismi	Neki	P	Jakarta	1990-10-02	08568745318	-	neki.arismi@gmail.com	Tangerang	L	0	Indonesia	Jawa	0	0	0	K0 	0	0	{{Sukin,Laki-laki,40,Bapak,SMA,"Karyawan Swasta"},{Rusmini,Perempuan,40,Ibu,SMA,""},{"Nur Hena",Perempuan,10,Saudara,SD,Pelajar}}	{{SD,"SD Kampung Bambu",2001,"",""},{SMP,"SMP Sunan Bonang",2004,"",""},{SMA,"SMKN 1 Tangerang",2007,"",""}}	\N	{{"Bahasa Indonesia",5,5,5},{"Bahasa Inggris",3,3,3}}	{{"PT. Zonekom",2007,2008,"Jr. Programmer","",10000}}	daholicofneki	2011-11-07 09:46:52
-\.
-
-COPY tb_pegawai_info_bahasa (pi4_idx, pi_no, pi4_bahasa, pi4_nilai_bicara, pi4_nilai_membaca, pi4_nilai_menulis) FROM stdin;
-1	IP0001	Inggris	0	0	0
-\.
-
-COPY tb_pegawai_info_keluarga (pi1_idx, pi_no, pi1_nama, pi1_umur, pi1_jenis_kelamin, pi1_hubungan, pi1_pendidikan, pi1_pekerjaan) FROM stdin;
-1	IP0001	Sukin	40	L	Bapak	SMA	Swasta
-\.
-
-COPY tb_pegawai_info_pekerjaan (pi5_idx, pi_no, pi5_nama_perusahaan, pi5_dari, pi5_sampai, pi5_jabatan, pi5_pekerjaan, pi5_gaji) FROM stdin;
-1	IP0001	Zonekom	2007-05-01	2008-04-30	\N	Programmer	10000.00
-2	IP0001	Indocore Perkasa	2008-05-01	2011-02-27	\N	Programmer	10000.00
-\.
-
-COPY tb_pegawai_info_pendidikan_formal (pi2_idx, pi_no, pi2_tingkat, pi2_nama_sekolah, pi2_tahun_lulus, pi2_jurusan, pi2_sertifikat) FROM stdin;
-2	IP0001	SMP	SMP Sunan Bonang	2004	\N	\N
-3	IP0001	SMK	SMK 1 Tangerang	2007	\N	\N
-1	IP0001	SD	SD Kampung Bambu	2001	\N	\N
-\.
-
-COPY tb_pegawai_info_pendidikan_informal (pi3_idx, pi_no, pi3_jenis_kursus, pi3_nama_lembaga, pi3_kualifikasi, pi3_tahun) FROM stdin;
-1	IP0001	Inggris	LIA	Bahasa Inggris	2007
-\.
-
-
-
 CREATE TABLE tb_peraturan
 (
 	idx SERIAL NOT NULL,
@@ -248,9 +219,5 @@ CREATE TABLE tb_peraturan
 
 	CONSTRAINT tb_peraturan_idx_pk PRIMARY KEY (idx)
 );
-
-COPY tb_peraturan (idx,ptkp_tk0,ptkp_k0,ptkp_k1,ptkp_k2,ptkp_k3,pph21_1_dari,pph21_1_sampai,pph21_1_persen,pph21_2_dari,pph21_2_sampai,pph21_2_persen,pph21_3_dari,pph21_3_sampai,pph21_3_persen,pph21_4_dari,pph21_4_persen,jamsostek_ditanggung_persen,jamsostek_dibayar_persen,jpk_lajang_persen,jpk_berkeluarga_persen,biaya_jabatan_1_persen,biaya_jabatan_2,biaya_jabatan_3,tunj_jabatan_supervisor,tunj_jabatan_ass_manager,tunj_jabatan_manager,tunj_pengobatan_1,tunj_pengobatan_2,tunj_pengobatan_3_persen,staff_ot_kantor_1_1,staff_ot_kantor_1_2,staff_ot_kantor_2_1,staff_ot_kantor_2_2,staff_event_sabtu_staff,staff_event_sabtu_supervisor,staff_event_sabtu_ass_manager,staff_event_sabtu_manager,staff_event_libur_staff,staff_event_libur_supervisor,staff_event_libur_ass_manager,staff_event_libur_manager,staff_tunj_luarkota_staff_1,staff_tunj_luarkota_staff_2,staff_tunj_luarkota_supervisor_1,staff_tunj_luarkota_supervisor_2,staff_tunj_luarkota_ass_manager_1,staff_tunj_luarkota_ass_manager_2,staff_tunj_luarkota_manager_1,staff_tunj_luarkota_manager_2,staff_tunj_luarkota_director_1,staff_tunj_luarkota_director_2,supir_tunj_makan_siang,supir_tunj_luarkota_menginap,supir_tunj_luarkota_tidak_menginap,supir_tunj_makan_malam,supir_tunj_makan_malam_dari,supir_ot_reguler,supir_ot_reguler_sampai,supir_ot_malam,supir_ot_malam_dari,supir_ot_libur,spg_ot_tetap_hari,spg_ot_kontrak,spg_event_1,spg_tunj_pulsa,spg_tunj_luarkota,lastupdated_by_account,lastupdated_timestamp) FROM stdin;
-1	1320000	1430000	1540000	1650000	1760000	0	50000000	5	50000001	250000000	15	250000001	500000000	25	500000001	30	2	0.54	3	6	5	500000	500000	0	0	0	1	1	50	173	1.5	173	2	35000	45000	50000	60000	70000	90000	100000	120000	60000	50000	70000	60000	80000	60000	100000	80000	120000	100000	15500	20000	30000	10000	20:30:00	3500	23:00:00	12500	23:01:00	40000	30	0	10000	25000	10000	neki	2011-11-24 15:26:13
-\.
 
 

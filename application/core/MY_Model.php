@@ -5,7 +5,7 @@
  * An open source application development framework for PHP 5.1.6 or newer
  *
  * @package     CodeIgniter
- * @author              Purwandi <free6300@gmail.com>
+ * @author      Purwandi <free6300@gmail.com>
  * @since       CodeIgniter Version 2.0
  * @filesource
  */
@@ -16,9 +16,9 @@
  * Loads Table
  *
  * @package     CodeIgniter
- * @subpackage          Libraries
- * @author              Purwandi <free6300@gmail.com>
- * @category            Model
+ * @subpackage  Libraries
+ * @author      Purwandi <free6300@gmail.com>
+ * @category    Model
  */
  
 class MY_Model extends CI_Model {
@@ -268,7 +268,7 @@ class MY_Model extends CI_Model {
 	 * An open source application development framework for PHP 5.1.6 or newer
 	 *
 	 * @package     CodeIgniter
-	 * @author              Purwandi <free6300@gmail.com>
+	 * @author      Purwandi <free6300@gmail.com>
 	 * @since       CodeIgniter Version 2.0
 	 * @filesource
 	 */
