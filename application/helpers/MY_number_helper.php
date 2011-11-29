@@ -23,4 +23,9 @@ function formatMoney($number, $fractional = FALSE)
 	return $number;
 }
 
+function strto_decimal ( $string )
+{
+	return str_replace (',','', $string);
+}
+
 /* end number helper.php*/
