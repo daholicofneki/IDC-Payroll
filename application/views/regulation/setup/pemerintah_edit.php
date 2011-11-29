@@ -10,15 +10,14 @@
 			centsSeparator: '.',
 			thousandsSeparator: ','
 		});
-		
+
 		$("#ptkp_tk0_bulan").blur(function(){
 			if ($("#ptkp_tk0_bulan").val() !="" || $("#ptkp_tk0_bulan").val()==null)
 			{
 				var val = $("#ptkp_tk0_bulan").val();
 				var string1 = val.replace(".00","");
 				var string2 = string1.replace(/[,]+/g,"");
-//alert(addcomma(parseFloat(string2)*12)+".00")
-				$("#ptkp_tk0_tahun").val(addcomma(parseFloat(string2)*12)+".00");
+				$("#ptkp_tk0_tahun").val(parseFloat(string2)*12+".00");
 			}
 			else
 			{
@@ -45,31 +44,31 @@
 		<td></td>
 		<td>TK 0</td>
 		<td><?php echo form_input('ptkp_tk0',number_format(@$data->ptkp_tk0,2),'class="required num" id="ptkp_tk0_bulan" size="15"')?></td>
-		<td><?php echo form_input('ptkp_tk0',number_format(@$data->ptkp_tk0*12,2),'class="required num" id="ptkp_tk0_tahun" size="15" readonly="readonly"')?></td>
+		<td><?php echo form_input('ptkp_tk0_tahun',number_format(@$data->ptkp_tk0*12,2),'class="required num" id="ptkp_tk0_tahun" size="15" readonly="readonly"')?></td>
 	</tr>
 	<tr>
 		<td></td>
 		<td>K0</td>
 		<td><?php echo form_input('ptkp_k0',number_format(@$data->ptkp_k0,2),'class="required num" id="ptkp_k0_bulan" size="15"')?></td>
-		<td><?php echo form_input('ptkp_k0',number_format(@$data->ptkp_k0*12,2),'class="required num" id="ptkp_k0_tahun" size="15" readonly="readonly"')?></td>
+		<td><?php echo form_input('ptkp_k0_tahun',number_format(@$data->ptkp_k0*12,2),'class="required num" id="ptkp_k0_tahun" size="15" readonly="readonly"')?></td>
 	</tr>
 	<tr>
 		<td></td>
 		<td>K1</td>
 		<td><?php echo form_input('ptkp_k1',number_format(@$data->ptkp_k1,2),'class="required num" id="ptkp_k1_bulan" size="15"')?></td>
-		<td><?php echo form_input('ptkp_k1',number_format(@$data->ptkp_k1*12,2),'class="required num" id="ptkp_k1_tahun" size="15" readonly="readonly"')?></td>
+		<td><?php echo form_input('ptkp_k1_tahun',number_format(@$data->ptkp_k1*12,2),'class="required num" id="ptkp_k1_tahun" size="15" readonly="readonly"')?></td>
 	</tr>
 	<tr>
 		<td></td>
 		<td>K2</td>
 		<td><?php echo form_input('ptkp_k2',number_format(@$data->ptkp_k2,2),'class="required num" id="ptkp_k2_bulan" size="15"')?></td>
-		<td><?php echo form_input('ptkp_k2',number_format(@$data->ptkp_k2*12,2),'class="required num" id="ptkp_k2_tahun" size="15" readonly="readonly"')?></td>
+		<td><?php echo form_input('ptkp_k2_tahun',number_format(@$data->ptkp_k2*12,2),'class="required num" id="ptkp_k2_tahun" size="15" readonly="readonly"')?></td>
 	</tr>
 	<tr>
 		<td></td>
 		<td>K3</td>
 		<td><?php echo form_input('ptkp_k3',number_format(@$data->ptkp_k3,2),'class="required num" id="ptkp_k3_bulan" size="15"')?></td>
-		<td><?php echo form_input('ptkp_k3',number_format(@$data->ptkp_k3*12,2),'class="required num" id="ptkp_k3_tahun" size="15" readonly="readonly"')?></td>
+		<td><?php echo form_input('ptkp_k3_tahun',number_format(@$data->ptkp_k3*12,2),'class="required num" id="ptkp_k3_tahun" size="15" readonly="readonly"')?></td>
 	</tr>
     </tbody>
 </table>

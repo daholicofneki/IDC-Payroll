@@ -119,3 +119,4 @@
 		<td><?php echo number_format(@$data->biaya_jabatan_3) ?> - Biaya Jabatan</td>
 	</tr>
 </table>
+<?php echo anchor($module[0].'/pemerintah_edit','Edit', 'class="awesome orange"')?>
