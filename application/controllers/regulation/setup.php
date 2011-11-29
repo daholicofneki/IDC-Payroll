@@ -35,7 +35,8 @@ class Setup extends MY_Controller {
 		parent :: __construct ();
 
 		$this->load->model(array(
-			'peraturan_m'
+			'peraturan_pemerintah_m',
+			'peraturan_perusahaan_m',
 		));
 	}
 
@@ -52,23 +53,17 @@ class Setup extends MY_Controller {
 
 	public function pemerintah ()
 	{
-                $this->params['data'] = $this->peraturan_m->get(1);
+                $this->params['data'] = $this->peraturan_pemerintah_m->get(1);
 		$this->_view('main_1_3', 'pemerintah');
-	}
-
-	public function perusahaan ()
-	{
-		$this->params['data'] = $this->peraturan_m->get(1);
-		$this->_view('main_1_3', 'perusahaan');
 	}
 
 	public function pemerintah_edit ($id = 1)
 	{
 		if ($this->input->post('save'))
 		{
-			if ($this->peraturan_m->isValid())
+			if ($this->peraturan_pemerintah_m->isValid())
 			{
-				if ($this->peraturan_m->save($id))
+				if ($this->peraturan_pemerintah_m->save($id))
 				{
 					setSucces('Data is edited');
 				}
@@ -78,8 +73,34 @@ class Setup extends MY_Controller {
 				}
 			}
 		}
-		$this->params['data'] = $this->peraturan_m->get(1);
+		$this->params['data'] = $this->peraturan_pemerintah_m->get(1);
 		$this->_view('main_1_3', 'pemerintah_edit');
+	}
+
+	public function perusahaan ()
+	{
+		$this->params['data'] = $this->peraturan_perusahaan_m->get(1);
+		$this->_view('main_1_3', 'perusahaan');
+	}
+
+	public function perusahaan_edit ($id = 1)
+	{
+		if ($this->input->post('save'))
+		{
+			if ($this->peraturan_perusahaan_m->isValid())
+			{
+				if ($this->peraturan_perusahaan_m->save($id))
+				{
+					setSucces('Data is edited');
+				}
+				else
+				{
+					setError('Unable to save');
+				}
+			}
+		}
+		$this->params['data'] = $this->peraturan_perusahaan_m->get(1);
+		$this->_view('main_1_3', 'perusahaan_edit');
 	}
 
 }
