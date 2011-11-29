@@ -37,6 +37,7 @@ class Peraturan_perusahaan_m extends MY_Model {
 			'tunj_pengobatan_1' => array('', TRUE, 'required|strto_decimal'),
 			'tunj_pengobatan_2' => array('', TRUE, 'required|strto_decimal'),
 			'tunj_pengobatan_3_persen' => array('', TRUE, 'required|strto_decimal'),
+
 			'staff_ot_kantor_1_1' => array('', TRUE, 'required'),
 			'staff_ot_kantor_1_2' => array('', TRUE, 'required|strto_decimal'),
 			'staff_ot_kantor_2_1' => array('', TRUE, 'required'),
@@ -59,6 +60,7 @@ class Peraturan_perusahaan_m extends MY_Model {
 			'staff_tunj_luarkota_manager_2' => array('', TRUE, 'required|strto_decimal'),
 			'staff_tunj_luarkota_director_1' => array('', TRUE, 'required|strto_decimal'),
 			'staff_tunj_luarkota_director_2' => array('', TRUE, 'required|strto_decimal'),
+
 			'supir_tunj_makan_siang' => array('', TRUE, 'required|strto_decimal'),
 			'supir_tunj_luarkota_menginap' => array('', TRUE, 'required|strto_decimal'),
 			'supir_tunj_luarkota_tidak_menginap' => array('', TRUE, 'required|strto_decimal'),
@@ -69,6 +71,7 @@ class Peraturan_perusahaan_m extends MY_Model {
 			'supir_ot_malam' => array('', TRUE, 'required|strto_decimal'),
 			'supir_ot_malam_dari' => array('', TRUE, 'required|strto_decimal'),
 			'supir_ot_libur' => array('', TRUE, 'required|strto_decimal'),
+
 			'spg_ot_tetap_hari' => array('', TRUE, 'required'),
 			'spg_ot_kontrak' => array('', TRUE, 'required'),
 			'spg_event_1' => array('', TRUE, 'required|strto_decimal'),

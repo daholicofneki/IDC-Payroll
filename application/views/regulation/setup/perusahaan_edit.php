@@ -1,4 +1,5 @@
 <script src="<?php echo base_url()?>static/js/jquery.validate.js" type="text/javascript"></script>
+<script src="<?php echo base_url()?>static/js/jquery-ui-timepicker-addon.js" type="text/javascript"></script>
 <script src="<?php echo base_url()?>static/js/jquery.number.js" type="text/javascript"></script>
 <script src="<?php echo base_url()?>static/js/helper.js" type="text/javascript"></script>
 <script type="text/javascript">
@@ -10,6 +11,18 @@
 			prefix: '',
 			centsSeparator: '.',
 			thousandsSeparator: ','
+		});
+		$('#supir_tunj_makan_malam_dari').timepicker({
+			hourGrid: 4,
+			minuteGrid: 10
+		});
+		$('#supir_ot_reguler_sampai').timepicker({
+			hourGrid: 4,
+			minuteGrid: 10
+		});
+		$('#supir_ot_malam_dari').timepicker({
+			hourGrid: 4,
+			minuteGrid: 10
 		});
 	});
 </script>
@@ -254,13 +267,13 @@
 		</p>
 
                 <div class="info">Tunjangan Makan Malam</div>
-                <p align="center">Berlaku mulai <?php echo @$data->supir_tunj_makan_malam_dari ?> : <?php echo form_input('supir_tunj_makan_malam',number_format(@$data->supir_tunj_makan_malam,2),'class="required num" id="supir_tunj_makan_malam" size="15"')?> x Total Hari</p>
+                <p align="center">Berlaku mulai <?php echo form_input('supir_tunj_makan_malam_dari',date('H:i', strtotime(@$data->supir_tunj_makan_malam_dari)),'class="required" id="supir_tunj_makan_malam_dari" size="7"')?> : <?php echo form_input('supir_tunj_makan_malam',number_format(@$data->supir_tunj_makan_malam,2),'class="required num" id="supir_tunj_makan_malam" size="15"')?> x Total Hari</p>
 
                 <div class="info">Overtime Reguler</div>
-                <p align="center">Berlaku sampai <?php echo @$data->supir_tunj_makan_malam_sampai ?> : <?php echo form_input('supir_ot_reguler',number_format(@$data->supir_ot_reguler,2),'class="required num" id="supir_ot_reguler" size="15"')?> x Total Jam Overtime</p>
+                <p align="center">Berlaku sampai <?php echo form_input('supir_ot_reguler_sampai',date('H:i', strtotime(@$data->supir_ot_reguler_sampai)),'class="required" id="supir_ot_reguler_sampai" size="7"')?>  : <?php echo form_input('supir_ot_reguler',number_format(@$data->supir_ot_reguler,2),'class="required num" id="supir_ot_reguler" size="15"')?> x Total Jam Overtime</p>
 
 		<div class="info">Overtime Malam</div>
-                <p align="center">Berlaku mulai <?php echo @$data->supir_tunj_makan_malam_dari ?> : <?php echo form_input('supir_ot_malam',number_format(@$data->supir_ot_malam,2),'class="required num" id="supir_ot_malam" size="15"')?> x Total Hari</p>
+                <p align="center">Berlaku mulai <?php echo form_input('supir_ot_malam_dari',date('H:i', strtotime(@$data->supir_ot_malam_dari)),'class="required" id="supir_ot_malam_dari" size="7"')?> : <?php echo form_input('supir_ot_malam',number_format(@$data->supir_ot_malam,2),'class="required num" id="supir_ot_malam" size="15"')?> x Total Hari</p>
 
 		<div class="info">Overtime Hari Libur</div>
                 <table>

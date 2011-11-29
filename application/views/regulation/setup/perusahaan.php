@@ -233,10 +233,10 @@
                 <p align="center">Berlaku mulai <?php echo @$data->supir_tunj_makan_malam_dari ?> : <?php echo number_format(@$data->supir_tunj_makan_malam) ?>  x Total Hari</p>
 
                 <div class="info">Overtime Reguler</div>
-                <p align="center">Berlaku sampai <?php echo @$data->supir_tunj_makan_malam_sampai ?> : <?php echo number_format(@$data->supir_ot_reguler) ?>  x Total Jam Overtime</p>
+                <p align="center">Berlaku sampai <?php echo @$data->supir_ot_reguler_sampai ?> : <?php echo number_format(@$data->supir_ot_reguler) ?>  x Total Jam Overtime</p>
 
 		<div class="info">Overtime Malam</div>
-                <p align="center">Berlaku mulai <?php echo @$data->supir_tunj_makan_malam_dari ?> : <?php echo number_format(@$data->supir_ot_malam) ?>  x Total Hari</p>
+                <p align="center">Berlaku mulai <?php echo @$data->supir_ot_malam_dari ?> : <?php echo number_format(@$data->supir_ot_malam) ?>  x Total Hari</p>
 
 		<div class="info">Overtime Hari Libur</div>
                 <table>
